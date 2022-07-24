@@ -1,0 +1,7 @@
+-keepattributes InnerClasses
+-keep class com.github.warren_bank.airplay_client.** { *; }
+
+-keepnames class javax.jmdns.** { *; }
+
+-dontwarn javax.jmdns.test.**
+-dontwarn org.slf4j.impl.StaticLoggerBinder

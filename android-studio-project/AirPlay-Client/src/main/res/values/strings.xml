@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string translatable="false" name="app_name">DroidPlay</string>
+
+  <!-- foreground service notification -->
+  <string name="notification_service_ticker">DroidPlay: service running</string>
+  <string name="notification_service_content_line1">DroidPlay running at:</string>
+  <string name="notification_service_content_line3">Click to stop service.</string>
+
+  <!-- Preference keys -->
+  <string translatable="false" name="prefkey_selected_service">selected_service</string>
+  <string translatable="false" name="prefkey_selected_folder">selected_folder</string>
+  <string translatable="false" name="prefkey_image_transition">image_transition</string>
+  <string translatable="false" name="prefkey_server_port">server_port</string>
+
+</resources>

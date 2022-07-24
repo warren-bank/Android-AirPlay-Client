@@ -1,0 +1,9 @@
+<resources>
+  <integer name="PERMISSION_REQUEST_CODE_READ_EXTERNAL_STORAGE">1</integer>
+
+  <integer name="NOTIFICATION_ID_NETWORKING_SERVICE">1</integer>
+
+  <!-- Preference default values (integer) -->
+  <integer name="prefval_server_port">9999</integer>
+
+</resources>

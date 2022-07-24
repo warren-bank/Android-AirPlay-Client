@@ -1,0 +1,12 @@
+{
+  "name": "@warren-bank/Android-AirPlay-Client",
+  "private": true,
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@warren-bank/translate-android-strings": "^1.9.1"
+  },
+  "scripts": {
+    "translate": "translate-android-strings -i \"en\" -f \"android-studio-project/AirPlay-Client/src/main/res/values/strings.xml\" -d \"android-studio-project/AirPlay-Client/src/withAllLanguageTranslations/res\" -m --nc --nw -b \"(?:AirPlay)\"",
+    "translate:debug": "npm run translate -- -o \"en\" --debug"
+  }
+}
