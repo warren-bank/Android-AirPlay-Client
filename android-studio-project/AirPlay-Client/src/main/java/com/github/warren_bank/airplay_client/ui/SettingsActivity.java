@@ -1,41 +1,40 @@
 package com.github.warren_bank.airplay_client.ui;
 
 import com.github.warren_bank.airplay_client.R;
-import com.github.warren_bank.airplay_client.utils.AirPlayUtils;
 import com.github.warren_bank.airplay_client.utils.PreferencesMgr;
 import com.github.warren_bank.airplay_client.utils.ToastUtils;
 
 import android.app.ActionBar;
-import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.Spinner;
+import android.preference.EditTextPreference;
+import android.preference.ListPreference;
+import android.preference.Preference;
+import android.preference.PreferenceActivity;
+import android.preference.PreferenceFragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
-/**
- * The settings activity.
- *
- * @author Tuomas Tikka
- */
-public class SettingsActivity extends Activity {
-  // server port
-  EditText serverPort;
+import java.util.Locale;
 
-  // image transition
-  Spinner imageTransition;
+public final class SettingsActivity extends PreferenceActivity {
+  private static final int MIN_PORT_NUMBER = 1025;
+  private static final int MAX_PORT_NUMBER = 65534;
 
-  // handler
-  private Handler handler = new Handler();
+  public static Intent getStartIntent(Context context) {
+    return new Intent(context, SettingsActivity.class);
+  }
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-
-    setContentView(R.layout.settings);
 
     // action bar icon as home link
     ActionBar actionBar = getActionBar();
@@ -44,82 +43,173 @@ public class SettingsActivity extends Activity {
     actionBar.setDisplayUseLogoEnabled(false);
     actionBar.setDisplayHomeAsUpEnabled(true);
 
-    // server port
-    serverPort = (EditText) findViewById(R.id.server_port);
-
-    // image transition
-    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.image_transition_item, R.id.transition, AirPlayUtils.getTransitionDescriptions());
-    imageTransition = (Spinner) findViewById(R.id.image_transition);
-    imageTransition.setAdapter(adapter);
-
-    // load settings
-    loadSettings();
+    getFragmentManager().beginTransaction().replace(android.R.id.content, new ScreenStreamPreferenceFragment()).commit();
   }
 
-  @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    MenuInflater inflater = getMenuInflater();
-    inflater.inflate(R.menu.settings_actions, menu);
-    return true;
-  }
+  public static class ScreenStreamPreferenceFragment extends PreferenceFragment {
+    int mResizeFactor;
+    int mIndex;
 
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-    switch (item.getItemId()) {
-      case R.id.save: {
-        if (saveSettings()) {
-          toast("Settings Saved");
-          finish();
+    private Handler handler = new Handler();
+
+    private void toast(final String message) {
+      if (message == null) return;
+
+      handler.post(new Runnable() {
+        @Override
+        public void run() {
+          ToastUtils.showToast(getActivity(), message);
         }
-        break;
-      }
-      case R.id.cancel:
-      case android.R.id.home: {
-        finish();
-        break;
-      }
-      default:
-        break;
-    }
-    return true;
-  }
-
-  private void loadSettings() {
-    // server port
-    serverPort.setText("" + PreferencesMgr.get_server_port());
-
-    // image transition
-    imageTransition.setSelection(PreferencesMgr.get_image_transition());
-  }
-
-  private boolean saveSettings() {
-    // validate port number
-    try {
-      int i = Integer.parseInt(serverPort.getText().toString());
-      if ((i < 1024) || (i > 65535)) {
-        toast("Server port: must be in range 1024-65535");
-        return false;
-      }
-    }
-    catch (Exception e) {
-      toast("Server port: must be a number");
-      return false;
+      });
     }
 
-    PreferencesMgr.set_server_port(Integer.valueOf(serverPort.getText().toString()));
-    PreferencesMgr.set_image_transition(Integer.valueOf(imageTransition.getSelectedItemPosition()));
-    return true;
-  }
-
-  private void toast(final String message) {
-    if (message == null) return;
-
-    handler.post(new Runnable() {
-      @Override
-      public void run() {
-        ToastUtils.showToast(SettingsActivity.this, message);
+    private void setResizeFactor(final int resizeFactor, final TextView resizeFactorText) {
+      mResizeFactor = resizeFactor;
+      resizeFactorText.setText(String.format(Locale.US, "%.1fx", mResizeFactor / 10f));
+      if (mResizeFactor > 10) {
+        int color = getResources().getInteger(R.color.colorAccent);
+        resizeFactorText.setTextColor(color);
+        resizeFactorText.setTypeface(resizeFactorText.getTypeface(), Typeface.BOLD);
+      } else {
+        int color = getResources().getInteger(R.color.textColorSecondary);
+        resizeFactorText.setTextColor(color);
+        resizeFactorText.setTypeface(Typeface.DEFAULT);
       }
-    });
-  }
+    }
 
+    @Override
+    public void onCreate(final Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      addPreferencesFromResource(R.xml.preferences);
+
+      // ===============================
+      // Streaming media
+      // ===============================
+
+      final String portRange = String.format(getString(R.string.settings_activity_port_range), MIN_PORT_NUMBER, MAX_PORT_NUMBER);
+      final EditTextPreference serverPortTextPreference = (EditTextPreference) findPreference(getString(R.string.pref_key_server_port));
+      serverPortTextPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object data) {
+          final String portString = data.toString();
+          if (portString == null || portString.length() == 0 || portString.length() > 5 || portString.length() < 4) {
+            toast(portRange);
+            return false;
+          }
+          final int portNumber = Integer.parseInt(portString);
+          if ((portNumber < MIN_PORT_NUMBER) || (portNumber > MAX_PORT_NUMBER)) {
+            toast(portRange);
+            return false;
+          }
+          return true;
+        }
+      });
+
+      // ===============================
+      // Images
+      // ===============================
+
+      final ListPreference imageTransitionPreference = (ListPreference) findPreference(getString(R.string.pref_key_image_transition));
+      mIndex = imageTransitionPreference.findIndexOfValue(imageTransitionPreference.getValue());
+      imageTransitionPreference.setSummary(
+          getString(R.string.pref_summary_image_transition)
+        + getString(R.string.settings_activity_value)
+        + imageTransitionPreference.getEntries()[mIndex]
+      );
+      imageTransitionPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object data) {
+          final int index = imageTransitionPreference.findIndexOfValue(data.toString());
+          imageTransitionPreference.setSummary(
+              getString(R.string.pref_summary_image_transition)
+            + getString(R.string.settings_activity_value)
+            + imageTransitionPreference.getEntries()[index]
+          );
+          return true;
+        }
+      });
+
+      // ===============================
+      // Screen Mirroring
+      // ===============================
+
+      final Preference resizePreference = findPreference(getString(R.string.pref_key_resize_factor));
+      resizePreference.setSummary(
+          getString(R.string.pref_summary_resize_factor)
+        + getString(R.string.settings_activity_value)
+        + String.format(Locale.US, "%.1fx", PreferencesMgr.get_resize_factor() / 10f)
+      );
+      resizePreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+        @Override
+        public boolean onPreferenceClick(final Preference preference) {
+          final LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
+          final View resizeView = layoutInflater.inflate(R.layout.pref_resize, null);
+          final TextView resizeFactor = (TextView) resizeView.findViewById(R.id.pref_resize_dialog_textView);
+          setResizeFactor(PreferencesMgr.get_resize_factor(), resizeFactor);
+
+          final SeekBar seekBar = (SeekBar) resizeView.findViewById(R.id.pref_resize_dialog_seekBar);
+          seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(final SeekBar seekBar, final int progress, final boolean fromUser) {
+              setResizeFactor(progress + 1, resizeFactor);
+            }
+
+            @Override
+            public void onStartTrackingTouch(final SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(final SeekBar seekBar) {}
+          });
+          seekBar.setProgress(mResizeFactor - 1);
+
+          new AlertDialog.Builder(getActivity())
+            .setView(resizeView)
+            .setCancelable(true)
+            .setIcon(R.drawable.ic_pref_resize_black_24dp)
+            .setTitle(R.string.pref_title_resize_factor)
+            .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+              @Override
+              public void onClick(final DialogInterface dialog, final int which) {
+                PreferencesMgr.set_resize_factor(mResizeFactor);
+                resizePreference.setSummary(
+                    getString(R.string.pref_summary_resize_factor)
+                  + getString(R.string.settings_activity_value)
+                  + String.format(Locale.US, "%.1fx", PreferencesMgr.get_resize_factor() / 10f)
+                );
+                dialog.dismiss();
+              }
+            })
+            .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+              @Override
+              public void onClick(final DialogInterface dialog, final int which) {
+                dialog.cancel();
+              }
+            }).create().show();
+
+          return true;
+        }
+      });
+
+      final ListPreference jpegQualityPreference = (ListPreference) findPreference(getString(R.string.pref_key_jpeg_quality));
+      mIndex = jpegQualityPreference.findIndexOfValue(jpegQualityPreference.getValue());
+      jpegQualityPreference.setSummary(
+          getString(R.string.pref_summary_jpeg_quality)
+        + getString(R.string.settings_activity_value)
+        + jpegQualityPreference.getEntries()[mIndex]
+      );
+      jpegQualityPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object data) {
+          final int index = jpegQualityPreference.findIndexOfValue(data.toString());
+          jpegQualityPreference.setSummary(
+              getString(R.string.pref_summary_jpeg_quality)
+            + getString(R.string.settings_activity_value)
+            + jpegQualityPreference.getEntries()[index]
+          );
+          return true;
+        }
+      });
+
+    }
+  }
 }

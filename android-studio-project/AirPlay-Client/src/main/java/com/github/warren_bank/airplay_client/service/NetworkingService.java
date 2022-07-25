@@ -3,9 +3,10 @@ package com.github.warren_bank.airplay_client.service;
 import com.github.warren_bank.airplay_client.MainApp;
 import com.github.warren_bank.airplay_client.R;
 import com.github.warren_bank.airplay_client.constant.Constant;
+import com.github.warren_bank.airplay_client.httpclient.AirPlayClient;
+import com.github.warren_bank.airplay_client.httpclient.AirPlayClientCallback;
 import com.github.warren_bank.airplay_client.httpd.HttpServer;
-import com.github.warren_bank.airplay_client.service.AirPlayClient;
-import com.github.warren_bank.airplay_client.service.AirPlayClientCallback;
+import com.github.warren_bank.airplay_client.mirror.ScreenMirrorMgr;
 import com.github.warren_bank.airplay_client.ui.dialogs.ConnectDialog;
 import com.github.warren_bank.airplay_client.utils.NetworkUtils;
 import com.github.warren_bank.airplay_client.utils.PreferencesMgr;
@@ -69,6 +70,9 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
   // HTTP server
   private HttpServer http;
 
+  // screen mirroring
+  private ScreenMirrorMgr mirror;
+
   // ---------------------------------------------------------------------------
   // Service lifecycle
 
@@ -82,6 +86,9 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
 
     // send instructions to AirPlay receiver
     client = new AirPlayClient(NetworkingService.this);
+
+    // store global reference
+    MainApp.setNetworkingService(NetworkingService.this);
 
     // global Message listener
     myMessageHandler = new MyMessageHandler(Looper.getMainLooper(), NetworkingService.this, client);
@@ -122,6 +129,11 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
     // http server
     http = new HttpServer();
     http.startServer(PreferencesMgr.get_server_port());
+
+    // screen mirroring
+    mirror = (Build.VERSION.SDK_INT >= 21)
+      ? ScreenMirrorMgr.getInstance(getApplicationContext())
+      : null;
 
     showNotification();
   }
@@ -194,6 +206,9 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
     MainApp.unregisterHandler(NetworkingService.class.getName());
     hideNotification();
 
+    // remove global reference
+    MainApp.setNetworkingService(null);
+
     // save selected service
     if (selectedService != null)
       PreferencesMgr.set_selected_service(selectedService);
@@ -202,7 +217,7 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
   // ---------------------------------------------------------------------------
   // public
 
-  protected ServiceInfo getSelectedService() {
+  public ServiceInfo getSelectedService() {
     return services.get(selectedService);
   }
 
@@ -227,6 +242,16 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
 
   protected void showConnectDialog(Context context) {
     new ConnectDialog(context, NetworkingService.this, services.values()).show();
+  }
+
+  protected void restartHttpServer() {
+    if (http != null)
+      http.stopServer();
+
+    http = new HttpServer();
+    http.startServer(PreferencesMgr.get_server_port());
+
+    updateNotification();
   }
 
   protected void toast(final String message) {
@@ -356,17 +381,24 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
   }
 
   private void showNotification() {
-    Notification notification = getNotification();
-    int NOTIFICATION_ID = getNotificationId();
+    if (Build.VERSION.SDK_INT < 5) {
+      updateNotification();
+      return;
+    }
 
-    if (Build.VERSION.SDK_INT >= 5) {
-      createNotificationChannel();
-      startForeground(NOTIFICATION_ID, notification);
-    }
-    else {
-      NotificationManager NM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-      NM.notify(NOTIFICATION_ID, notification);
-    }
+    int NOTIFICATION_ID = getNotificationId();
+    Notification notification = getNotification();
+
+    createNotificationChannel();
+    startForeground(NOTIFICATION_ID, notification);
+  }
+
+  private void updateNotification() {
+    int NOTIFICATION_ID = getNotificationId();
+    Notification notification = getNotification();
+
+    NotificationManager NM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+    NM.notify(NOTIFICATION_ID, notification);
   }
 
   private void hideNotification() {

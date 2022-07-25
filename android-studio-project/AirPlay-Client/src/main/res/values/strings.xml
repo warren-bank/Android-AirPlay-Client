@@ -8,10 +8,43 @@
   <string name="notification_service_content_line1">DroidPlay running at:</string>
   <string name="notification_service_content_line3">Click to stop service.</string>
 
-  <!-- Preference keys -->
-  <string translatable="false" name="prefkey_selected_service">selected_service</string>
-  <string translatable="false" name="prefkey_selected_folder">selected_folder</string>
-  <string translatable="false" name="prefkey_image_transition">image_transition</string>
-  <string translatable="false" name="prefkey_server_port">server_port</string>
+  <!-- Preference categories -->
+  <string name="pref_category_streaming">Streaming media</string>
+  <string name="pref_category_images">Images</string>
+  <string name="pref_category_mirroring">Screen Mirroring</string>
+
+  <!-- Preference keys (saved by app) -->
+  <string translatable="false" name="pref_key_selected_service">selected_service</string>
+  <string translatable="false" name="pref_key_selected_folder">selected_folder</string>
+
+  <!-- Preference keys (saved by user): streaming -->
+  <string translatable="false" name="pref_key_server_port">server_port</string>
+  <!-- Preference keys (saved by user): images -->
+  <string translatable="false" name="pref_key_image_transition">image_transition</string>
+  <!-- Preference keys (saved by user): mirroring -->
+  <string translatable="false" name="pref_key_resize_factor">resize_factor</string>
+  <string translatable="false" name="pref_key_jpeg_quality">jpeg_quality</string>
+
+  <!-- Preference default values (string) -->
+  <string translatable="false" name="pref_val_server_port">9999</string>
+  <string translatable="false" name="pref_val_image_transition">None</string>
+  <string translatable="false" name="pref_val_jpeg_quality">80</string>
+
+  <!-- Preference titles -->
+  <string name="pref_title_server_port">Server port</string>
+  <string name="pref_title_image_transition">Transition</string>
+  <string name="pref_title_resize_factor">Resize image</string>
+  <string name="pref_title_jpeg_quality">JPEG quality</string>
+
+  <!-- Preference summaries -->
+  <string name="pref_summary_server_port">Set port for incoming connections</string>
+  <string name="pref_summary_image_transition">Set behavior for transition</string>
+  <string name="pref_summary_resize_factor">Resize image before sending to client</string>
+  <string name="pref_summary_jpeg_quality">Set JPEG quality</string>
+
+  <!-- SettingsActivity -->
+  <string name="pref_resize_dialog_text">Select image resize factor:</string>
+  <string name="settings_activity_port_range">Port number must be between %1$d and %2$d</string>
+  <string name="settings_activity_value">\nValue:\u0020</string>
 
 </resources>

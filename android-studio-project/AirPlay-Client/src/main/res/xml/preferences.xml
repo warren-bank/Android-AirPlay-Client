@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <PreferenceCategory android:title="@string/pref_category_streaming">
+    <EditTextPreference
+      android:key="@string/pref_key_server_port"
+      android:title="@string/pref_title_server_port"
+      android:summary="@string/pref_summary_server_port"
+      android:defaultValue="@string/pref_val_server_port"
+      android:inputType="number"
+      android:singleLine="true"
+      android:icon="@drawable/ic_pref_http_black_24dp"
+      android:selectAllOnFocus="true" />
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="@string/pref_category_images">
+    <ListPreference
+      android:key="@string/pref_key_image_transition"
+      android:title="@string/pref_title_image_transition"
+      android:summary="@string/pref_summary_image_transition"
+      android:defaultValue="@string/pref_val_image_transition"
+      android:icon="@drawable/ic_pref_flip_to_back_black_24dp"
+      android:dialogIcon="@drawable/ic_pref_flip_to_back_black_24dp"
+      android:entries="@array/pref_names_image_transition"
+      android:entryValues="@array/pref_values_image_transition" />
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="@string/pref_category_mirroring">
+    <Preference
+      android:key="@string/pref_key_resize_factor"
+      android:title="@string/pref_title_resize_factor"
+      android:summary="@string/pref_summary_resize_factor"
+      android:icon="@drawable/ic_pref_resize_black_24dp" />
+
+    <ListPreference
+      android:key="@string/pref_key_jpeg_quality"
+      android:title="@string/pref_title_jpeg_quality"
+      android:summary="@string/pref_summary_jpeg_quality"
+      android:defaultValue="@string/pref_val_jpeg_quality"
+      android:icon="@drawable/ic_pref_high_quality_black_24dp"
+      android:dialogIcon="@drawable/ic_pref_high_quality_black_24dp"
+      android:entries="@array/pref_names_jpeg_quality"
+      android:entryValues="@array/pref_values_jpeg_quality" />
+  </PreferenceCategory>
+
+</PreferenceScreen>

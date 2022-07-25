@@ -1,8 +1,12 @@
 package com.github.warren_bank.airplay_client.ui;
 
+import static com.github.warren_bank.airplay_client.mirror.ScreenMirrorMgr.getProjectionManager;
+import static com.github.warren_bank.airplay_client.mirror.ScreenMirrorMgr.setMediaProjection;
+
 import com.github.warren_bank.airplay_client.MainApp;
 import com.github.warren_bank.airplay_client.R;
 import com.github.warren_bank.airplay_client.constant.Constant;
+import com.github.warren_bank.airplay_client.mirror.ScreenMirrorMgr;
 import com.github.warren_bank.airplay_client.service.NetworkingService;
 import com.github.warren_bank.airplay_client.ui.adapters.ImageAdapter;
 import com.github.warren_bank.airplay_client.ui.adapters.NavigationAdapter;
@@ -15,6 +19,9 @@ import com.github.warren_bank.airplay_client.utils.ToastUtils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.media.projection.MediaProjection;
+import android.media.projection.MediaProjectionManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -35,7 +42,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DroidPlayActivity extends Activity implements AdapterView.OnItemClickListener, FolderDialog.Callback {
+  private static final int REQUEST_CODE_SCREEN_CAPTURE = 1;
+  private static final int REQUEST_CODE_SETTINGS       = 2;
+
+  private boolean has_airplay_connection;
+  private boolean has_storage_permission;
+
   private Handler handler;
+
+  // screen mirroring
+  private boolean canMirror;
+  private ScreenMirrorMgr mirror;
 
   // holder for the navigation "drawer" layout
   private DrawerLayout navigationLayout;
@@ -56,28 +73,57 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
+    setContentView(R.layout.main);
+
+    has_airplay_connection = (MainApp.receiverName != null);
+    has_storage_permission = false;
+
     handler = new DroidPlayHandler(DroidPlayActivity.this);
     MainApp.registerHandler(DroidPlayActivity.class.getName(), handler);
 
-    setContentView(R.layout.main);
-
     // action bar
-    subtitle("Not connected");
+    updateSubtitle();
+
+    canMirror = (Build.VERSION.SDK_INT >= 21);
+    mirror    = null;
 
     // navigation drawer
     navigationLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
     List<NavigationItem> navigationItems = new ArrayList<NavigationItem>();
-    navigationItems.add(new NavigationItem("connect",   "Connect to AirPlay...", R.drawable.ic_cast_connected_grey600_36dp));
-    navigationItems.add(new NavigationItem("stop",      "Stop playback",         R.drawable.ic_stop_grey600_36dp          ));
     navigationAdapter = new NavigationAdapter(DroidPlayActivity.this, navigationItems);
     navigationList = (ListView) findViewById(R.id.drawer);
     navigationList.setAdapter(navigationAdapter);
     navigationList.setOnItemClickListener(DroidPlayActivity.this);
+    updateNavigationItems();
 
     if (ExternalStorageUtils.has_permission(DroidPlayActivity.this))
       onPermissionGranted();
     else
       ExternalStorageUtils.request_permission(DroidPlayActivity.this);
+  }
+
+  @Override
+  public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    switch (requestCode) {
+      case REQUEST_CODE_SCREEN_CAPTURE:
+        if (resultCode != RESULT_OK) return;
+
+        final MediaProjectionManager projectionManager = getProjectionManager();
+        if (projectionManager == null) return;
+
+        final MediaProjection mediaProjection = projectionManager.getMediaProjection(resultCode, data);
+        if (mediaProjection == null) return;
+
+        setMediaProjection(mediaProjection);
+
+        Message msg = Message.obtain();
+        msg.what = Constant.Msg.Msg_ScreenMirror_Stream_Start;
+        MainApp.broadcastMessage(msg);
+        break;
+      case REQUEST_CODE_SETTINGS:
+        PreferencesMgr.refresh();
+        break;
+    }
   }
 
   @Override
@@ -99,8 +145,7 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   public boolean onOptionsItemSelected(MenuItem item) {
     switch (item.getItemId()) {
       case R.id.settings : {
-        Intent intent = new Intent(DroidPlayActivity.this, SettingsActivity.class);
-        startActivity(intent);
+        startActivityForResult(SettingsActivity.getStartIntent(DroidPlayActivity.this), REQUEST_CODE_SETTINGS);
         break;
       }
       case R.id.exit : {
@@ -149,6 +194,16 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
         MainApp.broadcastMessage(msg);
         break;
       }
+      case "mirror": {
+        mirror = ScreenMirrorMgr.getInstance(getApplicationContext());
+
+        final MediaProjectionManager projectionManager = getProjectionManager();
+
+        if (projectionManager != null)
+          startActivityForResult(projectionManager.createScreenCaptureIntent(), REQUEST_CODE_SCREEN_CAPTURE);
+
+        break;
+      }
       case "pictures": {
         File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
         adapter.setFolder(folder);
@@ -191,15 +246,8 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   }
 
   private void onPermissionGranted() {
-    // update navigation drawer with additional options
-    navigationAdapter.clear();
-    navigationAdapter.add(new NavigationItem("connect",   "Connect to AirPlay...", R.drawable.ic_cast_connected_grey600_36dp));
-    navigationAdapter.add(new NavigationItem("pictures",  "Pictures",              R.drawable.ic_image_grey600_36dp         ));
-    navigationAdapter.add(new NavigationItem("videos",    "Videos",                R.drawable.ic_videocam_grey600_36dp      ));
-    navigationAdapter.add(new NavigationItem("downloads", "Downloads",             R.drawable.ic_file_download_grey600_36dp ));
-    navigationAdapter.add(new NavigationItem("folders",   "Choose folder...",      R.drawable.ic_folder_grey600_36dp        ));
-    navigationAdapter.add(new NavigationItem("stop",      "Stop playback",         R.drawable.ic_stop_grey600_36dp          ));
-    navigationAdapter.notifyDataSetChanged();
+    has_storage_permission = true;
+    updateNavigationItems();
 
     // load selected folder
     File folder = new File(PreferencesMgr.get_selected_folder());
@@ -243,6 +291,27 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
     startNetworkingService();
   }
 
+  private void updateNavigationItems() {
+    navigationAdapter.clear();
+    navigationAdapter.add(    new NavigationItem("connect",   "Connect to AirPlay...", R.drawable.ic_cast_connected_grey600_36dp));
+
+    if (has_airplay_connection) {
+      if (canMirror)
+        navigationAdapter.add(new NavigationItem("mirror",    "Mirror Screen",         R.drawable.ic_screen_mirror_grey600_36dp ));
+
+      if (has_storage_permission) {
+        navigationAdapter.add(new NavigationItem("pictures",  "Pictures",              R.drawable.ic_image_grey600_36dp         ));
+        navigationAdapter.add(new NavigationItem("videos",    "Videos",                R.drawable.ic_videocam_grey600_36dp      ));
+        navigationAdapter.add(new NavigationItem("downloads", "Downloads",             R.drawable.ic_file_download_grey600_36dp ));
+        navigationAdapter.add(new NavigationItem("folders",   "Choose folder...",      R.drawable.ic_folder_grey600_36dp        ));
+      }
+
+      navigationAdapter.add(  new NavigationItem("stop",      "Stop playback",         R.drawable.ic_stop_grey600_36dp          ));
+    }
+
+    navigationAdapter.notifyDataSetChanged();
+  }
+
   private void updateFolder(final String newFolder) {
     if (newFolder == null) return;
 
@@ -253,6 +322,12 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
         folder.setText(newFolder);
       }
     });
+  }
+
+  private void updateSubtitle() {
+    subtitle(
+      has_airplay_connection ? MainApp.receiverName : "Not connected"
+    );
   }
 
   private void subtitle(final String message) {
@@ -300,12 +375,17 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
 
       switch (msg.what) {
         case Constant.Msg.Msg_AirPlay_Connect : {
-          String receiver_name = (String) msg.obj;
-          subtitle(receiver_name);
+          has_airplay_connection = true;
+          MainApp.receiverName   = (String) msg.obj;
+          updateSubtitle();
+          updateNavigationItems();
           break;
         }
         case Constant.Msg.Msg_AirPlay_Disconnect : {
-          subtitle("Not connected");
+          has_airplay_connection = false;
+          MainApp.receiverName   = null;
+          updateSubtitle();
+          updateNavigationItems();
           break;
         }
         case Constant.Msg.Msg_Exit_Service : {

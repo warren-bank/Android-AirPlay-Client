@@ -1,7 +1,7 @@
 # [DroidPlay](https://github.com/warren-bank/Android-AirPlay-Client)
 > <small>forked from: <a href="https://github.com/tutikka/DroidPlay/tree/8270e9524bbaea734d1ccbd8e7016929ee7861bc">tutikka/DroidPlay v0.2.4</a></small>
 
-AirPlay client for Android
+AirPlay (version 1) client for Android
 
 Features
 --------
@@ -9,6 +9,8 @@ Features
 - Automatic discovery of AirPlay receivers within the same network
 - Beam photos from your device to AirPlay
 - Stream videos and music from your device to AirPlay
+- Mirror the screen from your device to AirPlay
+  * only available on Android 5.0 and higher
 
 Not Supported (yet)
 -------------------
@@ -36,15 +38,15 @@ Instructions
    * or use the default folders for _Pictures_ and _Videos_
 5. Tap on a thumbnail to beam it to your AirPlay service
    * images will be sent directly
-   * videos will be streamed from your device
+   * videos and music will be streamed from your device
 
 Credits
 -------
 
-- JmDNS library for discovery (http://jmdns.sourceforge.net)
-- Unofficial AirPlay protocol (http://nto.github.io/AirPlay.html)
-- Sample images (https://developers.google.com/speed/webp/gallery1)
-- Material design icons (https://www.google.com/design/icons/)
+- the original [DroidPlay](https://github.com/tutikka/DroidPlay) project
+- the unofficial [AirPlay v1 protocol](http://nto.github.io/AirPlay.html)
+- [jmDNS library](https://github.com/jmdns/jmdns) for discovery of AirPlay receivers on the LAN
+- [ScreenStream](https://github.com/dkrivoruchko/ScreenStream/tree/1.2.7) project for much of the code to implement screen mirroring on Android 5.0+
 
 License
 -------

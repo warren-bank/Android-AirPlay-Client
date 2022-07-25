@@ -1,4 +1,4 @@
-package com.github.warren_bank.airplay_client.service;
+package com.github.warren_bank.airplay_client.httpclient;
 
 import javax.jmdns.ServiceInfo;
 
@@ -24,6 +24,10 @@ public class AirPlayClient {
 
   // callback back to UI
   private AirPlayClientCallback callback;
+
+  public AirPlayClient() {
+    this((AirPlayClientCallback) null);
+  }
 
   /**
    * Initialize the service.
@@ -57,6 +61,21 @@ public class AirPlayClient {
       throw new Exception("Not connected to AirPlay service");
     }
     es.submit(new PutImageTask(file, serviceInfo, transition));
+  }
+
+  /**
+   * Send an image blob to the service (display the image).
+   *
+   * @param byte[] The image blob
+   * @param serviceInfo The service to use
+   * @param transition The image transition to use
+   * @throws Exception If there are any problems with the parameters
+   */
+  public void putRawImage(byte[] image, ServiceInfo serviceInfo, String transition) throws Exception {
+    if (serviceInfo == null) {
+      throw new Exception("Not connected to AirPlay service");
+    }
+    es.submit(new PutRawImageTask(image, serviceInfo, transition));
   }
 
   /**
@@ -129,13 +148,56 @@ public class AirPlayClient {
         in.close();
         out.close();
         int status = conn.getResponseCode();
-        if (status == 200) {
-          callback.onPutImageSuccess(file);
-        } else {
-          callback.onPutImageError(file, "AirPlay service responded HTTP " + status);
+
+        if (callback != null) {
+          if (status == 200)
+            callback.onPutImageSuccess(file);
+          else
+            callback.onPutImageError(file, "AirPlay service responded HTTP " + status);
         }
+      }
+      catch (Exception e) {
+        if (callback != null)
+          callback.onPutImageError(file, e.getMessage());
+      }
+    }
+
+  }
+
+  private class PutRawImageTask implements Runnable {
+
+    private byte[] image;
+
+    private ServiceInfo serviceInfo;
+
+    private String transition;
+
+    public PutRawImageTask(byte[] image, ServiceInfo serviceInfo, String transition) {
+      this.image = image;
+      this.serviceInfo = serviceInfo;
+      this.transition = transition;
+    }
+
+    @Override
+    public void run() {
+      try {
+        URL url = new URL(serviceInfo.getURL() + "/photo");
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setDoInput(true);
+        conn.setDoOutput(true);
+        conn.setConnectTimeout(15 * 1000);
+        conn.setReadTimeout(15 * 1000);
+        conn.setRequestMethod("PUT");
+        conn.setRequestProperty("Content-Length", "" + image.length);
+        conn.setRequestProperty("X-Apple-AssetKey", UUID.randomUUID().toString());
+        conn.setRequestProperty("X-Apple-Session-ID", UUID.randomUUID().toString());
+        conn.setRequestProperty("X-Apple-Transition", transition);
+        conn.setRequestProperty("User-Agent", "MediaControl/1.0");
+        BufferedOutputStream out = new BufferedOutputStream(conn.getOutputStream());
+        out.write(image, 0, image.length);
+        out.close();
+        int status = conn.getResponseCode();
       } catch (Exception e) {
-        callback.onPutImageError(file, e.getMessage());
       }
     }
 
@@ -176,13 +238,17 @@ public class AirPlayClient {
         out.write(content.toString().getBytes());
         out.close();
         int status = conn.getResponseCode();
-        if (status == 200) {
-          callback.onPlayVideoSuccess(location);
-        } else {
-          callback.onPlayVideoError(location, "AirPlay service responded HTTP " + status);
+
+        if (callback != null) {
+          if (status == 200)
+            callback.onPlayVideoSuccess(location);
+          else
+            callback.onPlayVideoError(location, "AirPlay service responded HTTP " + status);
         }
-      } catch (Exception e) {
-        callback.onPlayVideoError(location, e.getMessage());
+      }
+      catch (Exception e) {
+        if (callback != null)
+          callback.onPlayVideoError(location, e.getMessage());
       }
     }
 
@@ -207,13 +273,17 @@ public class AirPlayClient {
         conn.setRequestProperty("Content-Length", "0");
         conn.setRequestProperty("User-Agent", "MediaControl/1.0");
         int status = conn.getResponseCode();
-        if (status == 200) {
-          callback.onStopVideoSuccess();
-        } else {
-          callback.onStopVideoError("AirPlay service responded HTTP " + status);
+
+        if (callback != null) {
+          if (status == 200)
+            callback.onStopVideoSuccess();
+          else
+            callback.onStopVideoError("AirPlay service responded HTTP " + status);
         }
-      } catch (Exception e) {
-        callback.onStopVideoError(e.getMessage());
+      }
+      catch (Exception e) {
+        if (callback != null)
+          callback.onStopVideoError(e.getMessage());
       }
     }
 

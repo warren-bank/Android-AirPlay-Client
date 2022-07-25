@@ -1,4 +1,4 @@
-package com.github.warren_bank.airplay_client.service;
+package com.github.warren_bank.airplay_client.httpclient;
 
 import java.io.File;
 import java.net.URL;

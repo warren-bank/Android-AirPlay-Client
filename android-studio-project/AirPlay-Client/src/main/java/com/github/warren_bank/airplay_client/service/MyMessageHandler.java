@@ -1,9 +1,8 @@
 package com.github.warren_bank.airplay_client.service;
 
 import com.github.warren_bank.airplay_client.constant.Constant;
-import com.github.warren_bank.airplay_client.service.AirPlayClient;
+import com.github.warren_bank.airplay_client.httpclient.AirPlayClient;
 import com.github.warren_bank.airplay_client.service.NetworkingService;
-import com.github.warren_bank.airplay_client.utils.AirPlayUtils;
 import com.github.warren_bank.airplay_client.utils.PreferencesMgr;
 import com.github.warren_bank.airplay_client.utils.WakeLockMgr;
 
@@ -71,7 +70,7 @@ final class MyMessageHandler extends Handler {
 
         case Constant.Msg.Msg_Photo : {
           File file = (File) msg.obj;
-          client.putImage(file, service.getSelectedService(), AirPlayUtils.getTransition(PreferencesMgr.get_image_transition()));
+          client.putImage(file, service.getSelectedService(), PreferencesMgr.get_image_transition());
           break;
         }
 
@@ -96,6 +95,15 @@ final class MyMessageHandler extends Handler {
           client.stopVideo(service.getSelectedService());
 
           WakeLockMgr.release(WakeLockMgr.FLAG_WAKELOCK | WakeLockMgr.FLAG_WIFILOCK);
+          break;
+        }
+
+        // =======================================================================
+        // Restart Http Server
+        // =======================================================================
+
+        case Constant.Msg.Msg_Restart_Http_Server : {
+          service.restartHttpServer();
           break;
         }
 

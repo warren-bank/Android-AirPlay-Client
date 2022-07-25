@@ -2,10 +2,12 @@ package com.github.warren_bank.airplay_client.utils;
 
 import com.github.warren_bank.airplay_client.MainApp;
 import com.github.warren_bank.airplay_client.R;
+import com.github.warren_bank.airplay_client.constant.Constant;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Environment;
+import android.os.Message;
 import android.preference.PreferenceManager;
 
 import java.util.ArrayList;
@@ -94,6 +96,48 @@ public class PreferencesMgr {
     return prefs.getFloat(pref_key, default_value);
   }
 
+  // -----------------------------------
+
+  private static boolean getPrefBooleanFromString(int pref_key_id, String default_value) {
+    return Boolean.parseBoolean(
+      getPrefString(pref_key_id, default_value)
+    );
+  }
+
+  private static boolean getPrefBooleanFromString(Context context, SharedPreferences prefs, int pref_key_id, String default_value) {
+    return Boolean.parseBoolean(
+      getPrefString(context, prefs, pref_key_id, default_value)
+    );
+  }
+
+  // -----------------------------------
+
+  private static int getPrefIntegerFromString(int pref_key_id, String default_value) {
+    return Integer.parseInt(
+      getPrefString(pref_key_id, default_value)
+    );
+  }
+
+  private static int getPrefIntegerFromString(Context context, SharedPreferences prefs, int pref_key_id, String default_value) {
+    return Integer.parseInt(
+      getPrefString(context, prefs, pref_key_id, default_value)
+    );
+  }
+
+  // -----------------------------------
+
+  private static float getPrefFloatFromString(int pref_key_id, String default_value) {
+    return Float.parseFloat(
+      getPrefString(pref_key_id, default_value)
+    );
+  }
+
+  private static float getPrefFloatFromString(Context context, SharedPreferences prefs, int pref_key_id, String default_value) {
+    return Float.parseFloat(
+      getPrefString(context, prefs, pref_key_id, default_value)
+    );
+  }
+
   // ---------------------------------------------------------------------------
   // internal getters:
 
@@ -102,13 +146,13 @@ public class PreferencesMgr {
 
     return ((context == null) || (prefs == null))
       ? getPrefString(
-          /* pref_key_id= */   R.string.prefkey_selected_service,
+          /* pref_key_id= */   R.string.pref_key_selected_service,
           default_value
         )
       : getPrefString(
           context,
           prefs,
-          /* pref_key_id= */   R.string.prefkey_selected_service,
+          /* pref_key_id= */   R.string.pref_key_selected_service,
           default_value
         )
     ;
@@ -119,47 +163,81 @@ public class PreferencesMgr {
 
     return ((context == null) || (prefs == null))
       ? getPrefString(
-          /* pref_key_id= */   R.string.prefkey_selected_folder,
+          /* pref_key_id= */   R.string.pref_key_selected_folder,
           default_value
         )
       : getPrefString(
           context,
           prefs,
-          /* pref_key_id= */   R.string.prefkey_selected_folder,
+          /* pref_key_id= */   R.string.pref_key_selected_folder,
           default_value
         )
     ;
   }
 
-  private static int get_image_transition(Context context, SharedPreferences prefs) {
-    int default_value = 0;
+  private static String get_image_transition(Context context, SharedPreferences prefs) {
+    String default_value = context.getString(R.string.pref_val_image_transition);
 
     return ((context == null) || (prefs == null))
-      ? getPrefInteger(
-          /* pref_key_id= */   R.string.prefkey_image_transition,
+      ? getPrefString(
+          /* pref_key_id= */   R.string.pref_key_image_transition,
           default_value
         )
-      : getPrefInteger(
+      : getPrefString(
           context,
           prefs,
-          /* pref_key_id= */   R.string.prefkey_image_transition,
+          /* pref_key_id= */   R.string.pref_key_image_transition,
           default_value
         )
     ;
   }
 
   private static int get_server_port(Context context, SharedPreferences prefs) {
-    int default_value = context.getResources().getInteger(R.integer.prefval_server_port);
+    String default_value = context.getString(R.string.pref_val_server_port);
+
+    return ((context == null) || (prefs == null))
+      ? getPrefIntegerFromString(
+          /* pref_key_id= */   R.string.pref_key_server_port,
+          default_value
+        )
+      : getPrefIntegerFromString(
+          context,
+          prefs,
+          /* pref_key_id= */   R.string.pref_key_server_port,
+          default_value
+        )
+    ;
+  }
+
+  private static int get_resize_factor(Context context, SharedPreferences prefs) {
+    int default_value = context.getResources().getInteger(R.integer.pref_val_resize_factor);
 
     return ((context == null) || (prefs == null))
       ? getPrefInteger(
-          /* pref_key_id= */   R.string.prefkey_server_port,
+          /* pref_key_id= */   R.string.pref_key_resize_factor,
           default_value
         )
       : getPrefInteger(
           context,
           prefs,
-          /* pref_key_id= */   R.string.prefkey_server_port,
+          /* pref_key_id= */   R.string.pref_key_resize_factor,
+          default_value
+        )
+    ;
+  }
+
+  private static int get_jpeg_quality(Context context, SharedPreferences prefs) {
+    String default_value = context.getString(R.string.pref_val_jpeg_quality);
+
+    return ((context == null) || (prefs == null))
+      ? getPrefIntegerFromString(
+          /* pref_key_id= */   R.string.pref_key_jpeg_quality,
+          default_value
+        )
+      : getPrefIntegerFromString(
+          context,
+          prefs,
+          /* pref_key_id= */   R.string.pref_key_jpeg_quality,
           default_value
         )
     ;
@@ -168,12 +246,14 @@ public class PreferencesMgr {
   // ---------------------------------------------------------------------------
   // internal state:
 
-  private static boolean is_initialized = false;
+  private static boolean is_initialized   = false;
 
-  private static String  selected_service;
-  private static String  selected_folder;
-  private static int     image_transition;
-  private static int     server_port;
+  private static String  selected_service = null;
+  private static String  selected_folder  = null;
+  private static String  image_transition = null;
+  private static int     server_port      = -1;
+  private static int     resize_factor    = -1;
+  private static int     jpeg_quality     = -1;
 
   private static void initialize() {
     if (is_initialized) return;
@@ -186,6 +266,8 @@ public class PreferencesMgr {
     selected_folder         = get_selected_folder(context, prefs);
     image_transition        = get_image_transition(context, prefs);
     server_port             = get_server_port(context, prefs);
+    resize_factor           = get_resize_factor(context, prefs);
+    jpeg_quality            = get_jpeg_quality(context, prefs);
   }
 
   // ---------------------------------------------------------------------------
@@ -201,7 +283,7 @@ public class PreferencesMgr {
     return selected_folder;
   }
 
-  public static int get_image_transition() {
+  public static String get_image_transition() {
     initialize();
     return image_transition;
   }
@@ -209,6 +291,16 @@ public class PreferencesMgr {
   public static int get_server_port() {
     initialize();
     return server_port;
+  }
+
+  public static int get_resize_factor() {
+    initialize();
+    return resize_factor;
+  }
+
+  public static int get_jpeg_quality() {
+    initialize();
+    return jpeg_quality;
   }
 
   // ---------------------------------------------------------------------------
@@ -345,7 +437,7 @@ public class PreferencesMgr {
     Context context                 = getApplicationContext();
     SharedPreferences prefs         = getPrefs(context);
     SharedPreferences.Editor editor = getPrefsEditor(prefs);
-    int pref_key_id                 = R.string.prefkey_selected_service;
+    int pref_key_id                 = R.string.pref_key_selected_service;
     boolean did_edit;
 
     did_edit = setPrefString(context, editor, pref_key_id, /* old_value= */ selected_service, new_value);
@@ -368,7 +460,7 @@ public class PreferencesMgr {
     Context context                 = getApplicationContext();
     SharedPreferences prefs         = getPrefs(context);
     SharedPreferences.Editor editor = getPrefsEditor(prefs);
-    int pref_key_id                 = R.string.prefkey_selected_folder;
+    int pref_key_id                 = R.string.pref_key_selected_folder;
     boolean did_edit;
 
     did_edit = setPrefString(context, editor, pref_key_id, /* old_value= */ selected_folder, new_value);
@@ -385,50 +477,54 @@ public class PreferencesMgr {
     return did_edit;
   }
 
-  public static boolean set_image_transition(Integer new_value) {
+  public static boolean set_resize_factor(int new_value) {
     initialize();
 
     Context context                 = getApplicationContext();
     SharedPreferences prefs         = getPrefs(context);
     SharedPreferences.Editor editor = getPrefsEditor(prefs);
-    int pref_key_id                 = R.string.prefkey_image_transition;
+    int pref_key_id                 = R.string.pref_key_resize_factor;
     boolean did_edit;
 
-    did_edit = setPrefInteger(context, editor, pref_key_id, /* old_value= */ image_transition, new_value);
+    did_edit = setPrefInteger(context, editor, pref_key_id, /* old_value= */ resize_factor, Integer.valueOf(new_value));
 
     if (did_edit) {
       did_edit = editor.commit();
     }
 
     if (did_edit) {
-      image_transition = get_image_transition(context, prefs);
+      resize_factor = get_resize_factor(context, prefs);
       notifyListeners(pref_key_id);
     }
 
     return did_edit;
   }
 
-  public static boolean set_server_port(Integer new_value) {
+  public static void refresh() {
+    String old_image_transition = image_transition;
+    int    old_server_port      = server_port;
+    int    old_resize_factor    = resize_factor;
+    int    old_jpeg_quality     = jpeg_quality;
+
+    is_initialized = false;
     initialize();
 
-    Context context                 = getApplicationContext();
-    SharedPreferences prefs         = getPrefs(context);
-    SharedPreferences.Editor editor = getPrefsEditor(prefs);
-    int pref_key_id                 = R.string.prefkey_server_port;
-    boolean did_edit;
+    if (old_server_port != server_port) {
+      notifyListeners(R.string.pref_key_server_port);
 
-    did_edit = setPrefInteger(context, editor, pref_key_id, /* old_value= */ server_port, new_value);
-
-    if (did_edit) {
-      did_edit = editor.commit();
+      Message msg = Message.obtain();
+      msg.what = Constant.Msg.Msg_Restart_Http_Server;
+      MainApp.broadcastMessage(msg);
     }
 
-    if (did_edit) {
-      server_port = get_server_port(context, prefs);
-      notifyListeners(pref_key_id);
-    }
+    if (old_resize_factor != resize_factor)
+      notifyListeners(R.string.pref_key_resize_factor);
 
-    return did_edit;
+    if (old_jpeg_quality != jpeg_quality)
+      notifyListeners(R.string.pref_key_jpeg_quality);
+
+    if ((old_image_transition == null) || !old_image_transition.equals(image_transition))
+      notifyListeners(R.string.pref_key_image_transition);
   }
 
 }
