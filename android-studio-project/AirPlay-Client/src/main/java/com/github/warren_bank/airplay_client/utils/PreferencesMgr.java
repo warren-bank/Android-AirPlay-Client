@@ -175,6 +175,23 @@ public class PreferencesMgr {
     ;
   }
 
+  private static String get_folder_layout(Context context, SharedPreferences prefs) {
+    String default_value = context.getString(R.string.pref_val_folder_layout);
+
+    return ((context == null) || (prefs == null))
+      ? getPrefString(
+          /* pref_key_id= */   R.string.pref_key_folder_layout,
+          default_value
+        )
+      : getPrefString(
+          context,
+          prefs,
+          /* pref_key_id= */   R.string.pref_key_folder_layout,
+          default_value
+        )
+    ;
+  }
+
   private static String get_image_transition(Context context, SharedPreferences prefs) {
     String default_value = context.getString(R.string.pref_val_image_transition);
 
@@ -250,6 +267,7 @@ public class PreferencesMgr {
 
   private static String  selected_service = null;
   private static String  selected_folder  = null;
+  private static String  folder_layout    = null;
   private static String  image_transition = null;
   private static int     server_port      = -1;
   private static int     resize_factor    = -1;
@@ -264,6 +282,7 @@ public class PreferencesMgr {
 
     selected_service        = get_selected_service(context, prefs);
     selected_folder         = get_selected_folder(context, prefs);
+    folder_layout           = get_folder_layout(context, prefs);
     image_transition        = get_image_transition(context, prefs);
     server_port             = get_server_port(context, prefs);
     resize_factor           = get_resize_factor(context, prefs);
@@ -281,6 +300,11 @@ public class PreferencesMgr {
   public static String get_selected_folder() {
     initialize();
     return selected_folder;
+  }
+
+  public static String get_folder_layout() {
+    initialize();
+    return folder_layout;
   }
 
   public static String get_image_transition() {
@@ -501,6 +525,7 @@ public class PreferencesMgr {
   }
 
   public static void refresh() {
+    String old_folder_layout    = folder_layout;
     String old_image_transition = image_transition;
     int    old_server_port      = server_port;
     int    old_resize_factor    = resize_factor;
@@ -508,6 +533,17 @@ public class PreferencesMgr {
 
     is_initialized = false;
     initialize();
+
+    if ((old_folder_layout == null) || !old_folder_layout.equals(folder_layout)) {
+      notifyListeners(R.string.pref_key_folder_layout);
+
+      Message msg = Message.obtain();
+      msg.what = Constant.Msg.Msg_Change_Folder_Layout;
+      MainApp.broadcastMessage(msg);
+    }
+
+    if ((old_image_transition == null) || !old_image_transition.equals(image_transition))
+      notifyListeners(R.string.pref_key_image_transition);
 
     if (old_server_port != server_port) {
       notifyListeners(R.string.pref_key_server_port);
@@ -522,9 +558,6 @@ public class PreferencesMgr {
 
     if (old_jpeg_quality != jpeg_quality)
       notifyListeners(R.string.pref_key_jpeg_quality);
-
-    if ((old_image_transition == null) || !old_image_transition.equals(image_transition))
-      notifyListeners(R.string.pref_key_image_transition);
   }
 
 }

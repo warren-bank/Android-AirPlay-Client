@@ -63,6 +63,10 @@ public final class SettingsActivity extends PreferenceActivity {
       });
     }
 
+    private CharSequence normalizeListName(CharSequence name) {
+      return name.toString().replace(" [Default]", "");
+    }
+
     private void setResizeFactor(final int resizeFactor, final TextView resizeFactorText) {
       mResizeFactor = resizeFactor;
       resizeFactorText.setText(String.format(Locale.US, "%.1fx", mResizeFactor / 10f));
@@ -83,7 +87,31 @@ public final class SettingsActivity extends PreferenceActivity {
       addPreferencesFromResource(R.xml.preferences);
 
       // ===============================
-      // Streaming media
+      // Graphical User Interface
+      // ===============================
+
+      final ListPreference folderLayoutPreference = (ListPreference) findPreference(getString(R.string.pref_key_folder_layout));
+      mIndex = folderLayoutPreference.findIndexOfValue(folderLayoutPreference.getValue());
+      folderLayoutPreference.setSummary(
+          getString(R.string.pref_summary_folder_layout)
+        + getString(R.string.settings_activity_value)
+        + normalizeListName(folderLayoutPreference.getEntries()[mIndex])
+      );
+      folderLayoutPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object data) {
+          final int index = folderLayoutPreference.findIndexOfValue(data.toString());
+          folderLayoutPreference.setSummary(
+              getString(R.string.pref_summary_folder_layout)
+            + getString(R.string.settings_activity_value)
+            + normalizeListName(folderLayoutPreference.getEntries()[index])
+          );
+          return true;
+        }
+      });
+
+      // ===============================
+      // Streaming Media
       // ===============================
 
       final String portRange = String.format(getString(R.string.settings_activity_port_range), MIN_PORT_NUMBER, MAX_PORT_NUMBER);
@@ -114,7 +142,7 @@ public final class SettingsActivity extends PreferenceActivity {
       imageTransitionPreference.setSummary(
           getString(R.string.pref_summary_image_transition)
         + getString(R.string.settings_activity_value)
-        + imageTransitionPreference.getEntries()[mIndex]
+        + normalizeListName(imageTransitionPreference.getEntries()[mIndex])
       );
       imageTransitionPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
         @Override
@@ -123,7 +151,7 @@ public final class SettingsActivity extends PreferenceActivity {
           imageTransitionPreference.setSummary(
               getString(R.string.pref_summary_image_transition)
             + getString(R.string.settings_activity_value)
-            + imageTransitionPreference.getEntries()[index]
+            + normalizeListName(imageTransitionPreference.getEntries()[index])
           );
           return true;
         }
@@ -195,7 +223,7 @@ public final class SettingsActivity extends PreferenceActivity {
       jpegQualityPreference.setSummary(
           getString(R.string.pref_summary_jpeg_quality)
         + getString(R.string.settings_activity_value)
-        + jpegQualityPreference.getEntries()[mIndex]
+        + normalizeListName(jpegQualityPreference.getEntries()[mIndex])
       );
       jpegQualityPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
         @Override
@@ -204,7 +232,7 @@ public final class SettingsActivity extends PreferenceActivity {
           jpegQualityPreference.setSummary(
               getString(R.string.pref_summary_jpeg_quality)
             + getString(R.string.settings_activity_value)
-            + jpegQualityPreference.getEntries()[index]
+            + normalizeListName(jpegQualityPreference.getEntries()[index])
           );
           return true;
         }

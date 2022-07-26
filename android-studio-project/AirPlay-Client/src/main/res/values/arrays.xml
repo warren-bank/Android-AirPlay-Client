@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+  <string-array name="pref_names_folder_layout">
+    <item>List: Icon + File Name [Default]</item>
+    <item>Grid: Thumbnail</item>
+  </string-array>
+  <string-array name="pref_values_folder_layout">
+    <item>list</item>
+    <item>grid</item>
+  </string-array>
+
   <string-array name="pref_names_image_transition">
-    <item>None - Default</item>
+    <item>None [Default]</item>
     <item>Random</item>
     <item>Dissolve</item>
     <item>Slide left</item>
@@ -19,7 +28,7 @@
   <string-array name="pref_names_jpeg_quality">
     <item>100</item>
     <item>90</item>
-    <item>80 - Default</item>
+    <item>80 [Default]</item>
     <item>70</item>
     <item>60</item>
     <item>50</item>

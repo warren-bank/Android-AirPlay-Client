@@ -8,7 +8,9 @@ import com.github.warren_bank.airplay_client.R;
 import com.github.warren_bank.airplay_client.constant.Constant;
 import com.github.warren_bank.airplay_client.mirror.ScreenMirrorMgr;
 import com.github.warren_bank.airplay_client.service.NetworkingService;
-import com.github.warren_bank.airplay_client.ui.adapters.ImageAdapter;
+import com.github.warren_bank.airplay_client.ui.adapters.FolderBaseAdapter;
+import com.github.warren_bank.airplay_client.ui.adapters.FolderGridAdapter;
+import com.github.warren_bank.airplay_client.ui.adapters.FolderListAdapter;
 import com.github.warren_bank.airplay_client.ui.adapters.NavigationAdapter;
 import com.github.warren_bank.airplay_client.ui.adapters.NavigationItem;
 import com.github.warren_bank.airplay_client.ui.dialogs.FolderDialog;
@@ -63,8 +65,11 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   // holder for the navigation "drawer" list
   private ListView navigationList;
 
-  // the custom adapter for the thumbnail images
-  private ImageAdapter adapter;
+  // the layout manager to display contents of the selected folder
+  private GridView grid;
+
+  // the custom adapter for contents of the selected folder
+  private FolderBaseAdapter adapter;
 
   // ---------------------------------------------------------------------------
   // Activity lifecycle
@@ -255,12 +260,9 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
     // update folder label
     updateFolder(folder.getAbsolutePath());
 
-    adapter = new ImageAdapter(DroidPlayActivity.this, folder);
-
-    // file grid
-    GridView grid = (GridView) findViewById(R.id.grid);
+    // the layout manager to display contents of selected folder
+    grid = (GridView) findViewById(R.id.grid);
     grid.setEmptyView(findViewById(R.id.empty));
-    grid.setAdapter(adapter);
     grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -287,6 +289,7 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
         }
       }
     });
+    updateFolderLayout();
 
     startNetworkingService();
   }
@@ -322,6 +325,31 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
         folder.setText(newFolder);
       }
     });
+
+    PreferencesMgr.set_selected_folder(newFolder);
+  }
+
+  private void updateFolderLayout() {
+    String folder_layout = PreferencesMgr.get_folder_layout();
+    File folder = new File(PreferencesMgr.get_selected_folder());
+
+    switch(folder_layout) {
+      case "grid": {
+        adapter = new FolderGridAdapter(DroidPlayActivity.this, folder);
+        grid.setAdapter(null);
+        grid.setNumColumns(GridView.AUTO_FIT);
+        grid.setAdapter(adapter);
+        break;
+      }
+      case "list":
+      default: {
+        adapter = new FolderListAdapter(DroidPlayActivity.this, folder);
+        grid.setAdapter(null);
+        grid.setNumColumns(1);
+        grid.setAdapter(adapter);
+        break;
+      }
+    }
   }
 
   private void updateSubtitle() {
@@ -374,6 +402,10 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
         return;
 
       switch (msg.what) {
+        case Constant.Msg.Msg_Change_Folder_Layout : {
+          updateFolderLayout();
+          break;
+        }
         case Constant.Msg.Msg_AirPlay_Connect : {
           has_airplay_connection = true;
           MainApp.receiverName   = (String) msg.obj;

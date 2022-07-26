@@ -3,6 +3,18 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto">
 
+  <PreferenceCategory android:title="@string/pref_category_gui">
+    <ListPreference
+      android:key="@string/pref_key_folder_layout"
+      android:title="@string/pref_title_folder_layout"
+      android:summary="@string/pref_summary_folder_layout"
+      android:defaultValue="@string/pref_val_folder_layout"
+      android:icon="@drawable/ic_pref_dialpad_black_24dp"
+      android:dialogIcon="@drawable/ic_pref_dialpad_black_24dp"
+      android:entries="@array/pref_names_folder_layout"
+      android:entryValues="@array/pref_values_folder_layout" />
+  </PreferenceCategory>
+
   <PreferenceCategory android:title="@string/pref_category_streaming">
     <EditTextPreference
       android:key="@string/pref_key_server_port"

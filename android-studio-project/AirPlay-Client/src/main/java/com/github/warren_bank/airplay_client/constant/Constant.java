@@ -16,8 +16,9 @@ public class Constant {
         public static final int Msg_ScreenMirror_Stream_Stop     = 10;
         public static final int Msg_ScreenMirror_Detect_Rotation = 11;
 
-        public static final int Msg_Restart_Http_Server          = 12;
-        public static final int Msg_Exit_Service                 = 13;
+        public static final int Msg_Change_Folder_Layout         = 12;
+        public static final int Msg_Restart_Http_Server          = 13;
+        public static final int Msg_Exit_Service                 = 14;
     }
 
     public interface Target {

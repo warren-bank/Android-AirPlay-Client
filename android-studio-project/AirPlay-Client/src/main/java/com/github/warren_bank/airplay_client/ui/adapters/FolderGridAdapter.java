@@ -10,12 +10,10 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
 import java.io.File;
-import java.io.FilenameFilter;
 import java.lang.ref.WeakReference;
 
 /**
@@ -23,60 +21,15 @@ import java.lang.ref.WeakReference;
  *
  * @author Tuomas Tikka
  */
-public class ImageAdapter extends BaseAdapter {
-
-  // the application context
-  private Context context;
-
-  // the current base folder
-  private File folder;
-
-  // representation of images
-  private File[] files;
+public class FolderGridAdapter extends FolderBaseAdapter {
 
   /**
    * Initialize the adapter.
    *
    * @param context The application context
    */
-  public ImageAdapter(Context context, File folder) {
-      this.context = context;
-      this.folder = folder;
-      refresh();
-  }
-
-  /**
-   * Set the current folder (and refresh)
-   *
-   * @param folder The new folder
-   */
-  public void setFolder(File folder) {
-    this.folder = folder;
-    refresh();
-  }
-
-  /**
-   * Return the current folder.
-   *
-   * @return The current folder
-   */
-  public File getFolder() {
-    return (folder);
-  }
-
-  @Override
-  public int getCount() {
-    return (files.length);
-  }
-
-  @Override
-  public Object getItem(int position) {
-    return (files[position]);
-  }
-
-  @Override
-  public long getItemId(int position) {
-    return (position);
+  public FolderGridAdapter(Context context, File folder) {
+    super(context, folder);
   }
 
   @Override
@@ -99,17 +52,6 @@ public class ImageAdapter extends BaseAdapter {
   //
   // Private
   //
-
-  private void refresh() {
-    files = folder.listFiles(new FilenameFilter() {
-      @Override
-      public boolean accept(File dir, String filename) {
-        return (ExternalStorageUtils.isImageFile(filename) || ExternalStorageUtils.isVideoFile(filename) || ExternalStorageUtils.isAudioFile(filename));
-      }
-    });
-
-    notifyDataSetChanged();
-  }
 
   private class ImageAsyncTask extends AsyncTask<File, Void, Bitmap> {
     private WeakReference<ImageView> imageViewReference;
