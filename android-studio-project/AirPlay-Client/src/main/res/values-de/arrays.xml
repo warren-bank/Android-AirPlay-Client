@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string-array name="pref_names_folder_layout">
+    <item>Liste: Symbol + Dateiname [Standard]</item>
+    <item>Raster: Miniaturansicht</item>
+  </string-array>
+  <string-array name="pref_values_folder_layout">
+    <item>list</item>
+    <item>grid</item>
+  </string-array>
+
+  <string-array name="pref_names_image_transition">
+    <item>Keine [Standard]</item>
+    <item>Zufällig</item>
+    <item>Auflösen</item>
+    <item>Nach links schieben</item>
+    <item>Nach rechts schieben</item>
+  </string-array>
+  <string-array name="pref_values_image_transition">
+    <item>None</item>
+    <item>Random</item>
+    <item>Dissolve</item>
+    <item>SlideLeft</item>
+    <item>SlideRight</item>
+  </string-array>
+
+  <string-array name="pref_names_jpeg_quality">
+    <item>100</item>
+    <item>90</item>
+    <item>80 [Standard]</item>
+    <item>70</item>
+    <item>60</item>
+    <item>50</item>
+    <item>40</item>
+    <item>30</item>
+  </string-array>
+  <string-array name="pref_values_jpeg_quality">
+    <item>100</item>
+    <item>90</item>
+    <item>80</item>
+    <item>70</item>
+    <item>60</item>
+    <item>50</item>
+    <item>40</item>
+    <item>30</item>
+  </string-array>
+
+</resources>
