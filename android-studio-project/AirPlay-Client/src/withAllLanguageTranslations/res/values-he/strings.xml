@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: הרצת שירות</string>
+  <string name="notification_service_content_line1">DroidPlay רץ ב:</string>
+  <string name="notification_service_content_line3">לחצו כדי להפסיק את השירות.</string>
+  <string name="pref_category_gui">ממשק משתמש גרפי</string>
+  <string name="pref_category_streaming">הזרמת מדיה</string>
+  <string name="pref_category_images">תמונות</string>
+  <string name="pref_category_mirroring">עיצוב מסך</string>
+  <string name="pref_title_folder_layout">עיצוב תיקיה</string>
+  <string name="pref_title_server_port">יציאת שרת</string>
+  <string name="pref_title_image_transition">מעבר</string>
+  <string name="pref_title_resize_factor">שינוי גודל התמונה</string>
+  <string name="pref_title_jpeg_quality">JPEG איכות</string>
+  <string name="pref_summary_folder_layout">הגדרת עיצוב להצגת תוכן בתיקיה</string>
+  <string name="pref_summary_server_port">הגדרת יציאה עבור חיבורים נכנסים</string>
+  <string name="pref_summary_image_transition">הגדרת התנהגות עבור מעבר</string>
+  <string name="pref_summary_resize_factor">שינוי גודל התמונה לפני המשלוח ללקוח</string>
+  <string name="pref_summary_jpeg_quality">סט JPEG איכות</string>
+  <string name="pref_resize_dialog_text">בחירת גורם שינוי גודל התמונה.:</string>
+  <string name="settings_activity_port_range">מספר היציאה חייב להיות בין %1$d ו - %2$d</string>
+  <string name="settings_activity_value">\nערך:\u0020</string>
+</resources>

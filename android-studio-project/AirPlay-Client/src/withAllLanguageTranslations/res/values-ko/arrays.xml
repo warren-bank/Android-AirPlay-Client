@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="pref_names_folder_layout">
+    <item>목록: 아이콘+파일 이름 [기본값]</item>
+    <item>그리드: 썸네일</item>
+  </string-array>
+  <string-array name="pref_names_image_transition">
+    <item>없음 [기본값]</item>
+    <item>랜덤</item>
+    <item>해결하기</item>
+    <item>왼쪽 슬라이드</item>
+    <item>슬라이드 오른쪽</item>
+  </string-array>
+  <string-array name="pref_names_jpeg_quality">
+    <item>100</item>
+    <item>90</item>
+    <item>80 [기본값]</item>
+    <item>70</item>
+    <item>60</item>
+    <item>50</item>
+    <item>40</item>
+    <item>30</item>
+  </string-array>
+</resources>

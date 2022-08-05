@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: uruchamianie usługi</string>
+  <string name="notification_service_content_line1">DroidPlay uruchamianie w:</string>
+  <string name="notification_service_content_line3">Kliknij, aby zatrzymać usługę.</string>
+  <string name="pref_category_gui">Graficzny interfejs użytkownika</string>
+  <string name="pref_category_streaming">Nośnik strumieniowy</string>
+  <string name="pref_category_images">Obrazy</string>
+  <string name="pref_category_mirroring">Zapis lustrzany ekranu</string>
+  <string name="pref_title_folder_layout">Układ folderu</string>
+  <string name="pref_title_server_port">Port serwera</string>
+  <string name="pref_title_image_transition">Przejście</string>
+  <string name="pref_title_resize_factor">Zmień wielkość obrazu</string>
+  <string name="pref_title_jpeg_quality">JPEG jakość</string>
+  <string name="pref_summary_folder_layout">Ustaw układ wyświetlania treści w folderze</string>
+  <string name="pref_summary_server_port">Ustaw port dla połączeń przychodzących</string>
+  <string name="pref_summary_image_transition">Ustaw zachowanie dla przejścia</string>
+  <string name="pref_summary_resize_factor">Zmień rozmiar obrazu przed wysłaniem do klienta</string>
+  <string name="pref_summary_jpeg_quality">Ustaw JPEG jakość</string>
+  <string name="pref_resize_dialog_text">Wybierz współczynnik zmiany wielkości obrazu:</string>
+  <string name="settings_activity_port_range">Numer portu musi być między %1$d oraz %2$d</string>
+  <string name="settings_activity_value">\nWartość:\u0020</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: hizmet çalışıyor</string>
+  <string name="notification_service_content_line1">DroidPlay çalıştırma:</string>
+  <string name="notification_service_content_line3">Hizmeti durdurmak için tıklatın.</string>
+  <string name="pref_category_gui">Grafik Kullanıcı Arabirimi</string>
+  <string name="pref_category_streaming">Akış Ortamı</string>
+  <string name="pref_category_images">Resimler</string>
+  <string name="pref_category_mirroring">Ekran İkizleme</string>
+  <string name="pref_title_folder_layout">Klasör yerleşim düzeni</string>
+  <string name="pref_title_server_port">Sunucu kapısı</string>
+  <string name="pref_title_image_transition">Geçiş</string>
+  <string name="pref_title_resize_factor">Resmi boyutunu değiştir</string>
+  <string name="pref_title_jpeg_quality">JPEG kalite</string>
+  <string name="pref_summary_folder_layout">İçeriğin klasörde görüntülenmesi için yerleşim düzenini ayarla</string>
+  <string name="pref_summary_server_port">Gelen bağlantılar için kapı ayarla</string>
+  <string name="pref_summary_image_transition">Geçiş için davranışı ayarla</string>
+  <string name="pref_summary_resize_factor">İstemciye göndermeden önce resmi yeniden boyutlandır</string>
+  <string name="pref_summary_jpeg_quality">Ayarla JPEG kalite</string>
+  <string name="pref_resize_dialog_text">Görüntü yeniden boyutlandırma katsayısı seçin:</string>
+  <string name="settings_activity_port_range">Kapı numarası şu aralıkta olmalıdır: %1$d ve %2$d</string>
+  <string name="settings_activity_value">\nDeğer:\u0020</string>
+</resources>

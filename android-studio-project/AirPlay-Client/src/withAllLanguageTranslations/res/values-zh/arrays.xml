@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="pref_names_folder_layout">
+    <item>列表: 图标 + 文件名 [缺省值]</item>
+    <item>网格: 缩略图</item>
+  </string-array>
+  <string-array name="pref_names_image_transition">
+    <item>没有 [缺省值]</item>
+    <item>随机</item>
+    <item>解散</item>
+    <item>向左滑动</item>
+    <item>右滑动</item>
+  </string-array>
+  <string-array name="pref_names_jpeg_quality">
+    <item>100</item>
+    <item>90</item>
+    <item>80 [缺省值]</item>
+    <item>70</item>
+    <item>60</item>
+    <item>50</item>
+    <item>40</item>
+    <item>30</item>
+  </string-array>
+</resources>

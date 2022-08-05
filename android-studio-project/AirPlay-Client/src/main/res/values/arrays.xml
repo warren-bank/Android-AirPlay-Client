@@ -5,7 +5,7 @@
     <item>List: Icon + File Name [Default]</item>
     <item>Grid: Thumbnail</item>
   </string-array>
-  <string-array name="pref_values_folder_layout">
+  <string-array translatable="false" name="pref_values_folder_layout">
     <item>list</item>
     <item>grid</item>
   </string-array>
@@ -17,7 +17,7 @@
     <item>Slide left</item>
     <item>Slide right</item>
   </string-array>
-  <string-array name="pref_values_image_transition">
+  <string-array translatable="false" name="pref_values_image_transition">
     <item>None</item>
     <item>Random</item>
     <item>Dissolve</item>
@@ -35,7 +35,7 @@
     <item>40</item>
     <item>30</item>
   </string-array>
-  <string-array name="pref_values_jpeg_quality">
+  <string-array translatable="false" name="pref_values_jpeg_quality">
     <item>100</item>
     <item>90</item>
     <item>80</item>

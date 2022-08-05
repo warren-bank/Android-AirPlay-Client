@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="pref_names_folder_layout">
+    <item>Листа: Име иконе + датотека [Подразумевано]</item>
+    <item>Мрежа: заноктица</item>
+  </string-array>
+  <string-array name="pref_names_image_transition">
+    <item>Ниједан [Подразумевано]</item>
+    <item>Насумично</item>
+    <item>Раствори</item>
+    <item>Слајд лево</item>
+    <item>Клизни десно</item>
+  </string-array>
+  <string-array name="pref_names_jpeg_quality">
+    <item>100</item>
+    <item>90</item>
+    <item>80 [Подразумевано]</item>
+    <item>70</item>
+    <item>60</item>
+    <item>50</item>
+    <item>40</item>
+    <item>30</item>
+  </string-array>
+</resources>

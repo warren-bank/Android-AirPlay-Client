@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: tjenestekjøring</string>
+  <string name="notification_service_content_line1">DroidPlay kjøre på:</string>
+  <string name="notification_service_content_line3">Klikk for å stoppe tjeneste.</string>
+  <string name="pref_category_gui">Grafisk brukergrensesnitt</string>
+  <string name="pref_category_streaming">Streaming Media</string>
+  <string name="pref_category_images">Bilder</string>
+  <string name="pref_category_mirroring">Skjermspeiling</string>
+  <string name="pref_title_folder_layout">Layout for mappe</string>
+  <string name="pref_title_server_port">Serverport</string>
+  <string name="pref_title_image_transition">Overgang</string>
+  <string name="pref_title_resize_factor">Endre størrelse på bilde</string>
+  <string name="pref_title_jpeg_quality">JPEG kvalitet</string>
+  <string name="pref_summary_folder_layout">Sett layout for visning av innhold i mappe</string>
+  <string name="pref_summary_server_port">Sett port for innkommende tilkoblinger</string>
+  <string name="pref_summary_image_transition">Sett virkemåte for overgang</string>
+  <string name="pref_summary_resize_factor">Endre størrelse på bilde før du sender til klient</string>
+  <string name="pref_summary_jpeg_quality">Sett JPEG kvalitet</string>
+  <string name="pref_resize_dialog_text">Velg bildestørrelse for bilde:</string>
+  <string name="settings_activity_port_range">Portnummer må være mellom %1$d og %2$d</string>
+  <string name="settings_activity_value">\nVerdi:\u0020</string>
+</resources>

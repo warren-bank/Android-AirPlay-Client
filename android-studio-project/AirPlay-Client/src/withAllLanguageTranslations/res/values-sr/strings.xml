@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: услуга ради</string>
+  <string name="notification_service_content_line1">DroidPlay трèање на:</string>
+  <string name="notification_service_content_line3">Кликните да бисте зауставили услугу.</string>
+  <string name="pref_category_gui">Графички кориснички интерфејс</string>
+  <string name="pref_category_streaming">Стриминг медија</string>
+  <string name="pref_category_images">Слике</string>
+  <string name="pref_category_mirroring">Пресликавање екрана</string>
+  <string name="pref_title_folder_layout">Распоред фасцикле</string>
+  <string name="pref_title_server_port">Порт сервера</string>
+  <string name="pref_title_image_transition">Транзиција</string>
+  <string name="pref_title_resize_factor">Промена величине слике</string>
+  <string name="pref_title_jpeg_quality">JPEG квалитет</string>
+  <string name="pref_summary_folder_layout">Подесите распоред за приказ садржаја у фасцикли</string>
+  <string name="pref_summary_server_port">Подесите порт за долазне везе</string>
+  <string name="pref_summary_image_transition">Поставите понашање за транзицију</string>
+  <string name="pref_summary_resize_factor">Промените величину слике пре слања у клијента</string>
+  <string name="pref_summary_jpeg_quality">Подеси JPEG квалитет</string>
+  <string name="pref_resize_dialog_text">Изаберите фактор величине величине величине:</string>
+  <string name="settings_activity_port_range">Број порта мора бити између %1$d и %2$d</string>
+  <string name="settings_activity_value">\nВредност:\u0020</string>
+</resources>

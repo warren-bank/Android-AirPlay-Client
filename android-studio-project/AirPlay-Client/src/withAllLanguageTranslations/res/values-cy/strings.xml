@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: rhedeg gwasanaeth</string>
+  <string name="notification_service_content_line1">DroidPlay rhedeg ar:</string>
+  <string name="notification_service_content_line3">Cliciwch i atal y gwasanaeth.</string>
+  <string name="pref_category_gui">Rhyngwyneb Defnyddiwr graffigol</string>
+  <string name="pref_category_streaming">Ffrydio Cyfrwng</string>
+  <string name="pref_category_images">Delweddau</string>
+  <string name="pref_category_mirroring">Name</string>
+  <string name="pref_title_folder_layout">Cynllun plygell</string>
+  <string name="pref_title_server_port">Porth gweinydd</string>
+  <string name="pref_title_image_transition">Trawsnewid</string>
+  <string name="pref_title_resize_factor">Newid maint delwedd</string>
+  <string name="pref_title_jpeg_quality">JPEG ansawdd</string>
+  <string name="pref_summary_folder_layout">Gosod cynllun ar gyfer dangos cynnwys yn y blygell</string>
+  <string name="pref_summary_server_port">Gosod porth ar gyfer cysylltiadau newydd</string>
+  <string name="pref_summary_image_transition">Gosod ymddygiad ar gyfer trawsnewid</string>
+  <string name="pref_summary_resize_factor">Newid maint y ddelwedd cyn anfon at y cleient</string>
+  <string name="pref_summary_jpeg_quality">Gosod JPEG ansawdd</string>
+  <string name="pref_resize_dialog_text">Dewis ffactor newid maint y ddelwedd:</string>
+  <string name="settings_activity_port_range">Rhaid i rif y porth fod rhwng %1$d a %2$d</string>
+  <string name="settings_activity_value">\nGwerth:\u0020</string>
+</resources>

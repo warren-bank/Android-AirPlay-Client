@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: 서비스 실행</string>
+  <string name="notification_service_content_line1">DroidPlay 실행 중인:</string>
+  <string name="notification_service_content_line3">서비스를 중지하려면 누르십시오..</string>
+  <string name="pref_category_gui">그래픽 사용자 인터페이스</string>
+  <string name="pref_category_streaming">스트리밍 미디어</string>
+  <string name="pref_category_images">이미지</string>
+  <string name="pref_category_mirroring">화면 미러링</string>
+  <string name="pref_title_folder_layout">폴더 레이아웃</string>
+  <string name="pref_title_server_port">서버 포트</string>
+  <string name="pref_title_image_transition">상태 전이</string>
+  <string name="pref_title_resize_factor">이미지 크기 조정하기</string>
+  <string name="pref_title_jpeg_quality">JPEG 질의</string>
+  <string name="pref_summary_folder_layout">폴더의 컨텐츠 표시를 위한 레이아웃 설정</string>
+  <string name="pref_summary_server_port">수신 연결에 대한 포트 설정</string>
+  <string name="pref_summary_image_transition">상태 전이에 대한 동작 설정</string>
+  <string name="pref_summary_resize_factor">클라이언트로 보내기 전에 이미지 크기 조정</string>
+  <string name="pref_summary_jpeg_quality">설정하기 JPEG 질의</string>
+  <string name="pref_resize_dialog_text">이미지 크기 조정 요소 선택:</string>
+  <string name="settings_activity_port_range">포트 번호는 다음과 같아야 합니다. %1$d 및 %2$d</string>
+  <string name="settings_activity_value">\n가치:\u0020</string>
+</resources>

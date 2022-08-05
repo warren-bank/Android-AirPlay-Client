@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="pref_names_folder_layout">
+    <item>فہرست: آئیکون + فائل نام [ڈیفالٹ]</item>
+    <item>گرڈ: تھمبکیل</item>
+  </string-array>
+  <string-array name="pref_names_image_transition">
+    <item>کوئی بھی [ڈیفالٹ]</item>
+    <item>رینڈم</item>
+    <item>تحلیل</item>
+    <item>Slide چھوڑ دیا</item>
+    <item>صحی ہے</item>
+  </string-array>
+  <string-array name="pref_names_jpeg_quality">
+    <item>100</item>
+    <item>90</item>
+    <item>80 [ڈیفالٹ]</item>
+    <item>70</item>
+    <item>60</item>
+    <item>50</item>
+    <item>40</item>
+    <item>30</item>
+  </string-array>
+</resources>

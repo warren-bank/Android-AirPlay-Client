@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: rularea serviciului</string>
+  <string name="notification_service_content_line1">DroidPlay care rulează la:</string>
+  <string name="notification_service_content_line3">Click pentru a opri serviciul.</string>
+  <string name="pref_category_gui">Interfață grafică cu utilizatorul</string>
+  <string name="pref_category_streaming">Media de streaming</string>
+  <string name="pref_category_images">Imagini</string>
+  <string name="pref_category_mirroring">Oglindire ecran</string>
+  <string name="pref_title_folder_layout">Dispunerea dosarului</string>
+  <string name="pref_title_server_port">Port server</string>
+  <string name="pref_title_image_transition">Tranziție</string>
+  <string name="pref_title_resize_factor">Redimensionează imaginea</string>
+  <string name="pref_title_jpeg_quality">JPEG calitate</string>
+  <string name="pref_summary_folder_layout">Setați aspectul pentru afișarea conținutului în dosar</string>
+  <string name="pref_summary_server_port">Setați portul pentru conexiunile de intrare</string>
+  <string name="pref_summary_image_transition">Setați comportamentul pentru tranziție</string>
+  <string name="pref_summary_resize_factor">Redimensiona imaginea înainte de a trimite la client</string>
+  <string name="pref_summary_jpeg_quality">Set JPEG calitate</string>
+  <string name="pref_resize_dialog_text">Selectați factorul de redimensionare a imaginii:</string>
+  <string name="settings_activity_port_range">Numărul portului trebuie să fie între %1$d și %2$d</string>
+  <string name="settings_activity_value">\nValoare:\u0020</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: 服務執行中</string>
+  <string name="notification_service_content_line1">DroidPlay 在執行:</string>
+  <string name="notification_service_content_line3">按一下以停止服務.</string>
+  <string name="pref_category_gui">圖形使用者介面</string>
+  <string name="pref_category_streaming">串流媒體</string>
+  <string name="pref_category_images">影像</string>
+  <string name="pref_category_mirroring">螢幕鏡映</string>
+  <string name="pref_title_folder_layout">資料夾佈置</string>
+  <string name="pref_title_server_port">伺服器埠</string>
+  <string name="pref_title_image_transition">過渡</string>
+  <string name="pref_title_resize_factor">調整影像大小</string>
+  <string name="pref_title_jpeg_quality">JPEG 質</string>
+  <string name="pref_summary_folder_layout">設定在資料夾中顯示內容的佈置</string>
+  <string name="pref_summary_server_port">設定送入連線的埠</string>
+  <string name="pref_summary_image_transition">設定轉移的行為</string>
+  <string name="pref_summary_resize_factor">在傳送至用戶端之前調整影像大小</string>
+  <string name="pref_summary_jpeg_quality">設定 JPEG 質</string>
+  <string name="pref_resize_dialog_text">選取影像調整大小因數:</string>
+  <string name="settings_activity_port_range">埠號必須介於 %1$d 以及 %2$d</string>
+  <string name="settings_activity_value">\n價值:\u0020</string>
+</resources>

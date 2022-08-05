@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: служба запуску</string>
+  <string name="notification_service_content_line1">DroidPlay запущено на:</string>
+  <string name="notification_service_content_line3">Клацніть, щоб зупинити службу.</string>
+  <string name="pref_category_gui">Графічний інтерфейс користувача</string>
+  <string name="pref_category_streaming">Мультимедійні дані</string>
+  <string name="pref_category_images">Зображення</string>
+  <string name="pref_category_mirroring">Віддзеркалення екрана</string>
+  <string name="pref_title_folder_layout">Компонування теки</string>
+  <string name="pref_title_server_port">Порт сервера</string>
+  <string name="pref_title_image_transition">Перехід</string>
+  <string name="pref_title_resize_factor">Змінити розмір зображення</string>
+  <string name="pref_title_jpeg_quality">JPEG Якість</string>
+  <string name="pref_summary_folder_layout">Встановити компонування для показу вмісту у теці</string>
+  <string name="pref_summary_server_port">Встановити порт для вхідних з \' єднань</string>
+  <string name="pref_summary_image_transition">Встановити поведінку для переходу</string>
+  <string name="pref_summary_resize_factor">Змінити розмір зображення перед надсиланням до клієнта</string>
+  <string name="pref_summary_jpeg_quality">Встановіть JPEG Якість</string>
+  <string name="pref_resize_dialog_text">Виберіть коефіцієнт зміни розміру зображення:</string>
+  <string name="settings_activity_port_range">Номер порту має бути між %1$d і %2$d</string>
+  <string name="settings_activity_value">\nЗначення:\u0020</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: chạy dịch vụ</string>
+  <string name="notification_service_content_line1">DroidPlay đang chạy:</string>
+  <string name="notification_service_content_line3">Nhấp để dừng dịch vụ.</string>
+  <string name="pref_category_gui">Giao diện Đồ hoạ</string>
+  <string name="pref_category_streaming">Truyền thông tin</string>
+  <string name="pref_category_images">Ảnh</string>
+  <string name="pref_category_mirroring">Phản chiếu màn hình</string>
+  <string name="pref_title_folder_layout">Bô ́ cục</string>
+  <string name="pref_title_server_port">Cổng máy chủ</string>
+  <string name="pref_title_image_transition">Chuyển tiếp</string>
+  <string name="pref_title_resize_factor">Thay đổi cỡ ảnh</string>
+  <string name="pref_title_jpeg_quality">JPEG chất lượng</string>
+  <string name="pref_summary_folder_layout">Đặt bô ́ cục để hiển thị nội dung trong thư mục</string>
+  <string name="pref_summary_server_port">Ðặt cổng cho kết nối đến</string>
+  <string name="pref_summary_image_transition">Đặt hành vi cho chuyển tiếp</string>
+  <string name="pref_summary_resize_factor">Thay đổi kích cỡ ảnh trước khi gửi cho khách hàng</string>
+  <string name="pref_summary_jpeg_quality">Ðặt JPEG chất lượng</string>
+  <string name="pref_resize_dialog_text">Chọn nhân tố kích cỡ ảnh:</string>
+  <string name="settings_activity_port_range">Số cổng phải giữa %1$d và %2$d</string>
+  <string name="settings_activity_value">\nGiá trị:\u0020</string>
+</resources>

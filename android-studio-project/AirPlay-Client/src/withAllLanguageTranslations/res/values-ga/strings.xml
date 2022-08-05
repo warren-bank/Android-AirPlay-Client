@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: seirbhís á rith</string>
+  <string name="notification_service_content_line1">DroidPlay á rith ag:</string>
+  <string name="notification_service_content_line3">Cliceáil chun seirbhís a stopadh.</string>
+  <string name="pref_category_gui">Comhéadan Úsáideora Grafach</string>
+  <string name="pref_category_streaming">Meáin Shruthaithe</string>
+  <string name="pref_category_images">Íomhánna</string>
+  <string name="pref_category_mirroring">Scátháil an Scáileáin</string>
+  <string name="pref_title_folder_layout">Leagan amach an fhillteáin</string>
+  <string name="pref_title_server_port">Port an fhreastalaí</string>
+  <string name="pref_title_image_transition">Trasdul</string>
+  <string name="pref_title_resize_factor">Athmhéadaigh an íomhá</string>
+  <string name="pref_title_jpeg_quality">JPEG cáilíocht</string>
+  <string name="pref_summary_folder_layout">Socraigh leagan amach le haghaidh taispeáint ábhar san fhillteán</string>
+  <string name="pref_summary_server_port">Socraigh port le haghaidh ceangail gan teacht</string>
+  <string name="pref_summary_image_transition">Socraigh iompar le haghaidh trasathraithe</string>
+  <string name="pref_summary_resize_factor">Athmhéadaigh íomhá sula seolfar an cliant</string>
+  <string name="pref_summary_jpeg_quality">Socraigh JPEG cáilíocht</string>
+  <string name="pref_resize_dialog_text">Roghnaigh fachtóir athmhéadaithe íomhá:</string>
+  <string name="settings_activity_port_range">Ní mór uimhir an port a bheith idir %1$d agus %2$d</string>
+  <string name="settings_activity_value">\nLuach:\u0020</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: service som körs</string>
+  <string name="notification_service_content_line1">DroidPlay körs på:</string>
+  <string name="notification_service_content_line3">Klicka för att stoppa tjänsten.</string>
+  <string name="pref_category_gui">Grafiskt användargränssnitt</string>
+  <string name="pref_category_streaming">Strömmande media</string>
+  <string name="pref_category_images">Bilder</string>
+  <string name="pref_category_mirroring">Skärmspegling</string>
+  <string name="pref_title_folder_layout">Mapplayout</string>
+  <string name="pref_title_server_port">Serverport</string>
+  <string name="pref_title_image_transition">Övergång</string>
+  <string name="pref_title_resize_factor">Ändra storlek på bild</string>
+  <string name="pref_title_jpeg_quality">JPEG Kvalitet</string>
+  <string name="pref_summary_folder_layout">Ange layout för visning av innehåll i mapp</string>
+  <string name="pref_summary_server_port">Ange port för inkommande anslutningar</string>
+  <string name="pref_summary_image_transition">Ställ in beteenden för övergång</string>
+  <string name="pref_summary_resize_factor">Ändra storlek på bild innan du skickar till klienten</string>
+  <string name="pref_summary_jpeg_quality">Uppsättning JPEG Kvalitet</string>
+  <string name="pref_resize_dialog_text">Välj bildens storleksändringsfaktor:</string>
+  <string name="settings_activity_port_range">Portnumret måste vara mellan %1$d och %2$d</string>
+  <string name="settings_activity_value">\nVärde:\u0020</string>
+</resources>

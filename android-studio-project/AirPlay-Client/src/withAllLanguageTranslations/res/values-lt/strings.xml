@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: eksploatuos</string>
+  <string name="notification_service_content_line1">DroidPlay Veikia:</string>
+  <string name="notification_service_content_line3">Spragtelkite norėdami sustabdyti paslaugą.</string>
+  <string name="pref_category_gui">Grafinė vartotojo sąsaja</string>
+  <string name="pref_category_streaming">Media Media</string>
+  <string name="pref_category_images">Atvaizdai</string>
+  <string name="pref_category_mirroring">Ekrano mirroravimas</string>
+  <string name="pref_title_folder_layout">Aplanko maketas</string>
+  <string name="pref_title_server_port">Serverio prievadas</string>
+  <string name="pref_title_image_transition">Perėjimas</string>
+  <string name="pref_title_resize_factor">Pergabaritinis atvaizdas</string>
+  <string name="pref_title_jpeg_quality">JPEG Kokybė</string>
+  <string name="pref_summary_folder_layout">Nustatyti turinio rodytuvo išdėstymą aplanke</string>
+  <string name="pref_summary_server_port">Nustatykite prievadų prievadą</string>
+  <string name="pref_summary_image_transition">Nustatyti elgesio su perėjimu</string>
+  <string name="pref_summary_resize_factor">Naujo dydžio vaizdas prieš siunčiant į klientą</string>
+  <string name="pref_summary_jpeg_quality">Nustatyti JPEG Kokybė</string>
+  <string name="pref_resize_dialog_text">Pasirinkite paveikslėlio redydžio koeficientą:</string>
+  <string name="settings_activity_port_range">Uosto numeris turi būti tarp %1$d ir %2$d</string>
+  <string name="settings_activity_value">\nVertė:\u0020</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: サービス実行中</string>
+  <string name="notification_service_content_line1">DroidPlay 実行:</string>
+  <string name="notification_service_content_line3">クリックしてサービスを停止.</string>
+  <string name="pref_category_gui">グラフィカル・ユーザー・インターフェース</string>
+  <string name="pref_category_streaming">ストリーミング・メディア</string>
+  <string name="pref_category_images">像像</string>
+  <string name="pref_category_mirroring">画面ミラーリング</string>
+  <string name="pref_title_folder_layout">フォルダーのレイアウト</string>
+  <string name="pref_title_server_port">サーバー・ポート</string>
+  <string name="pref_title_image_transition">変遷</string>
+  <string name="pref_title_resize_factor">イメージのサイズ変更</string>
+  <string name="pref_title_jpeg_quality">JPEG 品質</string>
+  <string name="pref_summary_folder_layout">フォルダー内のコンテンツを表示するためのレイアウトの設定</string>
+  <string name="pref_summary_server_port">着信接続用のポートの設定</string>
+  <string name="pref_summary_image_transition">遷移の振る舞いの設定</string>
+  <string name="pref_summary_resize_factor">クライアントに送信する前にイメージをサイズ変更</string>
+  <string name="pref_summary_jpeg_quality">セット JPEG 品質</string>
+  <string name="pref_resize_dialog_text">イメージ・サイズ・サイズの選択:</string>
+  <string name="settings_activity_port_range">ポート番号は、 %1$d 及び %2$d</string>
+  <string name="settings_activity_value">\n価値:\u0020</string>
+</resources>

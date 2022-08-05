@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: Teenus töötab</string>
+  <string name="notification_service_content_line1">DroidPlay tööaeg:</string>
+  <string name="notification_service_content_line3">Klõpsa teenuse peatamiseks.</string>
+  <string name="pref_category_gui">Graafiline kasutajaliides</string>
+  <string name="pref_category_streaming">Stream meedia</string>
+  <string name="pref_category_images">Pildid</string>
+  <string name="pref_category_mirroring">Ekraani peegeldamine</string>
+  <string name="pref_title_folder_layout">Kataloogide paigutus</string>
+  <string name="pref_title_server_port">Serveri port</string>
+  <string name="pref_title_image_transition">Üleminek</string>
+  <string name="pref_title_resize_factor">Pildi suuruse muutmise võimalus</string>
+  <string name="pref_title_jpeg_quality">JPEG kvaliteet</string>
+  <string name="pref_summary_folder_layout">Kataloogi sisu näitamine kaustas</string>
+  <string name="pref_summary_server_port">Sisenevate ühenduste määramine</string>
+  <string name="pref_summary_image_transition">Käitumise määramine üleminekuks</string>
+  <string name="pref_summary_resize_factor">Pildi suuruse muutmise pilt enne kliendi saatmist</string>
+  <string name="pref_summary_jpeg_quality">Määra JPEG kvaliteet</string>
+  <string name="pref_resize_dialog_text">Vali pildi suuruse muutmise tegur:</string>
+  <string name="settings_activity_port_range">Pordi number peab olema %1$d ning %2$d</string>
+  <string name="settings_activity_value">\nVäärtus:\u0020</string>
+</resources>

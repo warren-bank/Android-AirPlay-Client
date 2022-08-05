@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: เซอร์วิสที่กำลังรัน</string>
+  <string name="notification_service_content_line1">DroidPlay การรันที่:</string>
+  <string name="notification_service_content_line3">คลิกเพื่อหยุดบริการ.</string>
+  <string name="pref_category_gui">อินเทอร์เฟซผู้ใช้แบบกราฟิก</string>
+  <string name="pref_category_streaming">สื่อการสตรีม</string>
+  <string name="pref_category_images">รูปภาพ</string>
+  <string name="pref_category_mirroring">การแสดงหน้าจอ</string>
+  <string name="pref_title_folder_layout">โครงร่างโฟลเดอร์</string>
+  <string name="pref_title_server_port">พอร์ตของเซิร์ฟเวอร์</string>
+  <string name="pref_title_image_transition">การเปลี่ยน</string>
+  <string name="pref_title_resize_factor">ปรับขนาดอิมเมจ</string>
+  <string name="pref_title_jpeg_quality">JPEG คุณภาพ</string>
+  <string name="pref_summary_folder_layout">ตั้งค่าโครงร่างสำหรับการแสดงเนื้อหาในโฟลเดอร์</string>
+  <string name="pref_summary_server_port">ตั้งค่าพอร์ตสำหรับการเชื่อมต่อขาเข้า</string>
+  <string name="pref_summary_image_transition">ตั้งค่าลักษณะการทำงานสำหรับการส่งผ่าน</string>
+  <string name="pref_summary_resize_factor">ปรับขนาดอิมเมจก่อนส่งไปยังไคลเอ็นต์</string>
+  <string name="pref_summary_jpeg_quality">ตั้ง JPEG คุณภาพ</string>
+  <string name="pref_resize_dialog_text">เลือกแฟกเตอร์ปรับขนาดรูปภาพ:</string>
+  <string name="settings_activity_port_range">หมายเลขพอร์ตต้องอยู่ระหว่าง %1$d และ %2$d</string>
+  <string name="settings_activity_value">\nค่า:\u0020</string>
+</resources>

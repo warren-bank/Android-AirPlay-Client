@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: serviço em execução</string>
+  <string name="notification_service_content_line1">DroidPlay correndo em:</string>
+  <string name="notification_service_content_line3">Clique para parar o serviço.</string>
+  <string name="pref_category_gui">Interface Gráfica do Usuário</string>
+  <string name="pref_category_streaming">Mídia de streaming</string>
+  <string name="pref_category_images">Imagens</string>
+  <string name="pref_category_mirroring">Espelhamento De Tela</string>
+  <string name="pref_title_folder_layout">Layout da pasta</string>
+  <string name="pref_title_server_port">Porta do servidor</string>
+  <string name="pref_title_image_transition">Transição</string>
+  <string name="pref_title_resize_factor">Redimensionar imagem</string>
+  <string name="pref_title_jpeg_quality">JPEG qualidade</string>
+  <string name="pref_summary_folder_layout">Definir layout para exibição de conteúdo na pasta</string>
+  <string name="pref_summary_server_port">Configurar porta para conexões de entrada</string>
+  <string name="pref_summary_image_transition">Configurar comportamento para transição</string>
+  <string name="pref_summary_resize_factor">Redimensionar imagem antes de enviar para o cliente</string>
+  <string name="pref_summary_jpeg_quality">Conjunto JPEG qualidade</string>
+  <string name="pref_resize_dialog_text">Selecionar fator de redimensionamento:</string>
+  <string name="settings_activity_port_range">Número da porta deve estar entre %1$d e %2$d</string>
+  <string name="settings_activity_value">\nValor:\u0020</string>
+</resources>

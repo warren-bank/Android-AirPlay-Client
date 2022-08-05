@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: جاري تشغيل الخدمة</string>
+  <string name="notification_service_content_line1">DroidPlay تشغيل في:</string>
+  <string name="notification_service_content_line3">اضغط لايقاف الخدمة.</string>
+  <string name="pref_category_gui">واجهة تعامل المستخدم البيانية</string>
+  <string name="pref_category_streaming">تسلسل وسط التخزين</string>
+  <string name="pref_category_images">صور</string>
+  <string name="pref_category_mirroring">نظام Mirroring</string>
+  <string name="pref_title_folder_layout">الشكل العام للحافظة</string>
+  <string name="pref_title_server_port">منفذ وحدة الخدمة</string>
+  <string name="pref_title_image_transition">الانتقال</string>
+  <string name="pref_title_resize_factor">تغيير حجم الصورة</string>
+  <string name="pref_title_jpeg_quality">JPEG جودة</string>
+  <string name="pref_summary_folder_layout">تحديد الشكل العام لعرض المحتويات في الحافظة</string>
+  <string name="pref_summary_server_port">تحديد منفذ للوصلات الواردة</string>
+  <string name="pref_summary_image_transition">تحديد التصرف للانتقال</string>
+  <string name="pref_summary_resize_factor">تغيير حجم الصورة قبل الارسال الى الوحدة التابعة</string>
+  <string name="pref_summary_jpeg_quality">تحديد JPEG جودة</string>
+  <string name="pref_resize_dialog_text">قم باختيار معامل تغيير حجم الصورة:</string>
+  <string name="settings_activity_port_range">رقم المنفذ يجب أن يكون بين %1$d و /- %2$d</string>
+  <string name="settings_activity_value">\nالقيمة:\u0020</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: služba spustená</string>
+  <string name="notification_service_content_line1">DroidPlay spustenie na:</string>
+  <string name="notification_service_content_line3">Kliknutím zastavte službu.</string>
+  <string name="pref_category_gui">Grafické užívateľské rozhranie</string>
+  <string name="pref_category_streaming">Streamovanie médií</string>
+  <string name="pref_category_images">Obrázky</string>
+  <string name="pref_category_mirroring">Zrkadlenie obrazovky</string>
+  <string name="pref_title_folder_layout">Rozloženie zložky</string>
+  <string name="pref_title_server_port">Port servera</string>
+  <string name="pref_title_image_transition">Prechod</string>
+  <string name="pref_title_resize_factor">Zmeniť veľkosť obrázka</string>
+  <string name="pref_title_jpeg_quality">JPEG kvalita</string>
+  <string name="pref_summary_folder_layout">Nastaviť rozloženie pre zobrazenie obsahu v zložke</string>
+  <string name="pref_summary_server_port">Nastaviť port pre prichádzajúce pripojenia</string>
+  <string name="pref_summary_image_transition">Nastaviť správanie pri prechode</string>
+  <string name="pref_summary_resize_factor">Zmeniť veľkosť obrázka pred odoslaním klientovi</string>
+  <string name="pref_summary_jpeg_quality">Množina JPEG kvalita</string>
+  <string name="pref_resize_dialog_text">Vybrať faktor zmeny veľkosti obrázka:</string>
+  <string name="settings_activity_port_range">Číslo portu musí byť medzi %1$d a %2$d</string>
+  <string name="settings_activity_value">\nHodnota:\u0020</string>
+</resources>

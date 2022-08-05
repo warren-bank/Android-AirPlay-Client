@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: சேவை இயங்குகிறது</string>
+  <string name="notification_service_content_line1">DroidPlay இயங்குகிறது:</string>
+  <string name="notification_service_content_line3">சேவை நிறுத்த க்ளிக் செய்யவும்.</string>
+  <string name="pref_category_gui">வரைகலை பயனர் இடைமுகம்</string>
+  <string name="pref_category_streaming">தெரியும் ஊடகம்</string>
+  <string name="pref_category_images">பிம்பங்கள்</string>
+  <string name="pref_category_mirroring">திரை வரைபடம்</string>
+  <string name="pref_title_folder_layout">அடைவு உருவரை</string>
+  <string name="pref_title_server_port">சேவையக துறை</string>
+  <string name="pref_title_image_transition">மாற்றம்</string>
+  <string name="pref_title_resize_factor">பிம்பத்தை மறுஅளவாக்கு</string>
+  <string name="pref_title_jpeg_quality">JPEG தரம்</string>
+  <string name="pref_summary_folder_layout">அடைவில் உள்ளடக்கத்தை காட்டு</string>
+  <string name="pref_summary_server_port">வரும் இணைப்புகளுக்கான துறையை அமை</string>
+  <string name="pref_summary_image_transition">செயற்பாட்டுக்கான நடத்தை அமை</string>
+  <string name="pref_summary_resize_factor">கிளைக்கு அனுப்புவதற்கு முன் பிம்பத்தை மறுஅளவாக்கு</string>
+  <string name="pref_summary_jpeg_quality">அமை JPEG தரம்</string>
+  <string name="pref_resize_dialog_text">பிம்ப மறுஅளவு காரணி தேர்ந்தெடு:</string>
+  <string name="settings_activity_port_range">போர்ட் எண் இடையே இருக்க வேண்டும் %1$d மற்றும் %2$d</string>
+  <string name="settings_activity_value">\nமதிப்பு:\u0020</string>
+</resources>

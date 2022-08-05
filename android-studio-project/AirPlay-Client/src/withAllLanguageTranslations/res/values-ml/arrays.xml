@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="pref_names_folder_layout">
+    <item>പട്ടിക: ചിഹ്നം + ഫയലിന്റെ പേരു് [സഹജമായ]</item>
+    <item>à \', à\', à \', à\', à \', à\',</item>
+  </string-array>
+  <string-array name="pref_names_image_transition">
+    <item>ഒന്നുമില്ല [സഹജമായ]</item>
+    <item>ഏതെങ്കിലുംName</item>
+    <item>പരിഹരിക്കുക</item>
+    <item>സ്ലൈഡ് ഇടത്</item>
+    <item>വലത്തേ പതുക്കുക</item>
+  </string-array>
+  <string-array name="pref_names_jpeg_quality">
+    <item>100</item>
+    <item>90</item>
+    <item>80 [സഹജമായ]</item>
+    <item>70</item>
+    <item>60</item>
+    <item>50</item>
+    <item>40</item>
+    <item>30</item>
+  </string-array>
+</resources>

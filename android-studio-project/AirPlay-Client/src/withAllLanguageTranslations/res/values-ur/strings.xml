@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: سروس چلانے</string>
+  <string name="notification_service_content_line1">DroidPlay چل رہا ہے:</string>
+  <string name="notification_service_content_line3">سٹاپ سروس پر کلک کریں.</string>
+  <string name="pref_category_gui">گرینفل یوزر انٹرچہرے</string>
+  <string name="pref_category_streaming">میڈیا کا نام</string>
+  <string name="pref_category_images">تصاویر</string>
+  <string name="pref_category_mirroring">سکرین Mirroring</string>
+  <string name="pref_title_folder_layout">فولڈر ترتیب</string>
+  <string name="pref_title_server_port">معیل بندرگاہ</string>
+  <string name="pref_title_image_transition">ٹرانسلیشن</string>
+  <string name="pref_title_resize_factor">عکس بندی</string>
+  <string name="pref_title_jpeg_quality">JPEG معیار</string>
+  <string name="pref_summary_folder_layout">فولڈر میں مواد کی نمائش کے لیے سیٹ ترتیب</string>
+  <string name="pref_summary_server_port">آنے والے روابط کے لیے سیٹ پورٹ</string>
+  <string name="pref_summary_image_transition">منتقلی کے لئے مقرر رویے</string>
+  <string name="pref_summary_resize_factor">کلائنٹ کو بھیجنے سے پہلے تصویر کو خارج کر دیں</string>
+  <string name="pref_summary_jpeg_quality">سیٹ JPEG معیار</string>
+  <string name="pref_resize_dialog_text">منتخب امیج ری سائز فیکٹر:</string>
+  <string name="settings_activity_port_range">پورٹ نمبر کے درمیان ہونا ضروری ہے %1$d اور %2$d</string>
+  <string name="settings_activity_value">\nوالو:\u0020</string>
+</resources>

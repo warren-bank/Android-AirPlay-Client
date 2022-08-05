@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: service wordt uitgevoerd</string>
+  <string name="notification_service_content_line1">DroidPlay uitvoeren op:</string>
+  <string name="notification_service_content_line3">Klik om de service te stoppen.</string>
+  <string name="pref_category_gui">Grafische gebruikersinterface</string>
+  <string name="pref_category_streaming">Streaming media</string>
+  <string name="pref_category_images">Afbeeldingen</string>
+  <string name="pref_category_mirroring">Schermspiegeling</string>
+  <string name="pref_title_folder_layout">Mapindeling</string>
+  <string name="pref_title_server_port">Serverpoort</string>
+  <string name="pref_title_image_transition">Overgang</string>
+  <string name="pref_title_resize_factor">Formaat van afbeelding wijzigen</string>
+  <string name="pref_title_jpeg_quality">JPEG Kwaliteit</string>
+  <string name="pref_summary_folder_layout">Layout instellen voor weergave van content in map</string>
+  <string name="pref_summary_server_port">Poort instellen voor inkomende verbindingen</string>
+  <string name="pref_summary_image_transition">Gedrag voor overgang instellen</string>
+  <string name="pref_summary_resize_factor">Afbeelding van formaat wijzigen voordat naar client wordt verzonden</string>
+  <string name="pref_summary_jpeg_quality">Instellen JPEG Kwaliteit</string>
+  <string name="pref_resize_dialog_text">Selecteer de grootte van de afbeeldingsgrootte:</string>
+  <string name="settings_activity_port_range">Poortnummer moet liggen tussen %1$d en %2$d</string>
+  <string name="settings_activity_value">\nWaarde:\u0020</string>
+</resources>

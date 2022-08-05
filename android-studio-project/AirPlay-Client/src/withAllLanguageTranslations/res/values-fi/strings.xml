@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: Palvelun käyttö</string>
+  <string name="notification_service_content_line1">DroidPlay Ajossa:</string>
+  <string name="notification_service_content_line3">Lopeta palvelu napsauttamalla.</string>
+  <string name="pref_category_gui">Graafinen käyttöliittymä</string>
+  <string name="pref_category_streaming">Streaming Media</string>
+  <string name="pref_category_images">Kuvat</string>
+  <string name="pref_category_mirroring">Screen Mirroring</string>
+  <string name="pref_title_folder_layout">Kansion rakenne</string>
+  <string name="pref_title_server_port">Palvelimen portti</string>
+  <string name="pref_title_image_transition">Siirtymävaihe</string>
+  <string name="pref_title_resize_factor">Muuta kuva</string>
+  <string name="pref_title_jpeg_quality">JPEG Laatu</string>
+  <string name="pref_summary_folder_layout">Sisällön näyttö kansiossa</string>
+  <string name="pref_summary_server_port">Määritä saapuvien yhteyksien portti</string>
+  <string name="pref_summary_image_transition">Aseta käyttäytyminen siirtymiselle</string>
+  <string name="pref_summary_resize_factor">Yritä uudelleen, ennen kuin lähetät asiakkaan</string>
+  <string name="pref_summary_jpeg_quality">Aseta JPEG Laatu</string>
+  <string name="pref_resize_dialog_text">Valitse kuvamuotoinen kuva:</string>
+  <string name="settings_activity_port_range">Portin numeron on oltava %1$d Ja %2$d</string>
+  <string name="settings_activity_value">\nArvo:\u0020</string>
+</resources>

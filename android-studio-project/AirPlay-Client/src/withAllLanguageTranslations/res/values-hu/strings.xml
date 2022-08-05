@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: Szolgáltatás fut</string>
+  <string name="notification_service_content_line1">DroidPlay Futás közben:</string>
+  <string name="notification_service_content_line3">Kattintson ide a szolgáltatás leállításához.</string>
+  <string name="pref_category_gui">Grafikus felhasználói felület</string>
+  <string name="pref_category_streaming">Média Streaming</string>
+  <string name="pref_category_images">Képek</string>
+  <string name="pref_category_mirroring">Képernyő tükrözése</string>
+  <string name="pref_title_folder_layout">Mappa szerkezete</string>
+  <string name="pref_title_server_port">Kiszolgáló port</string>
+  <string name="pref_title_image_transition">Átmenet</string>
+  <string name="pref_title_resize_factor">Kép átméretezése</string>
+  <string name="pref_title_jpeg_quality">JPEG Minőség</string>
+  <string name="pref_summary_folder_layout">Elrendezés beállítása tartalom megjelenítéséhez a mappában</string>
+  <string name="pref_summary_server_port">Bejövő kapcsolatok portjának beállítása</string>
+  <string name="pref_summary_image_transition">Átmeneti viselkedés beállítása</string>
+  <string name="pref_summary_resize_factor">A kép átméretezése a kliens küldése előtt</string>
+  <string name="pref_summary_jpeg_quality">Beállítás JPEG Minőség</string>
+  <string name="pref_resize_dialog_text">Képfájl átméretezési tényező kiválasztása:</string>
+  <string name="settings_activity_port_range">A portszámnak a között kell lennie %1$d és %2$d</string>
+  <string name="settings_activity_value">\nÉrték:\u0020</string>
+</resources>

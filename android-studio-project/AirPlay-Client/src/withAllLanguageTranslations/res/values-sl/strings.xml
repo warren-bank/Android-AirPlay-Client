@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="notification_service_ticker">DroidPlay: izvajanje storitve</string>
+  <string name="notification_service_content_line1">DroidPlay izvajanje na:</string>
+  <string name="notification_service_content_line3">Kliknite, da zaustavite storitev.</string>
+  <string name="pref_category_gui">Grafični uporabniški vmesnik</string>
+  <string name="pref_category_streaming">Pretočni mediji</string>
+  <string name="pref_category_images">Slike</string>
+  <string name="pref_category_mirroring">Zrcaljenje Zaslona</string>
+  <string name="pref_title_folder_layout">Postavitev mape</string>
+  <string name="pref_title_server_port">Vrata strežnika</string>
+  <string name="pref_title_image_transition">Prehod</string>
+  <string name="pref_title_resize_factor">Spremeni velikost slike</string>
+  <string name="pref_title_jpeg_quality">JPEG kakovost</string>
+  <string name="pref_summary_folder_layout">Nastavi postavitev za prikaz vsebine v mapi</string>
+  <string name="pref_summary_server_port">Nastavi vrata za vhodne povezave</string>
+  <string name="pref_summary_image_transition">Nastavi vedenje za prehod</string>
+  <string name="pref_summary_resize_factor">Spremeni velikost slike, preden se pošlje odjemalcu</string>
+  <string name="pref_summary_jpeg_quality">Nastavi JPEG kakovost</string>
+  <string name="pref_resize_dialog_text">Izberi faktor za spreminjanje velikosti slike:</string>
+  <string name="settings_activity_port_range">Številka vrat mora biti med %1$d in %2$d</string>
+  <string name="settings_activity_value">\nVrednost:\u0020</string>
+</resources>
