@@ -16,6 +16,7 @@ import com.github.warren_bank.airplay_client.ui.adapters.NavigationItem;
 import com.github.warren_bank.airplay_client.ui.dialogs.FolderDialog;
 import com.github.warren_bank.airplay_client.utils.ExternalStorageUtils;
 import com.github.warren_bank.airplay_client.utils.PreferencesMgr;
+import com.github.warren_bank.airplay_client.utils.RuntimePermissionUtils;
 import com.github.warren_bank.airplay_client.utils.ToastUtils;
 
 import android.app.Activity;
@@ -43,9 +44,12 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DroidPlayActivity extends Activity implements AdapterView.OnItemClickListener, FolderDialog.Callback {
-  private static final int REQUEST_CODE_SCREEN_CAPTURE = 1;
-  private static final int REQUEST_CODE_SETTINGS       = 2;
+public class DroidPlayActivity extends Activity implements AdapterView.OnItemClickListener, FolderDialog.Callback, RuntimePermissionUtils.RuntimePermissionListener {
+  private static final int REQUEST_CODE_POST_NOTIFICATIONS      = 1;  // (optional, Android 13+) required to display foreground service notification
+  private static final int REQUEST_CODE_READ_EXTERNAL_STORAGE   = 2;  // (optional, Android  6+) required to read media files
+  private static final int REQUEST_CODE_MANAGE_EXTERNAL_STORAGE = 3;  // (optional, Android 11+) required to read media files
+  private static final int REQUEST_CODE_SCREEN_CAPTURE          = 4;  // (optional, Android  6+) required for screen mirroring
+  private static final int REQUEST_CODE_SETTINGS                = 5;  // (internal)
 
   private boolean has_airplay_connection;
   private boolean has_storage_permission;
@@ -101,15 +105,16 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
     navigationList.setOnItemClickListener(DroidPlayActivity.this);
     updateNavigationItems();
 
-    if (ExternalStorageUtils.has_permission(DroidPlayActivity.this))
-      onPermissionGranted();
-    else
-      ExternalStorageUtils.request_permission(DroidPlayActivity.this);
+    requestPermissions();
   }
 
   @Override
-  public void onActivityResult(int requestCode, int resultCode, Intent data) {
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     switch (requestCode) {
+      case REQUEST_CODE_MANAGE_EXTERNAL_STORAGE:
+        // READ_EXTERNAL_STORAGE has been granted, regardless of resultCode
+        onStoragePermission(true);
+        break;
       case REQUEST_CODE_SCREEN_CAPTURE:
         if (resultCode != RESULT_OK) return;
 
@@ -132,11 +137,10 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   }
 
   @Override
-  public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+  public void onRequestPermissionsResult (int requestCode, String[] permissions, int[] grantResults) {
     super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-    if (ExternalStorageUtils.is_permission_granted(DroidPlayActivity.this, requestCode, grantResults))
-      onPermissionGranted();
+    RuntimePermissionUtils.onRequestPermissionsResult(DroidPlayActivity.this, DroidPlayActivity.this, requestCode, permissions, grantResults);
   }
 
   @Override
@@ -243,14 +247,82 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   }
 
   // ---------------------------------------------------------------------------
-  // private
+  // RuntimePermissionUtils.RuntimePermissionListener
 
-  private void startNetworkingService() {
-    Intent intent = new Intent(getApplicationContext(), NetworkingService.class);
-    MainApp.getInstance().startService(intent);
+  @Override
+  public void onRequestPermissionsGranted(int requestCode, Object passthrough) {
+    switch(requestCode) {
+      case REQUEST_CODE_READ_EXTERNAL_STORAGE : {
+        if (RuntimePermissionUtils.canAccessAllFiles())
+          onStoragePermission(true);
+        else
+          RuntimePermissionUtils.checkFilePermissions(DroidPlayActivity.this, REQUEST_CODE_MANAGE_EXTERNAL_STORAGE);
+        break;
+      }
+      case REQUEST_CODE_POST_NOTIFICATIONS : {
+        onNotificationPermission(true);
+        break;
+      }
+    }
   }
 
-  private void onPermissionGranted() {
+  @Override
+  public void onRequestPermissionsDenied(int requestCode, Object passthrough, String[] missingPermissions) {
+    switch(requestCode) {
+      case REQUEST_CODE_POST_NOTIFICATIONS : {
+        onNotificationPermission(false);
+        break;
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // private
+
+  private void requestPermissions() {
+    String[] allRequestedPermissions;
+
+    // =====================
+    // READ_EXTERNAL_STORAGE
+
+    allRequestedPermissions = (Build.VERSION.SDK_INT >= 33)
+      ? new String[]{"android.permission.READ_MEDIA_AUDIO", "android.permission.READ_MEDIA_IMAGES", "android.permission.READ_MEDIA_VIDEO"}
+      : new String[]{"android.permission.READ_EXTERNAL_STORAGE"};
+
+    RuntimePermissionUtils.requestPermissions(
+      DroidPlayActivity.this,
+      DroidPlayActivity.this,
+      allRequestedPermissions,
+      REQUEST_CODE_READ_EXTERNAL_STORAGE
+    );
+
+    // =====================
+    // POST_NOTIFICATIONS
+
+    if (Build.VERSION.SDK_INT >= 33) {
+      allRequestedPermissions = new String[]{"android.permission.POST_NOTIFICATIONS"};
+
+      RuntimePermissionUtils.requestPermissions(
+        DroidPlayActivity.this,
+        DroidPlayActivity.this,
+        allRequestedPermissions,
+        REQUEST_CODE_POST_NOTIFICATIONS
+      );
+    }
+    else {
+      onRequestPermissionsGranted(REQUEST_CODE_POST_NOTIFICATIONS, null);
+    }
+  }
+
+  private void onNotificationPermission(boolean granted) {
+    // ignore whether or not permission is granted;
+    // though not recommended, a foreground service can be started with a hidden notification.
+    startNetworkingService();
+  }
+
+  private void onStoragePermission(boolean granted) {
+    if (!granted) return;
+
     has_storage_permission = true;
     updateNavigationItems();
 
@@ -290,8 +362,6 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
       }
     });
     updateFolderLayout();
-
-    startNetworkingService();
   }
 
   private void updateNavigationItems() {
@@ -350,6 +420,11 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
         break;
       }
     }
+  }
+
+  private void startNetworkingService() {
+    Intent intent = new Intent(getApplicationContext(), NetworkingService.class);
+    MainApp.getInstance().startService(intent);
   }
 
   private void updateSubtitle() {
@@ -430,3 +505,4 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   }
 
 }
+

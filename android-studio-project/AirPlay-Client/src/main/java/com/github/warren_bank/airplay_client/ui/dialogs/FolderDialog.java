@@ -87,12 +87,14 @@ public class FolderDialog extends Dialog implements View.OnClickListener, Adapte
   @Override
   public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
     File file = adapter.getItem(arg2);
+
     if (file == null) {
-      currentFolder = currentFolder.getParentFile();
-    } else {
-      currentFolder = file;
+      file = currentFolder.getParentFile();
     }
-    refresh();
+    if (file != null) {
+      currentFolder = file;
+      refresh();
+    }
   }
 
   //
@@ -111,8 +113,10 @@ public class FolderDialog extends Dialog implements View.OnClickListener, Adapte
         return (pathname.isDirectory());
       }
     });
-    for (File file : files) {
-      adapter.add(file);
+    if (files != null) {
+      for (File file : files) {
+        adapter.add(file);
+      }
     }
   }
 

@@ -81,6 +81,9 @@ public abstract class FolderBaseAdapter extends BaseAdapter {
       }
     });
 
+    if (files == null)
+      files = new File[0];
+
     notifyDataSetChanged();
   }
 }

@@ -14,37 +14,6 @@ import java.util.regex.Matcher;
 
 public class ExternalStorageUtils {
 
-  // --------------------------------------------------------------------------- runtime permission
-
-  public static boolean has_permission(Context context) {
-    if (Build.VERSION.SDK_INT < 23) {
-      return true;
-    }
-    else {
-      String permission = Manifest.permission.READ_EXTERNAL_STORAGE;
-
-      return (context.checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED);
-    }
-  }
-
-  private static int get_request_code(Context context) {
-    return context.getResources().getInteger(R.integer.PERMISSION_REQUEST_CODE_READ_EXTERNAL_STORAGE);
-  }
-
-  public static void request_permission(Activity activity) {
-    String permission = Manifest.permission.READ_EXTERNAL_STORAGE;
-
-    activity.requestPermissions(new String[]{permission}, get_request_code(activity));
-  }
-
-  public static boolean is_permission_granted(Activity activity, int requestCode, int[] grantResults) {
-    return (
-         (requestCode == get_request_code(activity))
-      && (grantResults.length == 1)
-      && (grantResults[0] == PackageManager.PERMISSION_GRANTED)
-    );
-  }
-
   // --------------------------------------------------------------------------- media type detection
 
   // ===================================
