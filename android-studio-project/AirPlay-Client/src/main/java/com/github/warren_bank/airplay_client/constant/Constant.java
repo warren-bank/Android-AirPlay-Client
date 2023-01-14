@@ -27,4 +27,12 @@ public class Constant {
         public static final String PLAY                          = "/play";
     }
 
+    public interface PermissionRequestCode {
+        public static final int POST_NOTIFICATIONS              = 1;
+        public static final int READ_EXTERNAL_STORAGE           = 2;
+        public static final int MANAGE_EXTERNAL_STORAGE         = 3;
+        public static final int SCREEN_CAPTURE                  = 4;
+        public static final int SETTINGS                        = 5;
+    }
+
 }

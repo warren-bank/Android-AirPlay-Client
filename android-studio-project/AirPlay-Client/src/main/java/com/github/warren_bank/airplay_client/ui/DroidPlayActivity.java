@@ -45,12 +45,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DroidPlayActivity extends Activity implements AdapterView.OnItemClickListener, FolderDialog.Callback, RuntimePermissionUtils.RuntimePermissionListener {
-  private static final int REQUEST_CODE_POST_NOTIFICATIONS      = 1;  // (optional, Android 13+) required to display foreground service notification
-  private static final int REQUEST_CODE_READ_EXTERNAL_STORAGE   = 2;  // (optional, Android  6+) required to read media files
-  private static final int REQUEST_CODE_MANAGE_EXTERNAL_STORAGE = 3;  // (optional, Android 11+) required to read media files
-  private static final int REQUEST_CODE_SCREEN_CAPTURE          = 4;  // (optional, Android  6+) required for screen mirroring
-  private static final int REQUEST_CODE_SETTINGS                = 5;  // (internal)
-
   private boolean has_airplay_connection;
   private boolean has_storage_permission;
 
@@ -109,38 +103,30 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   }
 
   @Override
-  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-    switch (requestCode) {
-      case REQUEST_CODE_MANAGE_EXTERNAL_STORAGE:
-        // READ_EXTERNAL_STORAGE has been granted, regardless of resultCode
-        onStoragePermission(true);
-        break;
-      case REQUEST_CODE_SCREEN_CAPTURE:
-        if (resultCode != RESULT_OK) return;
+  public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        final MediaProjectionManager projectionManager = getProjectionManager();
-        if (projectionManager == null) return;
-
-        final MediaProjection mediaProjection = projectionManager.getMediaProjection(resultCode, data);
-        if (mediaProjection == null) return;
-
-        setMediaProjection(mediaProjection);
-
-        Message msg = Message.obtain();
-        msg.what = Constant.Msg.Msg_ScreenMirror_Stream_Start;
-        MainApp.broadcastMessage(msg);
-        break;
-      case REQUEST_CODE_SETTINGS:
-        PreferencesMgr.refresh();
-        break;
-    }
+    RuntimePermissionUtils.onRequestPermissionsResult(DroidPlayActivity.this, requestCode, permissions, grantResults);
   }
 
   @Override
-  public void onRequestPermissionsResult (int requestCode, String[] permissions, int[] grantResults) {
-    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
 
-    RuntimePermissionUtils.onRequestPermissionsResult(DroidPlayActivity.this, DroidPlayActivity.this, requestCode, permissions, grantResults);
+    switch(requestCode) {
+      case Constant.PermissionRequestCode.SCREEN_CAPTURE : {
+        onScreenCapturePermission(resultCode, data);
+        break;
+      }
+      case Constant.PermissionRequestCode.SETTINGS : {
+        PreferencesMgr.refresh();
+        break;
+      }
+      default : {
+        RuntimePermissionUtils.onActivityResult(DroidPlayActivity.this, requestCode, resultCode, data);
+        break;
+      }
+    }
   }
 
   @Override
@@ -154,7 +140,7 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   public boolean onOptionsItemSelected(MenuItem item) {
     switch (item.getItemId()) {
       case R.id.settings : {
-        startActivityForResult(SettingsActivity.getStartIntent(DroidPlayActivity.this), REQUEST_CODE_SETTINGS);
+        startActivityForResult(SettingsActivity.getStartIntent(DroidPlayActivity.this), Constant.PermissionRequestCode.SETTINGS);
         break;
       }
       case R.id.exit : {
@@ -209,7 +195,7 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
         final MediaProjectionManager projectionManager = getProjectionManager();
 
         if (projectionManager != null)
-          startActivityForResult(projectionManager.createScreenCaptureIntent(), REQUEST_CODE_SCREEN_CAPTURE);
+          startActivityForResult(projectionManager.createScreenCaptureIntent(), Constant.PermissionRequestCode.SCREEN_CAPTURE);
 
         break;
       }
@@ -252,15 +238,19 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   @Override
   public void onRequestPermissionsGranted(int requestCode, Object passthrough) {
     switch(requestCode) {
-      case REQUEST_CODE_READ_EXTERNAL_STORAGE : {
-        if (RuntimePermissionUtils.canAccessAllFiles())
-          onStoragePermission(true);
-        else
-          RuntimePermissionUtils.checkFilePermissions(DroidPlayActivity.this, REQUEST_CODE_MANAGE_EXTERNAL_STORAGE);
+      case Constant.PermissionRequestCode.POST_NOTIFICATIONS : {
+        onNotificationPermission(true);
         break;
       }
-      case REQUEST_CODE_POST_NOTIFICATIONS : {
-        onNotificationPermission(true);
+      case Constant.PermissionRequestCode.READ_EXTERNAL_STORAGE : {
+        if (RuntimePermissionUtils.hasFilePermissions())
+          onStoragePermission(true);
+        else
+          RuntimePermissionUtils.showFilePermissions(DroidPlayActivity.this, Constant.PermissionRequestCode.MANAGE_EXTERNAL_STORAGE);
+        break;
+      }
+      case Constant.PermissionRequestCode.MANAGE_EXTERNAL_STORAGE : {
+        onStoragePermission(true);
         break;
       }
     }
@@ -269,8 +259,17 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   @Override
   public void onRequestPermissionsDenied(int requestCode, Object passthrough, String[] missingPermissions) {
     switch(requestCode) {
-      case REQUEST_CODE_POST_NOTIFICATIONS : {
+      case Constant.PermissionRequestCode.POST_NOTIFICATIONS : {
         onNotificationPermission(false);
+        break;
+      }
+      case Constant.PermissionRequestCode.READ_EXTERNAL_STORAGE : {
+        onStoragePermission(false);
+        break;
+      }
+      case Constant.PermissionRequestCode.MANAGE_EXTERNAL_STORAGE : {
+        // READ_EXTERNAL_STORAGE is granted
+        onStoragePermission(true);
         break;
       }
     }
@@ -280,44 +279,43 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   // private
 
   private void requestPermissions() {
-    String[] allRequestedPermissions;
-
-    // =====================
-    // READ_EXTERNAL_STORAGE
-
-    allRequestedPermissions = (Build.VERSION.SDK_INT >= 33)
-      ? new String[]{"android.permission.READ_MEDIA_AUDIO", "android.permission.READ_MEDIA_IMAGES", "android.permission.READ_MEDIA_VIDEO"}
-      : new String[]{"android.permission.READ_EXTERNAL_STORAGE"};
 
     RuntimePermissionUtils.requestPermissions(
       DroidPlayActivity.this,
       DroidPlayActivity.this,
-      allRequestedPermissions,
-      REQUEST_CODE_READ_EXTERNAL_STORAGE
+      Constant.PermissionRequestCode.READ_EXTERNAL_STORAGE
     );
 
-    // =====================
-    // POST_NOTIFICATIONS
+    RuntimePermissionUtils.requestPermissions(
+      DroidPlayActivity.this,
+      DroidPlayActivity.this,
+      Constant.PermissionRequestCode.POST_NOTIFICATIONS
+    );
+  }
 
-    if (Build.VERSION.SDK_INT >= 33) {
-      allRequestedPermissions = new String[]{"android.permission.POST_NOTIFICATIONS"};
+  private void onScreenCapturePermission(int resultCode, Intent data) {
+    final MediaProjectionManager projectionManager = getProjectionManager();
+    if (projectionManager == null) return;
 
-      RuntimePermissionUtils.requestPermissions(
-        DroidPlayActivity.this,
-        DroidPlayActivity.this,
-        allRequestedPermissions,
-        REQUEST_CODE_POST_NOTIFICATIONS
-      );
-    }
-    else {
-      onRequestPermissionsGranted(REQUEST_CODE_POST_NOTIFICATIONS, null);
-    }
+    final MediaProjection mediaProjection = projectionManager.getMediaProjection(resultCode, data);
+    if (mediaProjection == null) return;
+
+    setMediaProjection(mediaProjection);
+
+    Message msg = Message.obtain();
+    msg.what = Constant.Msg.Msg_ScreenMirror_Stream_Start;
+    MainApp.broadcastMessage(msg);
   }
 
   private void onNotificationPermission(boolean granted) {
     // ignore whether or not permission is granted;
     // though not recommended, a foreground service can be started with a hidden notification.
     startNetworkingService();
+  }
+
+  private void startNetworkingService() {
+    Intent intent = new Intent(getApplicationContext(), NetworkingService.class);
+    MainApp.getInstance().startService(intent);
   }
 
   private void onStoragePermission(boolean granted) {
@@ -422,11 +420,6 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
     }
   }
 
-  private void startNetworkingService() {
-    Intent intent = new Intent(getApplicationContext(), NetworkingService.class);
-    MainApp.getInstance().startService(intent);
-  }
-
   private void updateSubtitle() {
     subtitle(
       has_airplay_connection ? MainApp.receiverName : "Not connected"
@@ -505,4 +498,3 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   }
 
 }
-
