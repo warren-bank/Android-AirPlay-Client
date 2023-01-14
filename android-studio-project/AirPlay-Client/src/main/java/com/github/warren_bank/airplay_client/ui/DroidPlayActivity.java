@@ -275,21 +275,23 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
     }
   }
 
+  @Override
+  public void onAllRequestsCompleted(Exception exception, Object passthrough) {
+  }
+
   // ---------------------------------------------------------------------------
   // private
 
   private void requestPermissions() {
-
-    RuntimePermissionUtils.requestPermissions(
-      DroidPlayActivity.this,
-      DroidPlayActivity.this,
+    final int[] requestCodes = new int[]{
+      Constant.PermissionRequestCode.POST_NOTIFICATIONS,
       Constant.PermissionRequestCode.READ_EXTERNAL_STORAGE
-    );
+    };
 
-    RuntimePermissionUtils.requestPermissions(
+    RuntimePermissionUtils.requestAllPermissions(
       DroidPlayActivity.this,
       DroidPlayActivity.this,
-      Constant.PermissionRequestCode.POST_NOTIFICATIONS
+      requestCodes
     );
   }
 
