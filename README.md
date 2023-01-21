@@ -3,6 +3,12 @@
 
 AirPlay (version 1) client for Android
 
+[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png"
+     alt="Get it on IzzyOnDroid"
+     height="80">](https://apt.izzysoft.de/fdroid/index/apk/com.littletrickster.scanner)
+
+Or get the latest APK from the [Releases Section](https://github.com/warren-bank/Android-AirPlay-Client/releases/latest).
+
 Features
 --------
 
