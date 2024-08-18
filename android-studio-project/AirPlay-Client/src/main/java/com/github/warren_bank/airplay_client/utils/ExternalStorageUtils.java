@@ -55,7 +55,7 @@ public class ExternalStorageUtils {
   // ===================================
   // audio
 
-  private static Pattern audio_regex = Pattern.compile("\\.(mp3|m4a|ogg|wav|flac)$");
+  private static Pattern audio_regex = Pattern.compile("\\.(mp3|m4a|ogg|wav|flac|m3u)$");
 
   public static String get_audio_fileExtension(String filename) {
     return get_fileExtension(filename, audio_regex);
