@@ -80,7 +80,11 @@ final class MyMessageHandler extends Handler {
 
         case Constant.Msg.Msg_Play : {
           File file = (File) msg.obj;
-          URL  url  = new URL("http", service.getNetworkAddress("localhost", false), PreferencesMgr.get_server_port(), Base64.encodeToString(file.getAbsolutePath().getBytes(), Base64.NO_WRAP|Base64.URL_SAFE));
+          URL  url;
+
+          url = new URL("http", service.getNetworkAddress("localhost", false), PreferencesMgr.get_server_port(), Base64.encodeToString(file.getAbsolutePath().getBytes(), Base64.NO_WRAP|Base64.URL_SAFE));
+          url = new URL(url, "#" + file.getName());
+
           client.playVideo(url, service.getSelectedService());
 
           WakeLockMgr.acquire(service, WakeLockMgr.FLAG_WAKELOCK | WakeLockMgr.FLAG_WIFILOCK);
