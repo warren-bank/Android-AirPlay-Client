@@ -10,22 +10,31 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- file access permissions: Android 1 to 10 -->
+    <!-- note: Android 10 requires "requestLegacyExternalStorage" -->
+    <uses-permission android:maxSdkVersion="29" android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- file access permissions: Android 11+ -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
+
+    <!-- file access permissions: Android 13+ -->
+    <!-- note: made redundant by "MANAGE_EXTERNAL_STORAGE" -->
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:name=".MainApp"
         android:label="@string/app_name"
         android:icon="@drawable/ic_launcher"
         android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
         android:allowBackup="false"
-        android:supportsRtl="true"
-        android:usesCleartextTraffic="true">
+        android:supportsRtl="true">
 
         <service
             android:name=".service.NetworkingService"
