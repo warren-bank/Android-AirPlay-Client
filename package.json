@@ -3,10 +3,10 @@
   "private": true,
   "license": "GPL-3.0",
   "devDependencies": {
-    "@warren-bank/translate-android-strings": "^1.9.2"
+    "@warren-bank/translate-android-strings": "^3.0.1"
   },
   "scripts": {
-    "translate:abstract":      "translate-android-strings -i \"en\" -d \"android-studio-project/AirPlay-Client/src/withAllLanguageTranslations/res\" -m --nc --nw -b \"(?:DroidPlay|AirPlay|JPEG|[\\\\][uU][\\d]{4}|[\\d]+|\\s+\\[)\"",
+    "translate:abstract":      "translate-android-strings -s \"deepl\" -i \"en\" -d \"android-studio-project/AirPlay-Client/src/withAllLanguageTranslations/res\" -m --nc --nw -b \"(?:DroidPlay|AirPlay|JPEG|[\\\\][uU][\\d]{4}|[\\d]+|\\s+\\[)\"",
     "translate:strings":       "npm run translate:abstract -- -f \"android-studio-project/AirPlay-Client/src/main/res/values/strings.xml\"",
     "translate:arrays":        "npm run translate:abstract -- -f \"android-studio-project/AirPlay-Client/src/main/res/values/arrays.xml\"",
     "translate:debug:strings": "npm run translate:strings  -- -o \"en\" --debug",

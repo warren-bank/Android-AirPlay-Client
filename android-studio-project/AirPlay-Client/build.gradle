@@ -2,66 +2,73 @@ apply from: '../constants.gradle'
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion project.ext.compileSdkVersion
-    buildToolsVersion project.ext.buildToolsVersion
+  namespace project.ext.applicationId
 
-    compileOptions {
-        sourceCompatibility project.ext.javaVersion
-        targetCompatibility project.ext.javaVersion
+  compileSdkVersion project.ext.compileSdkVersion
+  buildToolsVersion project.ext.buildToolsVersion
+
+  compileOptions {
+    sourceCompatibility project.ext.javaVersion
+    targetCompatibility project.ext.javaVersion
+  }
+
+  defaultConfig {
+    minSdkVersion    project.ext.minSdkVersion
+    targetSdkVersion project.ext.targetSdkVersion
+
+    applicationId project.ext.applicationId
+    versionName   project.ext.releaseVersion
+    versionCode   project.ext.releaseVersionCode
+
+    archivesBaseName += "-$versionName"
+  }
+
+  flavorDimensions "languageResources"
+
+  productFlavors {
+    withAllLanguageTranslations {
+      dimension "languageResources"
     }
-
-    defaultConfig {
-        minSdkVersion    project.ext.minSdkVersion
-        targetSdkVersion project.ext.targetSdkVersion
-
-        applicationId "com.github.warren_bank.airplay_client"
-        versionName project.ext.releaseVersion
-        versionCode project.ext.releaseVersionCode
-
-        archivesBaseName += "-$versionName"
+    english {
+      dimension "languageResources"
     }
+  }
 
-    flavorDimensions "languageResources"
-
-    productFlavors {
-        withAllLanguageTranslations {
-            dimension "languageResources"
-        }
-        english {
-            dimension "languageResources"
-        }
+  buildTypes {
+    release {
+      debuggable      false
+      jniDebuggable   false
+      minifyEnabled   true
+      shrinkResources true
+      proguardFiles = [
+        "proguard-rules.txt",
+        getDefaultProguardFile('proguard-android-optimize.txt')
+      ]
     }
-
-    buildTypes {
-        release {
-            debuggable      false
-            jniDebuggable   false
-            minifyEnabled   true
-            shrinkResources true
-            proguardFiles = [
-                "proguard-rules.txt",
-                getDefaultProguardFile('proguard-android-optimize.txt')
-            ]
-        }
-        debug {
-            debuggable      true
-            jniDebuggable   true
-            minifyEnabled   true
-            shrinkResources false
-            proguardFiles = [
-                "proguard-rules.txt",
-                getDefaultProguardFile('proguard-android-optimize.txt')
-            ]
-        }
+    debug {
+      debuggable      true
+      jniDebuggable   true
+      minifyEnabled   true
+      shrinkResources false
+      proguardFiles = [
+        "proguard-rules.txt",
+        getDefaultProguardFile('proguard-android-optimize.txt')
+      ]
     }
+  }
 
-    lintOptions {
-        disable 'MissingTranslation'
-        abortOnError true
-    }
+  dependenciesInfo {
+    includeInApk    = false  // Disables dependency metadata when building APKs.
+    includeInBundle = false  // Disables dependency metadata when building Android App Bundles.
+  }
+
+  lintOptions {
+    disable 'MissingTranslation'
+    abortOnError true
+  }
 }
 
 dependencies {
-    implementation 'androidx.drawerlayout:drawerlayout:'     + project.ext.libVersionAndroidxDrawerLayout     // https://mvnrepository.com/artifact/androidx.drawerlayout/drawerlayout
-    implementation 'org.jmdns:jmdns:'                        + project.ext.libVersionJmDNS                    // https://mvnrepository.com/artifact/org.jmdns/jmdns
+  implementation 'androidx.drawerlayout:drawerlayout:'     + project.ext.libVersionAndroidxDrawerLayout     // https://mvnrepository.com/artifact/androidx.drawerlayout/drawerlayout
+  implementation 'org.jmdns:jmdns:'                        + project.ext.libVersionJmDNS                    // https://mvnrepository.com/artifact/org.jmdns/jmdns
 }
