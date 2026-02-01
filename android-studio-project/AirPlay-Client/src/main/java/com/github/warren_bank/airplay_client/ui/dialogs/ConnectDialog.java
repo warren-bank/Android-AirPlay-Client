@@ -111,7 +111,7 @@ public class ConnectDialog extends Dialog implements View.OnClickListener, Adapt
 
           // name
           TextView name = (TextView) view.findViewById(R.id.name);
-          name.setText(si.getName());
+          name.setText(si.getName() + "\n" + si.getHostAddress());
 
           return (view);
       }
