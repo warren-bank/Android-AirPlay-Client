@@ -31,6 +31,8 @@
   <string name="pref_resize_dialog_text">Chọn hệ số thu nhỏ hình ảnh:</string>
   <string name="settings_activity_port_range">Số cổng phải nằm trong khoảng %1$d và %2$d</string>
   <string name="settings_activity_value">\nGiá trị:\u0020</string>
+  <string name="dialog_connect_title">Chọn AirPlay Dịch vụ</string>
+  <string name="dialog_folders_title">Chọn thư mục</string>
   <string name="layout_connect_empty">-- Không tìm thấy dịch vụ nào. --</string>
   <string name="layout_main_empty">-- Không tìm thấy tệp nào. --</string>
   <string name="layout_settings_server_port">Số cổng máy chủ:</string>

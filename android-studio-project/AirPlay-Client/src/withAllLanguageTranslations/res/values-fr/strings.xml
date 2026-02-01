@@ -31,6 +31,8 @@
   <string name="pref_resize_dialog_text">Sélectionner le facteur de redimensionnement de l\'image:</string>
   <string name="settings_activity_port_range">Le numéro de port doit être compris entre %1$d et %2$d</string>
   <string name="settings_activity_value">\nValeur:\u0020</string>
+  <string name="dialog_connect_title">Sélectionner AirPlay Service</string>
+  <string name="dialog_folders_title">Sélectionner un dossier</string>
   <string name="layout_connect_empty">-- Aucun service trouvé --</string>
   <string name="layout_main_empty">-- Aucun fichier trouvé --</string>
   <string name="layout_settings_server_port">Numéro de port du serveur:</string>

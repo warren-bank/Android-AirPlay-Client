@@ -48,7 +48,9 @@ public class ConnectDialog extends Dialog implements View.OnClickListener, Adapt
    */
   public ConnectDialog(Context context, ConnectDialog.Callback callback, Collection<ServiceInfo> services) {
     super(context);
-    setTitle("Select AirPlay Service");
+    setTitle(
+      context.getString(R.string.dialog_connect_title)
+    );
     this.callback = callback;
     setContentView(R.layout.connect);
 

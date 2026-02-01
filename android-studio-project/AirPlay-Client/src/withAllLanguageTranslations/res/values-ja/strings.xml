@@ -31,6 +31,8 @@
   <string name="pref_resize_dialog_text">画像リサイズ係数を選択:</string>
   <string name="settings_activity_port_range">ポート番号は次の範囲内である必要があります %1$d そして %2$d</string>
   <string name="settings_activity_value">\n価値:\u0020</string>
+  <string name="dialog_connect_title">選択 AirPlay サービス</string>
+  <string name="dialog_folders_title">フォルダを選択</string>
   <string name="layout_connect_empty">-- サービスが見つかりませんでした --</string>
   <string name="layout_main_empty">-- ファイルが見つかりませんでした --</string>
   <string name="layout_settings_server_port">サーバーのポート番号:</string>

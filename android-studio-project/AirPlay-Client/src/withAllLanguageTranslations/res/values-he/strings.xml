@@ -31,6 +31,8 @@
   <string name="pref_resize_dialog_text">בחר גורם שינוי גודל תמונה:</string>
   <string name="settings_activity_port_range">מספר היציאה חייב להיות בין %1$d ו %2$d</string>
   <string name="settings_activity_value">\nערך:\u0020</string>
+  <string name="dialog_connect_title">בחר AirPlay שירות</string>
+  <string name="dialog_folders_title">בחר תיקייה</string>
   <string name="layout_connect_empty">-- לא נמצאו שירותים --</string>
   <string name="layout_main_empty">-- לא נמצאו קבצים --</string>
   <string name="layout_settings_server_port">מספר יציאת השרת:</string>

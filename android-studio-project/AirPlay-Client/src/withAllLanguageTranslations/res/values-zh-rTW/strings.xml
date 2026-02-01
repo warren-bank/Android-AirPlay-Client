@@ -31,6 +31,8 @@
   <string name="pref_resize_dialog_text">選擇圖片縮放比例:</string>
   <string name="settings_activity_port_range">端口號碼必須介於 %1$d 以及 %2$d</string>
   <string name="settings_activity_value">\n價值:\u0020</string>
+  <string name="dialog_connect_title">選擇 AirPlay 服務</string>
+  <string name="dialog_folders_title">選擇資料夾</string>
   <string name="layout_connect_empty">-- 未找到任何服務 --</string>
   <string name="layout_main_empty">-- 未找到任何檔案 --</string>
   <string name="layout_settings_server_port">伺服器連接埠號碼:</string>

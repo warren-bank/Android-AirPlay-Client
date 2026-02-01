@@ -31,6 +31,8 @@
   <string name="pref_resize_dialog_text">Wybierz współczynnik zmiany rozmiaru obrazu:</string>
   <string name="settings_activity_port_range">Numer portu musi mieścić się w zakresie %1$d i %2$d</string>
   <string name="settings_activity_value">\nWartość:\u0020</string>
+  <string name="dialog_connect_title">Wybierz AirPlay Serwis</string>
+  <string name="dialog_folders_title">Wybierz folder</string>
   <string name="layout_connect_empty">-- Nie znaleziono żadnych usług --</string>
   <string name="layout_main_empty">-- Nie znaleziono żadnych plików. --</string>
   <string name="layout_settings_server_port">Numer portu serwera:</string>

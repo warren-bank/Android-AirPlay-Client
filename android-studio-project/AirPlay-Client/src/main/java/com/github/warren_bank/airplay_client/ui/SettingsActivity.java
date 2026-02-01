@@ -38,7 +38,9 @@ public final class SettingsActivity extends PreferenceActivity {
 
     // action bar icon as home link
     ActionBar actionBar = getActionBar();
-    actionBar.setSubtitle("Settings");
+    actionBar.setSubtitle(
+      getString(R.string.settings_activity_subtitle)
+    );
     actionBar.setHomeButtonEnabled(true);
     actionBar.setDisplayUseLogoEnabled(false);
     actionBar.setDisplayHomeAsUpEnabled(true);

@@ -31,6 +31,8 @@
   <string name="pref_resize_dialog_text">Pasirinkite vaizdo dydžio keitimo koeficientą:</string>
   <string name="settings_activity_port_range">Prievado numeris turi būti tarp %1$d ir %2$d</string>
   <string name="settings_activity_value">\nVertė:\u0020</string>
+  <string name="dialog_connect_title">Pasirinkite AirPlay Paslauga</string>
+  <string name="dialog_folders_title">Pasirinkite aplanką</string>
   <string name="layout_connect_empty">-- Nerasta paslaugų --</string>
   <string name="layout_main_empty">-- Nerasta jokių failų --</string>
   <string name="layout_settings_server_port">Serverio prievado numeris:</string>

@@ -52,7 +52,9 @@ public class FolderDialog extends Dialog implements View.OnClickListener, Adapte
    */
   public FolderDialog(Context context, FolderDialog.Callback callback, File currentFolder) {
     super(context);
-    setTitle("Select Folder");
+    setTitle(
+      context.getString(R.string.dialog_folders_title)
+    );
     this.callback = callback;
     this.currentFolder = currentFolder;
     setContentView(R.layout.folder);

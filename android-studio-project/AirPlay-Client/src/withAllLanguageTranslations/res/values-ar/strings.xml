@@ -31,6 +31,8 @@
   <string name="pref_resize_dialog_text">حدد عامل تغيير حجم الصورة:</string>
   <string name="settings_activity_port_range">يجب أن يكون رقم المنفذ بين %1$d و %2$d</string>
   <string name="settings_activity_value">\nالقيمة:\u0020</string>
+  <string name="dialog_connect_title">اختر AirPlay الخدمة</string>
+  <string name="dialog_folders_title">تحديد المجلد</string>
   <string name="layout_connect_empty">-- لم يتم العثور على أي خدمات --</string>
   <string name="layout_main_empty">-- لم يتم العثور على أي ملفات --</string>
   <string name="layout_settings_server_port">رقم منفذ الخادم:</string>

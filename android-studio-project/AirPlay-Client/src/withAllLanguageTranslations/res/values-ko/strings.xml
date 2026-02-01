@@ -31,6 +31,8 @@
   <string name="pref_resize_dialog_text">이미지 크기 조정 계수 선택:</string>
   <string name="settings_activity_port_range">포트 번호는 다음 범위 내에 있어야 합니다: %1$d 그리고 %2$d</string>
   <string name="settings_activity_value">\n가치:\u0020</string>
+  <string name="dialog_connect_title">선택 AirPlay 서비스</string>
+  <string name="dialog_folders_title">폴더 선택</string>
   <string name="layout_connect_empty">-- 서비스를 찾을 수 없습니다 --</string>
   <string name="layout_main_empty">-- 파일을 찾을 수 없습니다. --</string>
   <string name="layout_settings_server_port">서버 포트 번호:</string>

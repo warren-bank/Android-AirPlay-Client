@@ -31,6 +31,8 @@
   <string name="pref_resize_dialog_text">Pilih faktor perbesaran gambar:</string>
   <string name="settings_activity_port_range">Nomor port harus berada di antara %1$d dan %2$d</string>
   <string name="settings_activity_value">\nNilai:\u0020</string>
+  <string name="dialog_connect_title">Pilih AirPlay Layanan</string>
+  <string name="dialog_folders_title">Pilih Folder</string>
   <string name="layout_connect_empty">-- Tidak ditemukan layanan --</string>
   <string name="layout_main_empty">-- Tidak ditemukan file. --</string>
   <string name="layout_settings_server_port">Nomor port server:</string>
