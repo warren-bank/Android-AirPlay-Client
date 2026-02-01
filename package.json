@@ -6,11 +6,7 @@
     "@warren-bank/translate-android-strings": "^3.0.1"
   },
   "scripts": {
-    "translate:abstract":      "translate-android-strings -s \"deepl\" -i \"en\" -d \"android-studio-project/AirPlay-Client/src/withAllLanguageTranslations/res\" -m --nc --nw -b \"(?:DroidPlay|AirPlay|JPEG|[\\\\][uU][\\d]{4}|[\\d]+|\\s+\\[)\"",
-    "translate:strings":       "npm run translate:abstract -- -f \"android-studio-project/AirPlay-Client/src/main/res/values/strings.xml\"",
-    "translate:arrays":        "npm run translate:abstract -- -f \"android-studio-project/AirPlay-Client/src/main/res/values/arrays.xml\"",
-    "translate:debug:strings": "npm run translate:strings  -- -o \"en\" --debug",
-    "translate:debug:arrays":  "npm run translate:arrays   -- -o \"en\" --debug",
-    "translate":               "npm run translate:strings && npm run translate:arrays"
+    "translate":       "translate-android-strings -s \"deepl\" -i \"en\" -f \"android-studio-project/AirPlay-Client/src/main/res/values/strings.xml\" -d \"android-studio-project/AirPlay-Client/src/withAllLanguageTranslations/res\" -m --na --nc --nw -b \"(?:DroidPlay|AirPlay|JPEG|[\\\\][uU][\\d]{4}|[\\d]+|\\s+\\[)\"",
+    "translate:debug": "npm run translate -- -o \"en\" --debug"
   }
 }

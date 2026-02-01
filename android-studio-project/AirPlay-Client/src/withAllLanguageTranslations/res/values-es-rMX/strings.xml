@@ -8,10 +8,10 @@
   <string name="notification_service_content_line1">DroidPlay funcionando a:</string>
   <string name="notification_service_content_line3">Haga clic para detener el servicio..</string>
   <string name="pref_category_gui">Interfaz gráfica de usuario</string>
-  <string name="pref_category_streaming">Transmisión multimedia</string>
+  <string name="pref_category_streaming">Transmisión de medios</string>
   <string name="pref_category_images">Imágenes</string>
   <string name="pref_category_mirroring">Duplicación de pantalla</string>
-  <string name="pref_title_folder_layout">Diseño de la carpeta</string>
+  <string name="pref_title_folder_layout">Diseño de carpetas</string>
   <string name="pref_title_server_port">Puerto del servidor</string>
   <string name="pref_title_image_transition">Transición</string>
   <string name="pref_title_resize_factor">Cambiar el tamaño de la imagen</string>
@@ -24,7 +24,7 @@
   <string name="pref_resize_dialog_text">Seleccionar factor de cambio de tamaño de imagen:</string>
   <string name="settings_activity_port_range">El número de puerto debe estar entre %1$d y %2$d</string>
   <string name="settings_activity_value">\nValor:\u0020</string>
-  <string name="layout_connect_empty">-- No se han encontrado servicios. --</string>
+  <string name="layout_connect_empty">-- No se encontraron servicios --</string>
   <string name="layout_main_empty">-- No se han encontrado archivos. --</string>
   <string name="layout_settings_server_port">Número de puerto del servidor:</string>
   <string name="layout_settings_requires_restart">(Requiere reiniciar la aplicación.)</string>
@@ -32,7 +32,7 @@
   <string name="main_menu_item_open_drawer">Abrir cajón</string>
   <string name="main_menu_item_settings">Configuración</string>
   <string name="main_menu_item_exit">Salida</string>
-  <string name="pref_names_folder_layout_list">Lista: Icono + Nombre de archivo [Predeterminado]</string>
+  <string name="pref_names_folder_layout_list">Lista: Icono + Nombre del archivo [Predeterminado]</string>
   <string name="pref_names_folder_layout_grid">Cuadrícula: Miniatura</string>
   <string name="pref_names_image_transition_none">Ninguno [Predeterminado]</string>
   <string name="pref_names_image_transition_random">Aleatorio</string>

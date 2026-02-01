@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="notification_service_ticker">DroidPlay: service wordt uitgevoerd</string>
-  <string name="notification_service_content_line1">DroidPlay uitvoeren op:</string>
+  <string name="cancel">Annuleren</string>
+  <string name="none">Geen</string>
+  <string name="save">Opslaan</string>
+  <string name="select">Selecteer</string>
+  <string name="notification_service_ticker">DroidPlay: dienst in werking</string>
+  <string name="notification_service_content_line1">DroidPlay draait op:</string>
   <string name="notification_service_content_line3">Klik om de service te stoppen.</string>
   <string name="pref_category_gui">Grafische gebruikersinterface</string>
   <string name="pref_category_streaming">Streaming media</string>
@@ -10,14 +14,30 @@
   <string name="pref_title_folder_layout">Mapindeling</string>
   <string name="pref_title_server_port">Serverpoort</string>
   <string name="pref_title_image_transition">Overgang</string>
-  <string name="pref_title_resize_factor">Formaat van afbeelding wijzigen</string>
-  <string name="pref_title_jpeg_quality">JPEG Kwaliteit</string>
-  <string name="pref_summary_folder_layout">Layout instellen voor weergave van content in map</string>
+  <string name="pref_title_resize_factor">Afbeelding vergroten/verkleinen</string>
+  <string name="pref_title_jpeg_quality">JPEG kwaliteit</string>
+  <string name="pref_summary_folder_layout">Lay-out instellen voor weergave van inhoud in map</string>
   <string name="pref_summary_server_port">Poort instellen voor inkomende verbindingen</string>
   <string name="pref_summary_image_transition">Gedrag voor overgang instellen</string>
-  <string name="pref_summary_resize_factor">Afbeelding van formaat wijzigen voordat naar client wordt verzonden</string>
-  <string name="pref_summary_jpeg_quality">Instellen JPEG Kwaliteit</string>
-  <string name="pref_resize_dialog_text">Selecteer de grootte van de afbeeldingsgrootte:</string>
-  <string name="settings_activity_port_range">Poortnummer moet liggen tussen %1$d en %2$d</string>
+  <string name="pref_summary_resize_factor">Wijzig het formaat van de afbeelding voordat u deze naar de klant verzendt.</string>
+  <string name="pref_summary_jpeg_quality">Set JPEG kwaliteit</string>
+  <string name="pref_resize_dialog_text">Selecteer factor voor aanpassen afbeeldingsgrootte:</string>
+  <string name="settings_activity_port_range">Het poortnummer moet tussen %1$d en %2$d</string>
   <string name="settings_activity_value">\nWaarde:\u0020</string>
+  <string name="layout_connect_empty">-- Geen diensten gevonden --</string>
+  <string name="layout_main_empty">-- Geen bestanden gevonden --</string>
+  <string name="layout_settings_server_port">Serverpoortnummer:</string>
+  <string name="layout_settings_requires_restart">(Vereist herstart van de applicatie)</string>
+  <string name="layout_settings_image_transition">Beeldovergang:</string>
+  <string name="main_menu_item_open_drawer">Open lade</string>
+  <string name="main_menu_item_settings">Instellingen</string>
+  <string name="main_menu_item_exit">Afslag</string>
+  <string name="pref_names_folder_layout_list">Lijst: Pictogram + Bestandsnaam [Standaard]</string>
+  <string name="pref_names_folder_layout_grid">Raster: Miniatuur</string>
+  <string name="pref_names_image_transition_none">Geen [Standaard]</string>
+  <string name="pref_names_image_transition_random">Willekeurig</string>
+  <string name="pref_names_image_transition_dissolve">Oplossen</string>
+  <string name="pref_names_image_transition_slideleft">Naar links schuiven</string>
+  <string name="pref_names_image_transition_slideright">Schuif naar rechts</string>
+  <string name="pref_names_jpeg_quality_80">80 [Standaard]</string>
 </resources>

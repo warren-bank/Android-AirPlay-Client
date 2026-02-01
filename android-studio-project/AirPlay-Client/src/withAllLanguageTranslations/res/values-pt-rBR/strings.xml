@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="cancel">Cancelar</string>
+  <string name="none">Nenhum</string>
+  <string name="save">Salvar</string>
+  <string name="select">Selecionar</string>
+  <string name="notification_service_ticker">DroidPlay: serviço em execução</string>
+  <string name="notification_service_content_line1">DroidPlay em execução em:</string>
+  <string name="notification_service_content_line3">Clique para interromper o serviço.</string>
+  <string name="pref_category_gui">Interface gráfica do usuário</string>
+  <string name="pref_category_streaming">Mídia de streaming</string>
+  <string name="pref_category_images">Imagens</string>
+  <string name="pref_category_mirroring">Espelhamento de tela</string>
+  <string name="pref_title_folder_layout">Layout da pasta</string>
+  <string name="pref_title_server_port">Porta do servidor</string>
+  <string name="pref_title_image_transition">Transição</string>
+  <string name="pref_title_resize_factor">Redimensionar imagem</string>
+  <string name="pref_title_jpeg_quality">JPEG qualidade</string>
+  <string name="pref_summary_folder_layout">Definir layout para exibição do conteúdo na pasta</string>
+  <string name="pref_summary_server_port">Definir porta para conexões de entrada</string>
+  <string name="pref_summary_image_transition">Definir comportamento para transição</string>
+  <string name="pref_summary_resize_factor">Redimensionar imagem antes de enviar ao cliente</string>
+  <string name="pref_summary_jpeg_quality">Definir JPEG qualidade</string>
+  <string name="pref_resize_dialog_text">Selecione o fator de redimensionamento da imagem:</string>
+  <string name="settings_activity_port_range">O número da porta deve estar entre %1$d e %2$d</string>
+  <string name="settings_activity_value">\nValor:\u0020</string>
+  <string name="layout_connect_empty">-- Nenhum serviço encontrado --</string>
+  <string name="layout_main_empty">-- Nenhum arquivo encontrado --</string>
+  <string name="layout_settings_server_port">Número da porta do servidor:</string>
+  <string name="layout_settings_requires_restart">(Requer reinicialização do aplicativo)</string>
+  <string name="layout_settings_image_transition">Transição de imagem:</string>
+  <string name="main_menu_item_open_drawer">Abrir gaveta</string>
+  <string name="main_menu_item_settings">Configurações</string>
+  <string name="main_menu_item_exit">Saída</string>
+  <string name="pref_names_folder_layout_list">Lista: Ícone + Nome do arquivo [Padrão]</string>
+  <string name="pref_names_folder_layout_grid">Grade: Miniatura</string>
+  <string name="pref_names_image_transition_none">Nenhum [Padrão]</string>
+  <string name="pref_names_image_transition_random">Aleatório</string>
+  <string name="pref_names_image_transition_dissolve">Dissolver</string>
+  <string name="pref_names_image_transition_slideleft">Deslize para a esquerda</string>
+  <string name="pref_names_image_transition_slideright">Deslize para a direita</string>
+  <string name="pref_names_jpeg_quality_80">80 [Padrão]</string>
+</resources>
