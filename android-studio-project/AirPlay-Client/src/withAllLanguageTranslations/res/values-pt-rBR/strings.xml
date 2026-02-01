@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Definir comportamento para transição</string>
   <string name="pref_summary_resize_factor">Redimensionar imagem antes de enviar ao cliente</string>
   <string name="pref_summary_jpeg_quality">Definir JPEG qualidade</string>
+  <string name="main_activity_drawer_item_connect">Conecte-se a AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Tela espelhada</string>
+  <string name="main_activity_drawer_item_pictures">Fotos</string>
+  <string name="main_activity_drawer_item_videos">Vídeos</string>
+  <string name="main_activity_drawer_item_downloads">Downloads</string>
+  <string name="main_activity_drawer_item_folders">Escolha a pasta...</string>
+  <string name="main_activity_drawer_item_stop">Interromper a reprodução</string>
   <string name="pref_resize_dialog_text">Selecione o fator de redimensionamento da imagem:</string>
   <string name="settings_activity_port_range">O número da porta deve estar entre %1$d e %2$d</string>
   <string name="settings_activity_value">\nValor:\u0020</string>

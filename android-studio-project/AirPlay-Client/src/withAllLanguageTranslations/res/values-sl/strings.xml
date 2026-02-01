@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Nastavite vedenje za prehod</string>
   <string name="pref_summary_resize_factor">Pred pošiljanjem stranki spremenite velikost slike</string>
   <string name="pref_summary_jpeg_quality">Nastavite JPEG kakovost</string>
+  <string name="main_activity_drawer_item_connect">Poveži se z AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Zrcalni zaslon</string>
+  <string name="main_activity_drawer_item_pictures">Slike</string>
+  <string name="main_activity_drawer_item_videos">Videi</string>
+  <string name="main_activity_drawer_item_downloads">Prenosi</string>
+  <string name="main_activity_drawer_item_folders">Izberi mapo...</string>
+  <string name="main_activity_drawer_item_stop">Ustavi predvajanje</string>
   <string name="pref_resize_dialog_text">Izberite faktor za spreminjanje velikosti slike:</string>
   <string name="settings_activity_port_range">Številka vrat mora biti med %1$d in %2$d</string>
   <string name="settings_activity_value">\nVrednost:\u0020</string>

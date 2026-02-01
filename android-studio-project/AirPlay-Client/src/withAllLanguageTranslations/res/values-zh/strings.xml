@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">设置过渡行为</string>
   <string name="pref_summary_resize_factor">在发送给客户前调整图片尺寸</string>
   <string name="pref_summary_jpeg_quality">设置 JPEG 质量</string>
+  <string name="main_activity_drawer_item_connect">连接到 AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">镜面屏幕</string>
+  <string name="main_activity_drawer_item_pictures">图片</string>
+  <string name="main_activity_drawer_item_videos">视频</string>
+  <string name="main_activity_drawer_item_downloads">下载</string>
+  <string name="main_activity_drawer_item_folders">选择文件夹...</string>
+  <string name="main_activity_drawer_item_stop">停止播放</string>
   <string name="pref_resize_dialog_text">选择图像缩放因子:</string>
   <string name="settings_activity_port_range">端口号必须在 %1$d 以及 %2$d</string>
   <string name="settings_activity_value">\n价值:\u0020</string>

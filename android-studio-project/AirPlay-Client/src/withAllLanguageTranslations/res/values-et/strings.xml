@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Määra ülemineku käitumine</string>
   <string name="pref_summary_resize_factor">Muuda pildi suurust enne kliendile saatmist</string>
   <string name="pref_summary_jpeg_quality">Seadista JPEG kvaliteet</string>
+  <string name="main_activity_drawer_item_connect">Ühendage AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Peegelekraan</string>
+  <string name="main_activity_drawer_item_pictures">Pildid</string>
+  <string name="main_activity_drawer_item_videos">Videod</string>
+  <string name="main_activity_drawer_item_downloads">Allalaadimised</string>
+  <string name="main_activity_drawer_item_folders">Vali kaust...</string>
+  <string name="main_activity_drawer_item_stop">Peata taasesitus</string>
   <string name="pref_resize_dialog_text">Valige pildi suuruse muutmise tegur:</string>
   <string name="settings_activity_port_range">Porti number peab olema vahemikus %1$d ja %2$d</string>
   <string name="settings_activity_value">\nVäärtus:\u0020</string>

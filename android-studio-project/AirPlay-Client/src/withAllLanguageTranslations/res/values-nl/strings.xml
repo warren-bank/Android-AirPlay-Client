@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Gedrag voor overgang instellen</string>
   <string name="pref_summary_resize_factor">Wijzig het formaat van de afbeelding voordat u deze naar de klant verzendt.</string>
   <string name="pref_summary_jpeg_quality">Set JPEG kwaliteit</string>
+  <string name="main_activity_drawer_item_connect">Verbinden met AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Spiegelscherm</string>
+  <string name="main_activity_drawer_item_pictures">Foto\'s</string>
+  <string name="main_activity_drawer_item_videos">Video\'s</string>
+  <string name="main_activity_drawer_item_downloads">Downloads</string>
+  <string name="main_activity_drawer_item_folders">Map kiezen...</string>
+  <string name="main_activity_drawer_item_stop">Afspelen stoppen</string>
   <string name="pref_resize_dialog_text">Selecteer factor voor aanpassen afbeeldingsgrootte:</string>
   <string name="settings_activity_port_range">Het poortnummer moet tussen %1$d en %2$d</string>
   <string name="settings_activity_value">\nWaarde:\u0020</string>

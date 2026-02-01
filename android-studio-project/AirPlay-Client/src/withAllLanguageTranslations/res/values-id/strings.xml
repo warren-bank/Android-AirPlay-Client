@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Tentukan perilaku untuk transisi</string>
   <string name="pref_summary_resize_factor">Ubah ukuran gambar sebelum dikirim ke klien</string>
   <string name="pref_summary_jpeg_quality">Set JPEG kualitas</string>
+  <string name="main_activity_drawer_item_connect">Hubungkan ke AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Layar Cermin</string>
+  <string name="main_activity_drawer_item_pictures">Gambar</string>
+  <string name="main_activity_drawer_item_videos">Video</string>
+  <string name="main_activity_drawer_item_downloads">Unduhan</string>
+  <string name="main_activity_drawer_item_folders">Pilih folder...</string>
+  <string name="main_activity_drawer_item_stop">Hentikan pemutaran</string>
   <string name="pref_resize_dialog_text">Pilih faktor perbesaran gambar:</string>
   <string name="settings_activity_port_range">Nomor port harus berada di antara %1$d dan %2$d</string>
   <string name="settings_activity_value">\nNilai:\u0020</string>

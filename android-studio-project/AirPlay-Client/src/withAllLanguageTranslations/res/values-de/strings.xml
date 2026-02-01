@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Verhalten für Übergang festlegen</string>
   <string name="pref_summary_resize_factor">Bildgröße vor dem Senden an den Kunden ändern</string>
   <string name="pref_summary_jpeg_quality">Set JPEG Qualität</string>
+  <string name="main_activity_drawer_item_connect">Verbinden mit AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Spiegelbildschirm</string>
+  <string name="main_activity_drawer_item_pictures">Bilder</string>
+  <string name="main_activity_drawer_item_videos">Videos</string>
+  <string name="main_activity_drawer_item_downloads">Downloads</string>
+  <string name="main_activity_drawer_item_folders">Ordner auswählen...</string>
+  <string name="main_activity_drawer_item_stop">Wiedergabe stoppen</string>
   <string name="pref_resize_dialog_text">Bildgrößenfaktor auswählen:</string>
   <string name="settings_activity_port_range">Die Portnummer muss zwischen %1$d und %2$d</string>
   <string name="settings_activity_value">\nWert:\u0020</string>

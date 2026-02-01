@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Nastavit chování pro přechod</string>
   <string name="pref_summary_resize_factor">Změnit velikost obrázku před odesláním klientovi</string>
   <string name="pref_summary_jpeg_quality">Nastavit JPEG kvalita</string>
+  <string name="main_activity_drawer_item_connect">Připojit se k AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Zrcadlová obrazovka</string>
+  <string name="main_activity_drawer_item_pictures">Obrázky</string>
+  <string name="main_activity_drawer_item_videos">Videa</string>
+  <string name="main_activity_drawer_item_downloads">Stahování</string>
+  <string name="main_activity_drawer_item_folders">Vyberte složku...</string>
+  <string name="main_activity_drawer_item_stop">Zastavit přehrávání</string>
   <string name="pref_resize_dialog_text">Vyberte faktor změny velikosti obrázku:</string>
   <string name="settings_activity_port_range">Číslo portu musí být v rozmezí %1$d a %2$d</string>
   <string name="settings_activity_value">\nHodnota:\u0020</string>

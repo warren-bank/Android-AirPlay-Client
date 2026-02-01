@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Átmenet viselkedésének beállítása</string>
   <string name="pref_summary_resize_factor">Kép átméretezése az ügyfélnek való elküldés előtt</string>
   <string name="pref_summary_jpeg_quality">Beállítás JPEG minőség</string>
+  <string name="main_activity_drawer_item_connect">Csatlakozás AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Tükörképernyő</string>
+  <string name="main_activity_drawer_item_pictures">Képek</string>
+  <string name="main_activity_drawer_item_videos">Videók</string>
+  <string name="main_activity_drawer_item_downloads">Letöltések</string>
+  <string name="main_activity_drawer_item_folders">Mappa kiválasztása...</string>
+  <string name="main_activity_drawer_item_stop">Leállítás</string>
   <string name="pref_resize_dialog_text">Kép átméretezési tényező kiválasztása:</string>
   <string name="settings_activity_port_range">A portszámnak a következő tartományban kell lennie %1$d és %2$d</string>
   <string name="settings_activity_value">\nÉrték:\u0020</string>

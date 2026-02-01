@@ -370,20 +370,48 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
 
   private void updateNavigationItems() {
     navigationAdapter.clear();
-    navigationAdapter.add(    new NavigationItem("connect",   "Connect to AirPlay...", R.drawable.ic_cast_connected_grey600_36dp));
+    navigationAdapter.add(new NavigationItem(
+      "connect",
+      getString(R.string.main_activity_drawer_item_connect),
+      R.drawable.ic_cast_connected_grey600_36dp
+    ));
 
     if (has_airplay_connection) {
       if (canMirror)
-        navigationAdapter.add(new NavigationItem("mirror",    "Mirror Screen",         R.drawable.ic_screen_mirror_grey600_36dp ));
+        navigationAdapter.add(new NavigationItem(
+          "mirror",
+          getString(R.string.main_activity_drawer_item_mirror),
+          R.drawable.ic_screen_mirror_grey600_36dp
+        ));
 
       if (has_storage_permission) {
-        navigationAdapter.add(new NavigationItem("pictures",  "Pictures",              R.drawable.ic_image_grey600_36dp         ));
-        navigationAdapter.add(new NavigationItem("videos",    "Videos",                R.drawable.ic_videocam_grey600_36dp      ));
-        navigationAdapter.add(new NavigationItem("downloads", "Downloads",             R.drawable.ic_file_download_grey600_36dp ));
-        navigationAdapter.add(new NavigationItem("folders",   "Choose folder...",      R.drawable.ic_folder_grey600_36dp        ));
+        navigationAdapter.add(new NavigationItem(
+          "pictures",
+          getString(R.string.main_activity_drawer_item_pictures),
+          R.drawable.ic_image_grey600_36dp
+        ));
+        navigationAdapter.add(new NavigationItem(
+          "videos",
+          getString(R.string.main_activity_drawer_item_videos),
+          R.drawable.ic_videocam_grey600_36dp
+        ));
+        navigationAdapter.add(new NavigationItem(
+          "downloads",
+          getString(R.string.main_activity_drawer_item_downloads),
+          R.drawable.ic_file_download_grey600_36dp
+        ));
+        navigationAdapter.add(new NavigationItem(
+          "folders",
+          getString(R.string.main_activity_drawer_item_folders),
+          R.drawable.ic_folder_grey600_36dp
+        ));
       }
 
-      navigationAdapter.add(  new NavigationItem("stop",      "Stop playback",         R.drawable.ic_stop_grey600_36dp          ));
+      navigationAdapter.add(new NavigationItem(
+        "stop",
+        getString(R.string.main_activity_drawer_item_stop),
+        R.drawable.ic_stop_grey600_36dp
+      ));
     }
 
     navigationAdapter.notifyDataSetChanged();

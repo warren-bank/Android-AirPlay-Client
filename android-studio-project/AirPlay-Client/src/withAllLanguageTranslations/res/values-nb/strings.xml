@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Angi oppførsel for overgang</string>
   <string name="pref_summary_resize_factor">Endre størrelsen på bildet før du sender det til klienten</string>
   <string name="pref_summary_jpeg_quality">Sett JPEG kvalitet</string>
+  <string name="main_activity_drawer_item_connect">Koble til AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Speilskjerm</string>
+  <string name="main_activity_drawer_item_pictures">Bilder</string>
+  <string name="main_activity_drawer_item_videos">Videoer</string>
+  <string name="main_activity_drawer_item_downloads">Nedlastinger</string>
+  <string name="main_activity_drawer_item_folders">Velg mappe...</string>
+  <string name="main_activity_drawer_item_stop">Stopp avspilling</string>
   <string name="pref_resize_dialog_text">Velg faktor for bildestørrelse:</string>
   <string name="settings_activity_port_range">Portnummeret må være mellom %1$d og %2$d</string>
   <string name="settings_activity_value">\nVerdi:\u0020</string>

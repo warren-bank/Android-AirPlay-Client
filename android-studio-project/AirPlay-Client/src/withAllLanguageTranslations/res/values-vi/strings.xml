@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Định cấu hình hành vi cho quá trình chuyển đổi</string>
   <string name="pref_summary_resize_factor">Thay đổi kích thước hình ảnh trước khi gửi cho khách hàng</string>
   <string name="pref_summary_jpeg_quality">Đặt JPEG chất lượng</string>
+  <string name="main_activity_drawer_item_connect">Kết nối với AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Màn hình gương</string>
+  <string name="main_activity_drawer_item_pictures">Hình ảnh</string>
+  <string name="main_activity_drawer_item_videos">Video</string>
+  <string name="main_activity_drawer_item_downloads">Tải xuống</string>
+  <string name="main_activity_drawer_item_folders">Chọn thư mục...</string>
+  <string name="main_activity_drawer_item_stop">Dừng phát lại</string>
   <string name="pref_resize_dialog_text">Chọn hệ số thu nhỏ hình ảnh:</string>
   <string name="settings_activity_port_range">Số cổng phải nằm trong khoảng %1$d và %2$d</string>
   <string name="settings_activity_value">\nGiá trị:\u0020</string>

@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Ορισμός συμπεριφοράς για μετάβαση</string>
   <string name="pref_summary_resize_factor">Αλλαγή μεγέθους εικόνας πριν από την αποστολή στον πελάτη</string>
   <string name="pref_summary_jpeg_quality">Ρύθμιση JPEG ποιότητα</string>
+  <string name="main_activity_drawer_item_connect">Σύνδεση με AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Οθόνη καθρέφτη</string>
+  <string name="main_activity_drawer_item_pictures">Εικόνες</string>
+  <string name="main_activity_drawer_item_videos">Βίντεο</string>
+  <string name="main_activity_drawer_item_downloads">Λήψεις</string>
+  <string name="main_activity_drawer_item_folders">Επιλέξτε φάκελο...</string>
+  <string name="main_activity_drawer_item_stop">Διακοπή αναπαραγωγής</string>
   <string name="pref_resize_dialog_text">Επιλέξτε συντελεστή αλλαγής μεγέθους εικόνας:</string>
   <string name="settings_activity_port_range">Ο αριθμός θύρας πρέπει να είναι μεταξύ %1$d και %2$d</string>
   <string name="settings_activity_value">\nΑξία:\u0020</string>

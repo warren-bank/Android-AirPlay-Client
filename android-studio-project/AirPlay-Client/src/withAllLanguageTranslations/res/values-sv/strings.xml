@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Ställ in beteende för övergång</string>
   <string name="pref_summary_resize_factor">Ändra storlek på bilden innan den skickas till kunden</string>
   <string name="pref_summary_jpeg_quality">Ställ in JPEG kvalitet</string>
+  <string name="main_activity_drawer_item_connect">Anslut till AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Spegelskärm</string>
+  <string name="main_activity_drawer_item_pictures">Bilder</string>
+  <string name="main_activity_drawer_item_videos">Videor</string>
+  <string name="main_activity_drawer_item_downloads">Nedladdningar</string>
+  <string name="main_activity_drawer_item_folders">Välj mapp...</string>
+  <string name="main_activity_drawer_item_stop">Avbryt uppspelning</string>
   <string name="pref_resize_dialog_text">Välj bildstorleksfaktor:</string>
   <string name="settings_activity_port_range">Portnumret måste vara mellan %1$d och %2$d</string>
   <string name="settings_activity_value">\nVärde:\u0020</string>

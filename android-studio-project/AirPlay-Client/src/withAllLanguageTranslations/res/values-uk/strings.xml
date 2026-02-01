@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Встановити поведінку для переходу</string>
   <string name="pref_summary_resize_factor">Змінити розмір зображення перед відправкою клієнту</string>
   <string name="pref_summary_jpeg_quality">Набір JPEG якість</string>
+  <string name="main_activity_drawer_item_connect">Підключитися до AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Дзеркальний екран</string>
+  <string name="main_activity_drawer_item_pictures">Фотографії</string>
+  <string name="main_activity_drawer_item_videos">Відео</string>
+  <string name="main_activity_drawer_item_downloads">Завантаження</string>
+  <string name="main_activity_drawer_item_folders">Виберіть папку...</string>
+  <string name="main_activity_drawer_item_stop">Зупинити відтворення</string>
   <string name="pref_resize_dialog_text">Виберіть коефіцієнт зміни розміру зображення:</string>
   <string name="settings_activity_port_range">Номер порту повинен бути в діапазоні %1$d та %2$d</string>
   <string name="settings_activity_value">\nЦінність:\u0020</string>

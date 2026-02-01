@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">전환 동작 설정</string>
   <string name="pref_summary_resize_factor">클라이언트에게 전송하기 전에 이미지 크기 조정</string>
   <string name="pref_summary_jpeg_quality">설정 JPEG 품질</string>
+  <string name="main_activity_drawer_item_connect">연결하기 AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">미러 스크린</string>
+  <string name="main_activity_drawer_item_pictures">사진들</string>
+  <string name="main_activity_drawer_item_videos">동영상</string>
+  <string name="main_activity_drawer_item_downloads">다운로드</string>
+  <string name="main_activity_drawer_item_folders">폴더 선택...</string>
+  <string name="main_activity_drawer_item_stop">재생 중지</string>
   <string name="pref_resize_dialog_text">이미지 크기 조정 계수 선택:</string>
   <string name="settings_activity_port_range">포트 번호는 다음 범위 내에 있어야 합니다: %1$d 그리고 %2$d</string>
   <string name="settings_activity_value">\n가치:\u0020</string>

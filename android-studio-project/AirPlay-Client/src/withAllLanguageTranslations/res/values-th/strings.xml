@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">ตั้งค่าพฤติกรรมสำหรับการเปลี่ยนผ่าน</string>
   <string name="pref_summary_resize_factor">ปรับขนาดรูปภาพก่อนส่งให้ลูกค้า</string>
   <string name="pref_summary_jpeg_quality">ตั้งค่า JPEG คุณภาพ</string>
+  <string name="main_activity_drawer_item_connect">เชื่อมต่อกับ AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">หน้าจอสะท้อน</string>
+  <string name="main_activity_drawer_item_pictures">รูปภาพ</string>
+  <string name="main_activity_drawer_item_videos">วิดีโอ</string>
+  <string name="main_activity_drawer_item_downloads">ดาวน์โหลด</string>
+  <string name="main_activity_drawer_item_folders">เลือกโฟลเดอร์...</string>
+  <string name="main_activity_drawer_item_stop">หยุดการเล่น</string>
   <string name="pref_resize_dialog_text">เลือกตัวคูณการปรับขนาดภาพ:</string>
   <string name="settings_activity_port_range">หมายเลขพอร์ตต้องอยู่ระหว่าง %1$d และ %2$d</string>
   <string name="settings_activity_value">\nมูลค่า:\u0020</string>

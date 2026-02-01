@@ -54,6 +54,15 @@
   <string name="pref_summary_resize_factor">Resize image before sending to client</string>
   <string name="pref_summary_jpeg_quality">Set JPEG quality</string>
 
+  <!-- DroidPlayActivity -->
+  <string name="main_activity_drawer_item_connect">Connect to AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Mirror Screen</string>
+  <string name="main_activity_drawer_item_pictures">Pictures</string>
+  <string name="main_activity_drawer_item_videos">Videos</string>
+  <string name="main_activity_drawer_item_downloads">Downloads</string>
+  <string name="main_activity_drawer_item_folders">Choose folder...</string>
+  <string name="main_activity_drawer_item_stop">Stop playback</string>
+
   <!-- SettingsActivity -->
   <string name="pref_resize_dialog_text">Select image resize factor:</string>
   <string name="settings_activity_port_range">Port number must be between %1$d and %2$d</string>

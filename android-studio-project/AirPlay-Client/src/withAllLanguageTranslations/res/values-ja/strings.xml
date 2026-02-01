@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">遷移の動作を設定する</string>
   <string name="pref_summary_resize_factor">クライアントに送信する前に画像のサイズを変更する</string>
   <string name="pref_summary_jpeg_quality">セット JPEG 品質</string>
+  <string name="main_activity_drawer_item_connect">接続する AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">ミラースクリーン</string>
+  <string name="main_activity_drawer_item_pictures">写真</string>
+  <string name="main_activity_drawer_item_videos">動画</string>
+  <string name="main_activity_drawer_item_downloads">ダウンロード</string>
+  <string name="main_activity_drawer_item_folders">フォルダを選択...</string>
+  <string name="main_activity_drawer_item_stop">再生を停止</string>
   <string name="pref_resize_dialog_text">画像リサイズ係数を選択:</string>
   <string name="settings_activity_port_range">ポート番号は次の範囲内である必要があります %1$d そして %2$d</string>
   <string name="settings_activity_value">\n価値:\u0020</string>

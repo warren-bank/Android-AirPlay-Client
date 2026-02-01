@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Pārejas darbības iestatīšana</string>
   <string name="pref_summary_resize_factor">Mainiet attēla izmēru pirms nosūtīšanas klientam</string>
   <string name="pref_summary_jpeg_quality">Iestatīt JPEG kvalitāte</string>
+  <string name="main_activity_drawer_item_connect">Savienot ar AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Spoguļekrāns</string>
+  <string name="main_activity_drawer_item_pictures">Attēli</string>
+  <string name="main_activity_drawer_item_videos">Video</string>
+  <string name="main_activity_drawer_item_downloads">Lejupielādes</string>
+  <string name="main_activity_drawer_item_folders">Izvēlieties mapi...</string>
+  <string name="main_activity_drawer_item_stop">Pārtraukt atskaņošanu</string>
   <string name="pref_resize_dialog_text">Izvēlieties attēla izmēra maiņas koeficientu:</string>
   <string name="settings_activity_port_range">Porta numurs ir jābūt starp %1$d un %2$d</string>
   <string name="settings_activity_value">\nVērtība:\u0020</string>

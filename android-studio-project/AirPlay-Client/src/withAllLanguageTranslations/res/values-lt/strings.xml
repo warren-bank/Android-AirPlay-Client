@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Nustatyti perėjimo elgesį</string>
   <string name="pref_summary_resize_factor">Prieš siunčiant klientui pakeiskite vaizdo dydį</string>
   <string name="pref_summary_jpeg_quality">Nustatyti JPEG kokybė</string>
+  <string name="main_activity_drawer_item_connect">Prisijunkite prie AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Veidrodinis ekranas</string>
+  <string name="main_activity_drawer_item_pictures">Nuotraukos</string>
+  <string name="main_activity_drawer_item_videos">Vaizdo įrašai</string>
+  <string name="main_activity_drawer_item_downloads">Atsisiuntimai</string>
+  <string name="main_activity_drawer_item_folders">Pasirinkite aplanką...</string>
+  <string name="main_activity_drawer_item_stop">Sustabdyti atkūrimą</string>
   <string name="pref_resize_dialog_text">Pasirinkite vaizdo dydžio keitimo koeficientą:</string>
   <string name="settings_activity_port_range">Prievado numeris turi būti tarp %1$d ir %2$d</string>
   <string name="settings_activity_value">\nVertė:\u0020</string>

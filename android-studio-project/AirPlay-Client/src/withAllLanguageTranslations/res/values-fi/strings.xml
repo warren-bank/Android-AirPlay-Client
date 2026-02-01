@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Aseta siirtymän käyttäytyminen</string>
   <string name="pref_summary_resize_factor">Muuta kuvan kokoa ennen lähettämistä asiakkaalle</string>
   <string name="pref_summary_jpeg_quality">Aseta JPEG laatu</string>
+  <string name="main_activity_drawer_item_connect">Yhdistä AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Peilinäyttö</string>
+  <string name="main_activity_drawer_item_pictures">Kuvat</string>
+  <string name="main_activity_drawer_item_videos">Videot</string>
+  <string name="main_activity_drawer_item_downloads">Lataukset</string>
+  <string name="main_activity_drawer_item_folders">Valitse kansio...</string>
+  <string name="main_activity_drawer_item_stop">Pysäytä toisto</string>
   <string name="pref_resize_dialog_text">Valitse kuvan koon muuttokerroin:</string>
   <string name="settings_activity_port_range">Portin numeron on oltava välillä %1$d ja %2$d</string>
   <string name="settings_activity_value">\nArvo:\u0020</string>

@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Setați comportamentul pentru tranziție</string>
   <string name="pref_summary_resize_factor">Redimensionați imaginea înainte de a o trimite clientului</string>
   <string name="pref_summary_jpeg_quality">Set JPEG calitate</string>
+  <string name="main_activity_drawer_item_connect">Conectați-vă la AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Ecran oglindă</string>
+  <string name="main_activity_drawer_item_pictures">Imagini</string>
+  <string name="main_activity_drawer_item_videos">Videoclipuri</string>
+  <string name="main_activity_drawer_item_downloads">Descărcări</string>
+  <string name="main_activity_drawer_item_folders">Alegeți folderul...</string>
+  <string name="main_activity_drawer_item_stop">Opriți redarea</string>
   <string name="pref_resize_dialog_text">Selectați factorul de redimensionare a imaginii:</string>
   <string name="settings_activity_port_range">Numărul portului trebuie să fie între %1$d și %2$d</string>
   <string name="settings_activity_value">\nValoare:\u0020</string>

@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">הגדר התנהגות למעבר</string>
   <string name="pref_summary_resize_factor">שינוי גודל התמונה לפני שליחתה ללקוח</string>
   <string name="pref_summary_jpeg_quality">הגדר JPEG איכות</string>
+  <string name="main_activity_drawer_item_connect">התחבר ל AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">מסך מראה</string>
+  <string name="main_activity_drawer_item_pictures">תמונות</string>
+  <string name="main_activity_drawer_item_videos">סרטונים</string>
+  <string name="main_activity_drawer_item_downloads">הורדות</string>
+  <string name="main_activity_drawer_item_folders">בחר תיקייה...</string>
+  <string name="main_activity_drawer_item_stop">עצור השמעה</string>
   <string name="pref_resize_dialog_text">בחר גורם שינוי גודל תמונה:</string>
   <string name="settings_activity_port_range">מספר היציאה חייב להיות בין %1$d ו %2$d</string>
   <string name="settings_activity_value">\nערך:\u0020</string>

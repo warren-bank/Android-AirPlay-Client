@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">تعيين سلوك الانتقال</string>
   <string name="pref_summary_resize_factor">تغيير حجم الصورة قبل إرسالها إلى العميل</string>
   <string name="pref_summary_jpeg_quality">مجموعة JPEG الجودة</string>
+  <string name="main_activity_drawer_item_connect">اتصل بـ AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">شاشة مرآة</string>
+  <string name="main_activity_drawer_item_pictures">صور</string>
+  <string name="main_activity_drawer_item_videos">مقاطع فيديو</string>
+  <string name="main_activity_drawer_item_downloads">التنزيلات</string>
+  <string name="main_activity_drawer_item_folders">اختر المجلد...</string>
+  <string name="main_activity_drawer_item_stop">إيقاف التشغيل</string>
   <string name="pref_resize_dialog_text">حدد عامل تغيير حجم الصورة:</string>
   <string name="settings_activity_port_range">يجب أن يكون رقم المنفذ بين %1$d و %2$d</string>
   <string name="settings_activity_value">\nالقيمة:\u0020</string>

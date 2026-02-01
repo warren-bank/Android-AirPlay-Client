@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Установить поведение для перехода</string>
   <string name="pref_summary_resize_factor">Изменить размер изображения перед отправкой клиенту</string>
   <string name="pref_summary_jpeg_quality">Набор JPEG качество</string>
+  <string name="main_activity_drawer_item_connect">Подключиться к AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Зеркальный экран</string>
+  <string name="main_activity_drawer_item_pictures">Фотографии</string>
+  <string name="main_activity_drawer_item_videos">Видео</string>
+  <string name="main_activity_drawer_item_downloads">Загрузки</string>
+  <string name="main_activity_drawer_item_folders">Выбрать папку...</string>
+  <string name="main_activity_drawer_item_stop">Остановить воспроизведение</string>
   <string name="pref_resize_dialog_text">Выберите коэффициент изменения размера изображения:</string>
   <string name="settings_activity_port_range">Номер порта должен быть в диапазоне %1$d и %2$d</string>
   <string name="settings_activity_value">\nЦенность:\u0020</string>

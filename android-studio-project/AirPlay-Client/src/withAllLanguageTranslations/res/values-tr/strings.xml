@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Geçiş için davranış ayarla</string>
   <string name="pref_summary_resize_factor">Müşteriye göndermeden önce görüntünün boyutunu değiştirin</string>
   <string name="pref_summary_jpeg_quality">Ayar JPEG kalite</string>
+  <string name="main_activity_drawer_item_connect">Bağlan AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Ayna Ekran</string>
+  <string name="main_activity_drawer_item_pictures">Resimler</string>
+  <string name="main_activity_drawer_item_videos">Videolar</string>
+  <string name="main_activity_drawer_item_downloads">İndirmeler</string>
+  <string name="main_activity_drawer_item_folders">Klasörü seçin...</string>
+  <string name="main_activity_drawer_item_stop">Oynatmayı durdur</string>
   <string name="pref_resize_dialog_text">Görüntü yeniden boyutlandırma faktörünü seçin:</string>
   <string name="settings_activity_port_range">Port numarası arasında olmalıdır %1$d ve %2$d</string>
   <string name="settings_activity_value">\nDeğer:\u0020</string>

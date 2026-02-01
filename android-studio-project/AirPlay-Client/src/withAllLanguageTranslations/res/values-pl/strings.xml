@@ -21,6 +21,13 @@
   <string name="pref_summary_image_transition">Ustaw zachowanie dla przejścia</string>
   <string name="pref_summary_resize_factor">Zmiana rozmiaru obrazu przed wysłaniem do klienta</string>
   <string name="pref_summary_jpeg_quality">Ustaw JPEG jakość</string>
+  <string name="main_activity_drawer_item_connect">Połącz się z AirPlay...</string>
+  <string name="main_activity_drawer_item_mirror">Ekran lustrzany</string>
+  <string name="main_activity_drawer_item_pictures">Zdjęcia</string>
+  <string name="main_activity_drawer_item_videos">Filmy</string>
+  <string name="main_activity_drawer_item_downloads">Pliki do pobrania</string>
+  <string name="main_activity_drawer_item_folders">Wybierz folder...</string>
+  <string name="main_activity_drawer_item_stop">Zatrzymaj odtwarzanie</string>
   <string name="pref_resize_dialog_text">Wybierz współczynnik zmiany rozmiaru obrazu:</string>
   <string name="settings_activity_port_range">Numer portu musi mieścić się w zakresie %1$d i %2$d</string>
   <string name="settings_activity_value">\nWartość:\u0020</string>
