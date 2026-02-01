@@ -30,7 +30,7 @@
           android:layout_height="wrap_content"
           android:textColor="#444444"
           android:textSize="18sp"
-          android:text="Cancel"/>
+          android:text="@string/layout_folder_cancel"/>
 
       <Button
           android:id="@+id/select"
@@ -38,7 +38,7 @@
           android:layout_height="wrap_content"
           android:textColor="#444444"
           android:textSize="18sp"
-          android:text="Select"/>
+          android:text="@string/layout_folder_select"/>
 
      </TableRow>
 

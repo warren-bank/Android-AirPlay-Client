@@ -139,6 +139,10 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
     switch (item.getItemId()) {
+      case R.id.open_drawer : {
+        navigationLayout.openDrawer(navigationList);
+        break;
+      }
       case R.id.settings : {
         startActivityForResult(SettingsActivity.getStartIntent(DroidPlayActivity.this), Constant.PermissionRequestCode.SETTINGS);
         break;

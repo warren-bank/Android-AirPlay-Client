@@ -1,13 +1,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
+            android:id="@+id/open_drawer"
+            android:showAsAction="never"
+            android:title="@string/main_menu_item_open_drawer"/>
+
+    <item
             android:id="@+id/settings"
             android:showAsAction="never"
-            android:title="Settings"/>
+            android:title="@string/main_menu_item_settings"/>
 
     <item
             android:id="@+id/exit"
             android:showAsAction="never"
-            android:title="Exit"/>
+            android:title="@string/main_menu_item_exit"/>
 
 </menu>

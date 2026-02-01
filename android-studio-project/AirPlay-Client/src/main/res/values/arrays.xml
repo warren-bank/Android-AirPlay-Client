@@ -2,8 +2,8 @@
 <resources>
 
   <string-array name="pref_names_folder_layout">
-    <item>List: Icon + File Name [Default]</item>
-    <item>Grid: Thumbnail</item>
+    <item>@string/pref_names_folder_layout_list</item>
+    <item>@string/pref_names_folder_layout_grid</item>
   </string-array>
   <string-array translatable="false" name="pref_values_folder_layout">
     <item>list</item>
@@ -11,11 +11,11 @@
   </string-array>
 
   <string-array name="pref_names_image_transition">
-    <item>None [Default]</item>
-    <item>Random</item>
-    <item>Dissolve</item>
-    <item>Slide left</item>
-    <item>Slide right</item>
+    <item>@string/pref_names_image_transition_none</item>
+    <item>@string/pref_names_image_transition_random</item>
+    <item>@string/pref_names_image_transition_dissolve</item>
+    <item>@string/pref_names_image_transition_slideleft</item>
+    <item>@string/pref_names_image_transition_slideright</item>
   </string-array>
   <string-array translatable="false" name="pref_values_image_transition">
     <item>None</item>
@@ -28,7 +28,7 @@
   <string-array name="pref_names_jpeg_quality">
     <item>100</item>
     <item>90</item>
-    <item>80 [Default]</item>
+    <item>@string/pref_names_jpeg_quality_80</item>
     <item>70</item>
     <item>60</item>
     <item>50</item>

@@ -3,6 +3,12 @@
 
   <string translatable="false" name="app_name">DroidPlay</string>
 
+  <!-- common -->
+  <string name="cancel">Cancel</string>
+  <string name="none">None</string>
+  <string name="save">Save</string>
+  <string name="select">Select</string>
+
   <!-- foreground service notification -->
   <string name="notification_service_ticker">DroidPlay: service running</string>
   <string name="notification_service_content_line1">DroidPlay running at:</string>
@@ -31,7 +37,7 @@
   <!-- Preference default values (string) -->
   <string translatable="false" name="pref_val_folder_layout">list</string>
   <string translatable="false" name="pref_val_server_port">9999</string>
-  <string translatable="false" name="pref_val_image_transition">None</string>
+  <string translatable="false" name="pref_val_image_transition">@string/none</string>
   <string translatable="false" name="pref_val_jpeg_quality">80</string>
 
   <!-- Preference titles -->
@@ -52,5 +58,40 @@
   <string name="pref_resize_dialog_text">Select image resize factor:</string>
   <string name="settings_activity_port_range">Port number must be between %1$d and %2$d</string>
   <string name="settings_activity_value">\nValue:\u0020</string>
+
+  <!-- res/layout/connect -->
+  <string name="layout_connect_cancel">@string/cancel</string>
+  <string name="layout_connect_empty">-- No services found --</string>
+
+  <!-- res/layout/folder -->
+  <string name="layout_folder_cancel">@string/cancel</string>
+  <string name="layout_folder_select">@string/select</string>
+
+  <!-- res/layout/main -->
+  <string name="layout_main_empty">-- No files found --</string>
+
+  <!-- res/layout/settings -->
+  <string name="layout_settings_server_port">Server port number:</string>
+  <string name="layout_settings_requires_restart">(Requires application restart)</string>
+  <string name="layout_settings_image_transition">Image transition:</string>
+
+  <!-- res/menu/main_actions -->
+  <string name="main_menu_item_open_drawer">Open Drawer</string>
+  <string name="main_menu_item_settings">Settings</string>
+  <string name="main_menu_item_exit">Exit</string>
+
+  <!-- res/menu/settings_actions -->
+  <string name="settings_menu_item_cancel">@string/cancel</string>
+  <string name="settings_menu_item_save">@string/save</string>
+
+  <!-- res/values/arrays -->
+  <string name="pref_names_folder_layout_list">List: Icon + File Name [Default]</string>
+  <string name="pref_names_folder_layout_grid">Grid: Thumbnail</string>
+  <string name="pref_names_image_transition_none">None [Default]</string>
+  <string name="pref_names_image_transition_random">Random</string>
+  <string name="pref_names_image_transition_dissolve">Dissolve</string>
+  <string name="pref_names_image_transition_slideleft">Slide left</string>
+  <string name="pref_names_image_transition_slideright">Slide right</string>
+  <string name="pref_names_jpeg_quality_80">80 [Default]</string>
 
 </resources>

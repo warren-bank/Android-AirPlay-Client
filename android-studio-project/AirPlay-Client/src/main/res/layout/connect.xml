@@ -11,7 +11,7 @@
       android:layout_alignParentBottom="true"
       android:textColor="#444444"
       android:textSize="18sp"
-      android:text="Cancel"/>
+      android:text="@string/layout_connect_cancel"/>
 
   <ListView
       android:id="@+id/list"
@@ -27,7 +27,7 @@
       android:layout_margin="8dp"
       android:textColor="#888888"
       android:textSize="18sp"
-      android:text="-- No services found --"
+      android:text="@string/layout_connect_empty"
       android:gravity="center"
       android:visibility="gone"/>
 
