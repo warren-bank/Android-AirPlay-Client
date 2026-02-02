@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Välj mapp</string>
   <string name="layout_connect_empty">-- Inga tjänster hittades --</string>
   <string name="layout_main_empty">-- Inga filer hittades --</string>
-  <string name="layout_settings_server_port">Serverportnummer:</string>
-  <string name="layout_settings_requires_restart">(Kräver omstart av applikationen)</string>
-  <string name="layout_settings_image_transition">Bildövergång:</string>
   <string name="main_menu_item_open_drawer">Öppna låda</string>
   <string name="main_menu_item_settings">Inställningar</string>
   <string name="main_menu_item_exit">Avsluta</string>

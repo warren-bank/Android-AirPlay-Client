@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">选择文件夹</string>
   <string name="layout_connect_empty">-- 未找到任何服务 --</string>
   <string name="layout_main_empty">-- 未找到文件 --</string>
-  <string name="layout_settings_server_port">服务器端口号:</string>
-  <string name="layout_settings_requires_restart">(需要重新启动应用程序)</string>
-  <string name="layout_settings_image_transition">图像过渡:</string>
   <string name="main_menu_item_open_drawer">打开抽屉</string>
   <string name="main_menu_item_settings">设置</string>
   <string name="main_menu_item_exit">退出</string>

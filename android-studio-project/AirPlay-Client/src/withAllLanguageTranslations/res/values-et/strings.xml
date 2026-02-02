@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Vali kaust</string>
   <string name="layout_connect_empty">-- Teenuseid ei leitud --</string>
   <string name="layout_main_empty">-- Faile ei leitud --</string>
-  <string name="layout_settings_server_port">Serveri pordi number:</string>
-  <string name="layout_settings_requires_restart">(Nõuab rakenduse taaskäivitamist)</string>
-  <string name="layout_settings_image_transition">Pildi üleminek:</string>
   <string name="main_menu_item_open_drawer">Ava sahtel</string>
   <string name="main_menu_item_settings">Seaded</string>
   <string name="main_menu_item_exit">Väljumine</string>

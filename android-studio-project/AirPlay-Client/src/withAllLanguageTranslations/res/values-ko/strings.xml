@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">폴더 선택</string>
   <string name="layout_connect_empty">-- 서비스를 찾을 수 없습니다 --</string>
   <string name="layout_main_empty">-- 파일을 찾을 수 없습니다. --</string>
-  <string name="layout_settings_server_port">서버 포트 번호:</string>
-  <string name="layout_settings_requires_restart">(응용 프로그램 재시작이 필요합니다)</string>
-  <string name="layout_settings_image_transition">이미지 전환:</string>
   <string name="main_menu_item_open_drawer">서랍 열기</string>
   <string name="main_menu_item_settings">설정</string>
   <string name="main_menu_item_exit">종료</string>

@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Chọn thư mục</string>
   <string name="layout_connect_empty">-- Không tìm thấy dịch vụ nào. --</string>
   <string name="layout_main_empty">-- Không tìm thấy tệp nào. --</string>
-  <string name="layout_settings_server_port">Số cổng máy chủ:</string>
-  <string name="layout_settings_requires_restart">(Yêu cầu khởi động lại ứng dụng)</string>
-  <string name="layout_settings_image_transition">Chuyển đổi hình ảnh:</string>
   <string name="main_menu_item_open_drawer">Mở ngăn kéo</string>
   <string name="main_menu_item_settings">Cài đặt</string>
   <string name="main_menu_item_exit">Thoát</string>

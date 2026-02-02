@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Ordner auswählen</string>
   <string name="layout_connect_empty">-- Keine Dienste gefunden --</string>
   <string name="layout_main_empty">-- Keine Dateien gefunden --</string>
-  <string name="layout_settings_server_port">Server-Portnummer:</string>
-  <string name="layout_settings_requires_restart">(Erfordert einen Neustart der Anwendung)</string>
-  <string name="layout_settings_image_transition">Bildübergang:</string>
   <string name="main_menu_item_open_drawer">Schublade öffnen</string>
   <string name="main_menu_item_settings">Einstellungen</string>
   <string name="main_menu_item_exit">Ausgang</string>

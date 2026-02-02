@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Klasörü Seç</string>
   <string name="layout_connect_empty">-- Hizmet bulunamadı --</string>
   <string name="layout_main_empty">-- Dosya bulunamadı --</string>
-  <string name="layout_settings_server_port">Sunucu bağlantı noktası numarası:</string>
-  <string name="layout_settings_requires_restart">(Uygulamanın yeniden başlatılması gerekir)</string>
-  <string name="layout_settings_image_transition">Görüntü geçişi:</string>
   <string name="main_menu_item_open_drawer">Çekmeceyi aç</string>
   <string name="main_menu_item_settings">Ayarlar</string>
   <string name="main_menu_item_exit">Çıkış</string>

@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Wybierz folder</string>
   <string name="layout_connect_empty">-- Nie znaleziono żadnych usług --</string>
   <string name="layout_main_empty">-- Nie znaleziono żadnych plików. --</string>
-  <string name="layout_settings_server_port">Numer portu serwera:</string>
-  <string name="layout_settings_requires_restart">(Wymaga ponownego uruchomienia aplikacji)</string>
-  <string name="layout_settings_image_transition">Przejście obrazu:</string>
   <string name="main_menu_item_open_drawer">Otwórz szufladę</string>
   <string name="main_menu_item_settings">Ustawienia</string>
   <string name="main_menu_item_exit">Wyjście</string>

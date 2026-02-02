@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Изберете папка</string>
   <string name="layout_connect_empty">-- Няма намерени услуги --</string>
   <string name="layout_main_empty">-- Няма намерени файлове --</string>
-  <string name="layout_settings_server_port">Номер на порт на сървъра:</string>
-  <string name="layout_settings_requires_restart">(Изисква рестартиране на приложението)</string>
-  <string name="layout_settings_image_transition">Преход на изображението:</string>
   <string name="main_menu_item_open_drawer">Отворено чекмедже</string>
   <string name="main_menu_item_settings">Настройки</string>
   <string name="main_menu_item_exit">Изход</string>

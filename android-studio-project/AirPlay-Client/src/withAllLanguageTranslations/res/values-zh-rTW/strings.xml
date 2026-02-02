@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">選擇資料夾</string>
   <string name="layout_connect_empty">-- 未找到任何服務 --</string>
   <string name="layout_main_empty">-- 未找到任何檔案 --</string>
-  <string name="layout_settings_server_port">伺服器連接埠號碼:</string>
-  <string name="layout_settings_requires_restart">(需要重新啟動應用程式)</string>
-  <string name="layout_settings_image_transition">影像轉換:</string>
   <string name="main_menu_item_open_drawer">打開抽屜</string>
   <string name="main_menu_item_settings">設定</string>
   <string name="main_menu_item_exit">退出</string>

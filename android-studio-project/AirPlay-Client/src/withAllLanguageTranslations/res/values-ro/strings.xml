@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Selectați folderul</string>
   <string name="layout_connect_empty">-- Nu s-au găsit servicii --</string>
   <string name="layout_main_empty">-- Nu s-au găsit fișiere --</string>
-  <string name="layout_settings_server_port">Numărul portului serverului:</string>
-  <string name="layout_settings_requires_restart">(Necesită repornirea aplicației)</string>
-  <string name="layout_settings_image_transition">Tranziția imaginii:</string>
   <string name="main_menu_item_open_drawer">Sertar deschis</string>
   <string name="main_menu_item_settings">Setări</string>
   <string name="main_menu_item_exit">Ieșire</string>

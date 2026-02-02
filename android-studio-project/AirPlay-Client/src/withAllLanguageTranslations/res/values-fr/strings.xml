@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Sélectionner un dossier</string>
   <string name="layout_connect_empty">-- Aucun service trouvé --</string>
   <string name="layout_main_empty">-- Aucun fichier trouvé --</string>
-  <string name="layout_settings_server_port">Numéro de port du serveur:</string>
-  <string name="layout_settings_requires_restart">(Nécessite le redémarrage de l\'application)</string>
-  <string name="layout_settings_image_transition">Transition d\'image:</string>
   <string name="main_menu_item_open_drawer">Tiroir ouvert</string>
   <string name="main_menu_item_settings">Paramètres</string>
   <string name="main_menu_item_exit">Sortie</string>

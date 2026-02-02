@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">フォルダを選択</string>
   <string name="layout_connect_empty">-- サービスが見つかりませんでした --</string>
   <string name="layout_main_empty">-- ファイルが見つかりませんでした --</string>
-  <string name="layout_settings_server_port">サーバーのポート番号:</string>
-  <string name="layout_settings_requires_restart">(アプリケーションの再起動が必要です)</string>
-  <string name="layout_settings_image_transition">画像遷移:</string>
   <string name="main_menu_item_open_drawer">引き出しを開ける</string>
   <string name="main_menu_item_settings">設定</string>
   <string name="main_menu_item_exit">出口</string>

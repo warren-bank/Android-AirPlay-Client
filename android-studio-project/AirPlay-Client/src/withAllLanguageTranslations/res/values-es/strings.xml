@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Seleccionar carpeta</string>
   <string name="layout_connect_empty">-- No se han encontrado servicios. --</string>
   <string name="layout_main_empty">-- No se han encontrado archivos. --</string>
-  <string name="layout_settings_server_port">Número de puerto del servidor:</string>
-  <string name="layout_settings_requires_restart">(Requiere reiniciar la aplicación.)</string>
-  <string name="layout_settings_image_transition">Transición de imágenes:</string>
   <string name="main_menu_item_open_drawer">Abrir cajón</string>
   <string name="main_menu_item_settings">Configuración</string>
   <string name="main_menu_item_exit">Salida</string>

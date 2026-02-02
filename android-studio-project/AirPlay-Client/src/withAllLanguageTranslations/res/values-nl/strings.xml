@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Map selecteren</string>
   <string name="layout_connect_empty">-- Geen diensten gevonden --</string>
   <string name="layout_main_empty">-- Geen bestanden gevonden --</string>
-  <string name="layout_settings_server_port">Serverpoortnummer:</string>
-  <string name="layout_settings_requires_restart">(Vereist herstart van de applicatie)</string>
-  <string name="layout_settings_image_transition">Beeldovergang:</string>
   <string name="main_menu_item_open_drawer">Open lade</string>
   <string name="main_menu_item_settings">Instellingen</string>
   <string name="main_menu_item_exit">Afslag</string>

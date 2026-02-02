@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Mappa kiválasztása</string>
   <string name="layout_connect_empty">-- Nincs találat --</string>
   <string name="layout_main_empty">-- Nincs fájl található --</string>
-  <string name="layout_settings_server_port">Szerver port száma:</string>
-  <string name="layout_settings_requires_restart">(Az alkalmazás újraindítása szükséges)</string>
-  <string name="layout_settings_image_transition">Képátmenet:</string>
   <string name="main_menu_item_open_drawer">Nyitott fiók</string>
   <string name="main_menu_item_settings">Beállítások</string>
   <string name="main_menu_item_exit">Kilépés</string>

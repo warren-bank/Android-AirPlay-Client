@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Selecionar pasta</string>
   <string name="layout_connect_empty">-- Nenhum serviço encontrado --</string>
   <string name="layout_main_empty">-- Nenhum arquivo encontrado --</string>
-  <string name="layout_settings_server_port">Número da porta do servidor:</string>
-  <string name="layout_settings_requires_restart">(Requer reinicialização do aplicativo)</string>
-  <string name="layout_settings_image_transition">Transição de imagem:</string>
   <string name="main_menu_item_open_drawer">Abrir gaveta</string>
   <string name="main_menu_item_settings">Configurações</string>
   <string name="main_menu_item_exit">Saída</string>

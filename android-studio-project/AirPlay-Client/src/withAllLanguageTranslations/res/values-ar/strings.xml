@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">تحديد المجلد</string>
   <string name="layout_connect_empty">-- لم يتم العثور على أي خدمات --</string>
   <string name="layout_main_empty">-- لم يتم العثور على أي ملفات --</string>
-  <string name="layout_settings_server_port">رقم منفذ الخادم:</string>
-  <string name="layout_settings_requires_restart">(يتطلب إعادة تشغيل التطبيق)</string>
-  <string name="layout_settings_image_transition">انتقال الصورة:</string>
   <string name="main_menu_item_open_drawer">فتح الدرج</string>
   <string name="main_menu_item_settings">الإعدادات</string>
   <string name="main_menu_item_exit">خروج</string>

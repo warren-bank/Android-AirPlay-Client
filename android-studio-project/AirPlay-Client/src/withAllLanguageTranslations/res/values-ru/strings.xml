@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Выбрать папку</string>
   <string name="layout_connect_empty">-- Услуги не найдены --</string>
   <string name="layout_main_empty">-- Файлы не найдены --</string>
-  <string name="layout_settings_server_port">Номер порта сервера:</string>
-  <string name="layout_settings_requires_restart">(Требуется перезапуск приложения)</string>
-  <string name="layout_settings_image_transition">Переход изображения:</string>
   <string name="main_menu_item_open_drawer">Открыть ящик</string>
   <string name="main_menu_item_settings">Настройки</string>
   <string name="main_menu_item_exit">Выход</string>

@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Pilih Folder</string>
   <string name="layout_connect_empty">-- Tidak ditemukan layanan --</string>
   <string name="layout_main_empty">-- Tidak ditemukan file. --</string>
-  <string name="layout_settings_server_port">Nomor port server:</string>
-  <string name="layout_settings_requires_restart">(Membutuhkan restart aplikasi)</string>
-  <string name="layout_settings_image_transition">Transisi gambar:</string>
   <string name="main_menu_item_open_drawer">Buka Laci</string>
   <string name="main_menu_item_settings">Pengaturan</string>
   <string name="main_menu_item_exit">Keluar</string>

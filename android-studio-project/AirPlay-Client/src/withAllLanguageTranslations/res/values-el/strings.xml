@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Επιλογή φακέλου</string>
   <string name="layout_connect_empty">-- Δεν βρέθηκαν υπηρεσίες --</string>
   <string name="layout_main_empty">-- Δεν βρέθηκαν αρχεία --</string>
-  <string name="layout_settings_server_port">Αριθμός θύρας διακομιστή:</string>
-  <string name="layout_settings_requires_restart">(Απαιτείται επανεκκίνηση της εφαρμογής)</string>
-  <string name="layout_settings_image_transition">Μετάβαση εικόνας:</string>
   <string name="main_menu_item_open_drawer">Ανοιχτό συρτάρι</string>
   <string name="main_menu_item_settings">Ρυθμίσεις</string>
   <string name="main_menu_item_exit">Έξοδος</string>

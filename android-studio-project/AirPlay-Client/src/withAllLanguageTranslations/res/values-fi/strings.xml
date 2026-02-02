@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Valitse kansio</string>
   <string name="layout_connect_empty">-- Palveluja ei löytynyt --</string>
   <string name="layout_main_empty">-- Tiedostoja ei löytynyt --</string>
-  <string name="layout_settings_server_port">Palvelimen portin numero:</string>
-  <string name="layout_settings_requires_restart">(Vaatii sovelluksen uudelleenkäynnistyksen)</string>
-  <string name="layout_settings_image_transition">Kuvan siirtyminen:</string>
   <string name="main_menu_item_open_drawer">Avoin laatikko</string>
   <string name="main_menu_item_settings">Asetukset</string>
   <string name="main_menu_item_exit">Poistu</string>

@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Vybrat složku</string>
   <string name="layout_connect_empty">-- Nebyly nalezeny žádné služby --</string>
   <string name="layout_main_empty">-- Nebyly nalezeny žádné soubory --</string>
-  <string name="layout_settings_server_port">Číslo portu serveru:</string>
-  <string name="layout_settings_requires_restart">(Vyžaduje restart aplikace)</string>
-  <string name="layout_settings_image_transition">Přechod obrázků:</string>
   <string name="main_menu_item_open_drawer">Otevřít zásuvku</string>
   <string name="main_menu_item_settings">Nastavení</string>
   <string name="main_menu_item_exit">Konec</string>

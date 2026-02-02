@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Izvēlieties mapi</string>
   <string name="layout_connect_empty">-- Pakalpojumi nav atrasti --</string>
   <string name="layout_main_empty">-- Nekādi faili nav atrasti --</string>
-  <string name="layout_settings_server_port">Servera porta numurs:</string>
-  <string name="layout_settings_requires_restart">(Nepieciešama lietojumprogrammas pārstartēšana)</string>
-  <string name="layout_settings_image_transition">Attēla pāreja:</string>
   <string name="main_menu_item_open_drawer">Atvērt atvilktni</string>
   <string name="main_menu_item_settings">Iestatījumi</string>
   <string name="main_menu_item_exit">Izlīšana</string>

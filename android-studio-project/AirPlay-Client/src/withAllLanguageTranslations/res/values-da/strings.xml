@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Vælg mappe</string>
   <string name="layout_connect_empty">-- Ingen tjenester fundet --</string>
   <string name="layout_main_empty">-- Ingen filer fundet --</string>
-  <string name="layout_settings_server_port">Serverportnummer:</string>
-  <string name="layout_settings_requires_restart">(Kræver genstart af applikationen)</string>
-  <string name="layout_settings_image_transition">Billedovergang:</string>
   <string name="main_menu_item_open_drawer">Åben skuffe</string>
   <string name="main_menu_item_settings">Indstillinger</string>
   <string name="main_menu_item_exit">Afgang</string>

@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Pasirinkite aplanką</string>
   <string name="layout_connect_empty">-- Nerasta paslaugų --</string>
   <string name="layout_main_empty">-- Nerasta jokių failų --</string>
-  <string name="layout_settings_server_port">Serverio prievado numeris:</string>
-  <string name="layout_settings_requires_restart">(Reikia iš naujo paleisti programą)</string>
-  <string name="layout_settings_image_transition">Vaizdo perėjimas:</string>
   <string name="main_menu_item_open_drawer">Atidaryti stalčių</string>
   <string name="main_menu_item_settings">Nustatymai</string>
   <string name="main_menu_item_exit">Išeiti</string>

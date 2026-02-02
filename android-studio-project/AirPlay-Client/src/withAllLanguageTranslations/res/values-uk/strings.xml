@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Вибрати папку</string>
   <string name="layout_connect_empty">-- Послуги не знайдені --</string>
   <string name="layout_main_empty">-- Файлів не знайдено --</string>
-  <string name="layout_settings_server_port">Номер порту сервера:</string>
-  <string name="layout_settings_requires_restart">(Потрібно перезапустити програму)</string>
-  <string name="layout_settings_image_transition">Перехід зображення:</string>
   <string name="main_menu_item_open_drawer">Відкрити шухляду</string>
   <string name="main_menu_item_settings">Налаштування</string>
   <string name="main_menu_item_exit">Вихід</string>

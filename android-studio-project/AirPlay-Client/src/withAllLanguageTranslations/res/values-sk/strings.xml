@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">Vybrať priečinok</string>
   <string name="layout_connect_empty">-- Nenašli sa žiadne služby --</string>
   <string name="layout_main_empty">-- Nenašli sa žiadne súbory --</string>
-  <string name="layout_settings_server_port">Číslo portu servera:</string>
-  <string name="layout_settings_requires_restart">(Vyžaduje reštart aplikácie)</string>
-  <string name="layout_settings_image_transition">Prechod obrázkov:</string>
   <string name="main_menu_item_open_drawer">Otvorená zásuvka</string>
   <string name="main_menu_item_settings">Nastavenia</string>
   <string name="main_menu_item_exit">Výstup</string>

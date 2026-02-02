@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">בחר תיקייה</string>
   <string name="layout_connect_empty">-- לא נמצאו שירותים --</string>
   <string name="layout_main_empty">-- לא נמצאו קבצים --</string>
-  <string name="layout_settings_server_port">מספר יציאת השרת:</string>
-  <string name="layout_settings_requires_restart">(נדרשת הפעלה מחדש של היישום)</string>
-  <string name="layout_settings_image_transition">מעבר תמונה:</string>
   <string name="main_menu_item_open_drawer">מגירה פתוחה</string>
   <string name="main_menu_item_settings">הגדרות</string>
   <string name="main_menu_item_exit">יציאה</string>

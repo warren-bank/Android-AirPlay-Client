@@ -36,9 +36,6 @@
   <string name="dialog_folders_title">เลือกโฟลเดอร์</string>
   <string name="layout_connect_empty">-- ไม่พบบริการ --</string>
   <string name="layout_main_empty">-- ไม่พบไฟล์ --</string>
-  <string name="layout_settings_server_port">หมายเลขพอร์ตเซิร์ฟเวอร์:</string>
-  <string name="layout_settings_requires_restart">(จำเป็นต้องรีสตาร์ทแอปพลิเคชัน)</string>
-  <string name="layout_settings_image_transition">การเปลี่ยนภาพ:</string>
   <string name="main_menu_item_open_drawer">เปิดลิ้นชัก</string>
   <string name="main_menu_item_settings">การตั้งค่า</string>
   <string name="main_menu_item_exit">ทางออก</string>
