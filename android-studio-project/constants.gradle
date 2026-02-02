@@ -8,6 +8,6 @@ project.ext {
   compileSdkVersion  = 35
   buildToolsVersion  = '35.0.0'
 
-  libVersionAndroidxDrawerLayout = '1.1.1'
+  libVersionAndroidxDrawerLayout = '1.2.0'
   libVersionJmDNS                = '3.5.8'
 }
