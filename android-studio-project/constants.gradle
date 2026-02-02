@@ -1,7 +1,7 @@
 project.ext {
   applicationId      = 'com.github.warren_bank.airplay_client'
-  releaseVersionCode = Integer.parseInt("000051314", 10)  //Integer.MAX_VALUE == 2147483647
-  releaseVersion     = '000.05.13-14API'
+  releaseVersionCode = Integer.parseInt("000051414", 10)  //Integer.MAX_VALUE == 2147483647
+  releaseVersion     = '000.05.14-14API'
   javaVersion        = JavaVersion.VERSION_1_8
   minSdkVersion      = 14
   targetSdkVersion   = 35
