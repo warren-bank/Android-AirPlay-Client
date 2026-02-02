@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Định cấu hình hành vi cho quá trình chuyển đổi</string>
   <string name="pref_summary_resize_factor">Thay đổi kích thước hình ảnh trước khi gửi cho khách hàng</string>
   <string name="pref_summary_jpeg_quality">Đặt JPEG chất lượng</string>
+  <string name="main_activity_subtitle_not_connected">Không kết nối</string>
   <string name="main_activity_drawer_item_connect">Kết nối với AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Màn hình gương</string>
   <string name="main_activity_drawer_item_pictures">Hình ảnh</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Kéo sang trái</string>
   <string name="pref_names_image_transition_slideright">Kéo sang phải</string>
   <string name="pref_names_jpeg_quality_80">80 [Mặc định]</string>
+  <string name="toast_error">Lỗi</string>
+  <string name="toast_error_discovery_service">Không thể khởi tạo dịch vụ phát hiện.</string>
+  <string name="toast_error_file_type">Loại tệp không xác định</string>
+  <string name="toast_error_image">Lỗi khi gửi hình ảnh</string>
+  <string name="toast_error_local_address">Không thể kết nối với mạng cục bộ IP địa chỉ</string>
+  <string name="toast_error_video">Lỗi khi gửi liên kết video</string>
+  <string name="toast_error_video_stopped">Lỗi khi gửi yêu cầu dừng video</string>
+  <string name="toast_image">Hình ảnh đã gửi</string>
+  <string name="toast_local_address">Sử dụng địa chỉ địa phương</string>
+  <string name="toast_service_connected">Sử dụng AirPlay dịch vụ</string>
+  <string name="toast_service_found">Được tìm thấy AirPlay dịch vụ</string>
+  <string name="toast_service_removed">Đã xóa AirPlay dịch vụ</string>
+  <string name="toast_service_resolved">Đã giải quyết AirPlay dịch vụ</string>
+  <string name="toast_video">Gửi liên kết video</string>
+  <string name="toast_video_stopped">Đã gửi yêu cầu dừng video</string>
 </resources>

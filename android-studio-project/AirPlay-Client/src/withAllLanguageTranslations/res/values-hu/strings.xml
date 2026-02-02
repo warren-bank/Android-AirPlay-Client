@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Átmenet viselkedésének beállítása</string>
   <string name="pref_summary_resize_factor">Kép átméretezése az ügyfélnek való elküldés előtt</string>
   <string name="pref_summary_jpeg_quality">Beállítás JPEG minőség</string>
+  <string name="main_activity_subtitle_not_connected">Nincs csatlakozás</string>
   <string name="main_activity_drawer_item_connect">Csatlakozás AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Tükörképernyő</string>
   <string name="main_activity_drawer_item_pictures">Képek</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Csúsztassa balra</string>
   <string name="pref_names_image_transition_slideright">Csúsztassa jobbra</string>
   <string name="pref_names_jpeg_quality_80">80 [Alapértelmezett]</string>
+  <string name="toast_error">Hiba</string>
+  <string name="toast_error_discovery_service">A felderítési szolgáltatás inicializálása nem sikerült</string>
+  <string name="toast_error_file_type">Ismeretlen fájltípus</string>
+  <string name="toast_error_image">Hiba a kép elküldésekor</string>
+  <string name="toast_error_local_address">Nem lehet helyi elérni IP cím</string>
+  <string name="toast_error_video">Hiba a videó link elküldésekor</string>
+  <string name="toast_error_video_stopped">Hiba a videó leállítására irányuló kérés elküldésekor</string>
+  <string name="toast_image">Elküldött kép</string>
+  <string name="toast_local_address">Helyi cím használata</string>
+  <string name="toast_service_connected">Használata AirPlay szolgáltatás</string>
+  <string name="toast_service_found">Talált AirPlay szolgáltatás</string>
+  <string name="toast_service_removed">Eltávolítva AirPlay szolgáltatás</string>
+  <string name="toast_service_resolved">Megoldva AirPlay szolgáltatás</string>
+  <string name="toast_video">Elküldött videó link</string>
+  <string name="toast_video_stopped">Kérés elküldése a videó leállítására</string>
 </resources>

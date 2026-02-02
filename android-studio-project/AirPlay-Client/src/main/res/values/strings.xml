@@ -55,6 +55,7 @@
   <string name="pref_summary_jpeg_quality">Set JPEG quality</string>
 
   <!-- ui/DroidPlayActivity -->
+  <string name="main_activity_subtitle_not_connected">Not connected</string>
   <string name="main_activity_drawer_item_connect">Connect to AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Mirror Screen</string>
   <string name="main_activity_drawer_item_pictures">Pictures</string>
@@ -109,5 +110,22 @@
   <string name="pref_names_image_transition_slideleft">Slide left</string>
   <string name="pref_names_image_transition_slideright">Slide right</string>
   <string name="pref_names_jpeg_quality_80">80 [Default]</string>
+
+  <!-- Toast notification messages -->
+  <string name="toast_error">Error</string>
+  <string name="toast_error_discovery_service">Unable to initialize discovery service</string>
+  <string name="toast_error_file_type">Unknown file type</string>
+  <string name="toast_error_image">Error sending image</string>
+  <string name="toast_error_local_address">Unable to get local IP address</string>
+  <string name="toast_error_video">Error sending video link</string>
+  <string name="toast_error_video_stopped">Error sending request to stop video</string>
+  <string name="toast_image">Sent image</string>
+  <string name="toast_local_address">Using local address</string>
+  <string name="toast_service_connected">Using AirPlay service</string>
+  <string name="toast_service_found">Found AirPlay service</string>
+  <string name="toast_service_removed">Removed AirPlay service</string>
+  <string name="toast_service_resolved">Resolved AirPlay service</string>
+  <string name="toast_video">Sent video link</string>
+  <string name="toast_video_stopped">Sent request to stop video</string>
 
 </resources>

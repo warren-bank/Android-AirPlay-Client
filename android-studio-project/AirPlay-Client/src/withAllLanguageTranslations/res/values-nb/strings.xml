@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Angi oppførsel for overgang</string>
   <string name="pref_summary_resize_factor">Endre størrelsen på bildet før du sender det til klienten</string>
   <string name="pref_summary_jpeg_quality">Sett JPEG kvalitet</string>
+  <string name="main_activity_subtitle_not_connected">Ikke tilkoblet</string>
   <string name="main_activity_drawer_item_connect">Koble til AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Speilskjerm</string>
   <string name="main_activity_drawer_item_pictures">Bilder</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Skyv til venstre</string>
   <string name="pref_names_image_transition_slideright">Skyv til høyre</string>
   <string name="pref_names_jpeg_quality_80">80 [Standard]</string>
+  <string name="toast_error">Feil</string>
+  <string name="toast_error_discovery_service">Kan ikke initialisere oppdagelsestjenesten</string>
+  <string name="toast_error_file_type">Ukjent filtype</string>
+  <string name="toast_error_image">Feil ved sending av bilde</string>
+  <string name="toast_error_local_address">Kan ikke få lokal IP adresse</string>
+  <string name="toast_error_video">Feil ved sending av videolink</string>
+  <string name="toast_error_video_stopped">Feil ved sending av forespørsel om å stoppe video</string>
+  <string name="toast_image">Sendt bilde</string>
+  <string name="toast_local_address">Bruke lokal adresse</string>
+  <string name="toast_service_connected">Bruk AirPlay tjeneste</string>
+  <string name="toast_service_found">Funnet AirPlay tjeneste</string>
+  <string name="toast_service_removed">Fjernet AirPlay tjeneste</string>
+  <string name="toast_service_resolved">Løst AirPlay tjeneste</string>
+  <string name="toast_video">Sendte videolink</string>
+  <string name="toast_video_stopped">Sendte forespørsel om å stoppe video</string>
 </resources>

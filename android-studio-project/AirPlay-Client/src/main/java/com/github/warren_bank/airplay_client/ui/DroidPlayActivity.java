@@ -357,11 +357,19 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
             MainApp.broadcastMessage(msg);
           }
           else {
-            toast("Error: Unknown file type");
+            toast(
+                getString(R.string.toast_error)
+              + ": "
+              + getString(R.string.toast_error_file_type)
+            );
           }
         }
         catch (Exception e) {
-          toast("Error: " + e.getMessage());
+          toast(
+              getString(R.string.toast_error)
+            + ": "
+            + e.getMessage()
+          );
         }
       }
     });
@@ -456,7 +464,7 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
 
   private void updateSubtitle() {
     subtitle(
-      has_airplay_connection ? MainApp.receiverName : "Not connected"
+      has_airplay_connection ? MainApp.receiverName : getString(R.string.main_activity_subtitle_not_connected)
     );
   }
 

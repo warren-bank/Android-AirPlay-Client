@@ -1,5 +1,6 @@
 package com.github.warren_bank.airplay_client.service;
 
+import com.github.warren_bank.airplay_client.R;
 import com.github.warren_bank.airplay_client.constant.Constant;
 import com.github.warren_bank.airplay_client.httpclient.AirPlayClient;
 import com.github.warren_bank.airplay_client.service.NetworkingService;
@@ -60,7 +61,11 @@ final class MyMessageHandler extends Handler {
 
         case Constant.Msg.Msg_AirPlay_Connect : {
           String receiver_name = (String) msg.obj;
-          service.toast("Using AirPlay service: " + receiver_name);
+          service.toast(
+              service.getString(R.string.toast_service_connected)
+            + ": "
+            + receiver_name
+          );
           break;
         }
 

@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Définir le comportement pour la transition</string>
   <string name="pref_summary_resize_factor">Redimensionner l\'image avant de l\'envoyer au client</string>
   <string name="pref_summary_jpeg_quality">Définir JPEG qualité</string>
+  <string name="main_activity_subtitle_not_connected">Non connecté</string>
   <string name="main_activity_drawer_item_connect">Se connecter à AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Écran miroir</string>
   <string name="main_activity_drawer_item_pictures">Photos</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Glisser vers la gauche</string>
   <string name="pref_names_image_transition_slideright">Glisser vers la droite</string>
   <string name="pref_names_jpeg_quality_80">80 [Par défaut]</string>
+  <string name="toast_error">Erreur</string>
+  <string name="toast_error_discovery_service">Impossible d\'initialiser le service de découverte</string>
+  <string name="toast_error_file_type">Type de fichier inconnu</string>
+  <string name="toast_error_image">Erreur lors de l\'envoi de l\'image</string>
+  <string name="toast_error_local_address">Impossible d\'obtenir localement IP adresse</string>
+  <string name="toast_error_video">Erreur lors de l\'envoi du lien vidéo</string>
+  <string name="toast_error_video_stopped">Erreur lors de l\'envoi de la demande d\'arrêt de la vidéo</string>
+  <string name="toast_image">Image envoyée</string>
+  <string name="toast_local_address">Utilisation d\'une adresse locale</string>
+  <string name="toast_service_connected">Utilisation AirPlay service</string>
+  <string name="toast_service_found">Trouvé AirPlay service</string>
+  <string name="toast_service_removed">Supprimé AirPlay service</string>
+  <string name="toast_service_resolved">Résolu AirPlay service</string>
+  <string name="toast_video">Envoi d\'un lien vidéo</string>
+  <string name="toast_video_stopped">Demande envoyée pour arrêter la vidéo</string>
 </resources>

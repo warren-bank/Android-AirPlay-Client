@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Määra ülemineku käitumine</string>
   <string name="pref_summary_resize_factor">Muuda pildi suurust enne kliendile saatmist</string>
   <string name="pref_summary_jpeg_quality">Seadista JPEG kvaliteet</string>
+  <string name="main_activity_subtitle_not_connected">Ei ole ühendatud</string>
   <string name="main_activity_drawer_item_connect">Ühendage AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Peegelekraan</string>
   <string name="main_activity_drawer_item_pictures">Pildid</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Liugle vasakule</string>
   <string name="pref_names_image_transition_slideright">Liugle paremale</string>
   <string name="pref_names_jpeg_quality_80">80 [Vaikimisi]</string>
+  <string name="toast_error">Viga</string>
+  <string name="toast_error_discovery_service">Avastamisteenust ei õnnestunud algatada</string>
+  <string name="toast_error_file_type">Tundmatu failitüüp</string>
+  <string name="toast_error_image">Pildi saatmise viga</string>
+  <string name="toast_error_local_address">Ei ole võimalik saada kohalikku IP aadress</string>
+  <string name="toast_error_video">Videolingi saatmisel tekkis viga</string>
+  <string name="toast_error_video_stopped">Viga video peatamise taotluse saatmisel</string>
+  <string name="toast_image">Saadetud pilt</string>
+  <string name="toast_local_address">Kohaliku aadressi kasutamine</string>
+  <string name="toast_service_connected">Kasutamine AirPlay teenus</string>
+  <string name="toast_service_found">Leitud AirPlay teenus</string>
+  <string name="toast_service_removed">Eemaldatud AirPlay teenus</string>
+  <string name="toast_service_resolved">Lahendatud AirPlay teenus</string>
+  <string name="toast_video">Saadetud videolink</string>
+  <string name="toast_video_stopped">Saadeti taotlus video peatamiseks</string>
 </resources>

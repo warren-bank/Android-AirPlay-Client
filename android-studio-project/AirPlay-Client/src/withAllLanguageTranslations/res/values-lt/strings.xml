@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Nustatyti perėjimo elgesį</string>
   <string name="pref_summary_resize_factor">Prieš siunčiant klientui pakeiskite vaizdo dydį</string>
   <string name="pref_summary_jpeg_quality">Nustatyti JPEG kokybė</string>
+  <string name="main_activity_subtitle_not_connected">Nesusijęs</string>
   <string name="main_activity_drawer_item_connect">Prisijunkite prie AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Veidrodinis ekranas</string>
   <string name="main_activity_drawer_item_pictures">Nuotraukos</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Slinkite į kairę</string>
   <string name="pref_names_image_transition_slideright">Slinkite į dešinę</string>
   <string name="pref_names_jpeg_quality_80">80 [Numatytasis]</string>
+  <string name="toast_error">Klaida</string>
+  <string name="toast_error_discovery_service">Nepavyko inicijuoti paieškos paslaugos</string>
+  <string name="toast_error_file_type">Nežinomas failo tipas</string>
+  <string name="toast_error_image">Klaida siunčiant vaizdą</string>
+  <string name="toast_error_local_address">Nepavyko gauti vietos IP adresas</string>
+  <string name="toast_error_video">Klaida siunčiant vaizdo įrašo nuorodą</string>
+  <string name="toast_error_video_stopped">Klaida siunčiant prašymą sustabdyti vaizdo įrašą</string>
+  <string name="toast_image">Išsiųstas vaizdas</string>
+  <string name="toast_local_address">Naudojant vietinį adresą</string>
+  <string name="toast_service_connected">Naudojimas AirPlay paslauga</string>
+  <string name="toast_service_found">Rasta AirPlay paslauga</string>
+  <string name="toast_service_removed">Pašalinta AirPlay paslauga</string>
+  <string name="toast_service_resolved">Išspręsta AirPlay paslauga</string>
+  <string name="toast_video">Siųsta vaizdo įrašo nuoroda</string>
+  <string name="toast_video_stopped">Siųstas prašymas sustabdyti vaizdo įrašą</string>
 </resources>

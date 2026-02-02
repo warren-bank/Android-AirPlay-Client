@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">הגדר התנהגות למעבר</string>
   <string name="pref_summary_resize_factor">שינוי גודל התמונה לפני שליחתה ללקוח</string>
   <string name="pref_summary_jpeg_quality">הגדר JPEG איכות</string>
+  <string name="main_activity_subtitle_not_connected">לא מחובר</string>
   <string name="main_activity_drawer_item_connect">התחבר ל AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">מסך מראה</string>
   <string name="main_activity_drawer_item_pictures">תמונות</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">החלק שמאלה</string>
   <string name="pref_names_image_transition_slideright">החלק ימינה</string>
   <string name="pref_names_jpeg_quality_80">80 [ברירת מחדל]</string>
+  <string name="toast_error">שגיאה</string>
+  <string name="toast_error_discovery_service">לא ניתן לאתחל את שירות הגילוי</string>
+  <string name="toast_error_file_type">סוג קובץ לא ידוע</string>
+  <string name="toast_error_image">שגיאה בשליחת תמונה</string>
+  <string name="toast_error_local_address">לא ניתן להשיג מקומי IP כתובת</string>
+  <string name="toast_error_video">שגיאה בשליחת קישור הווידאו</string>
+  <string name="toast_error_video_stopped">שגיאה בשליחת בקשה לעצירת הסרטון</string>
+  <string name="toast_image">תמונה שנשלחה</string>
+  <string name="toast_local_address">שימוש בכתובת מקומית</string>
+  <string name="toast_service_connected">שימוש AirPlay שירות</string>
+  <string name="toast_service_found">נמצא AirPlay שירות</string>
+  <string name="toast_service_removed">הוסר AirPlay שירות</string>
+  <string name="toast_service_resolved">נפתר AirPlay שירות</string>
+  <string name="toast_video">שלח קישור לסרטון</string>
+  <string name="toast_video_stopped">נשלחה בקשה לעצור את הווידאו</string>
 </resources>

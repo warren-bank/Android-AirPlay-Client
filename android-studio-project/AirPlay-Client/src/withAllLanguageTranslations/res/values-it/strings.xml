@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Imposta comportamento per transizione</string>
   <string name="pref_summary_resize_factor">Ridimensionare l\'immagine prima di inviarla al cliente</string>
   <string name="pref_summary_jpeg_quality">Imposta JPEG qualità</string>
+  <string name="main_activity_subtitle_not_connected">Non connesso</string>
   <string name="main_activity_drawer_item_connect">Connettiti a AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Schermo speculare</string>
   <string name="main_activity_drawer_item_pictures">Immagini</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Scorri verso sinistra</string>
   <string name="pref_names_image_transition_slideright">Scorri verso destra</string>
   <string name="pref_names_jpeg_quality_80">80 [Impostazione predefinita]</string>
+  <string name="toast_error">Errore</string>
+  <string name="toast_error_discovery_service">Impossibile inizializzare il servizio di rilevamento</string>
+  <string name="toast_error_file_type">Tipo di file sconosciuto</string>
+  <string name="toast_error_image">Errore durante l\'invio dell\'immagine</string>
+  <string name="toast_error_local_address">Impossibile ottenere locale IP indirizzo</string>
+  <string name="toast_error_video">Errore durante l\'invio del link video</string>
+  <string name="toast_error_video_stopped">Errore durante l\'invio della richiesta di interruzione del video</string>
+  <string name="toast_image">Immagine inviata</string>
+  <string name="toast_local_address">Utilizzo dell\'indirizzo locale</string>
+  <string name="toast_service_connected">Utilizzo AirPlay servizio</string>
+  <string name="toast_service_found">Trovato AirPlay servizio</string>
+  <string name="toast_service_removed">Rimosso AirPlay servizio</string>
+  <string name="toast_service_resolved">Risolto AirPlay servizio</string>
+  <string name="toast_video">Inviato link video</string>
+  <string name="toast_video_stopped">Inviata richiesta di interrompere il video</string>
 </resources>

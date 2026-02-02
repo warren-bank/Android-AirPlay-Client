@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Establecer comportamiento para la transición</string>
   <string name="pref_summary_resize_factor">Cambiar el tamaño de la imagen antes de enviarla al cliente.</string>
   <string name="pref_summary_jpeg_quality">Establecer JPEG calidad</string>
+  <string name="main_activity_subtitle_not_connected">No conectado</string>
   <string name="main_activity_drawer_item_connect">Conectarse a AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Pantalla espejo</string>
   <string name="main_activity_drawer_item_pictures">Imágenes</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Deslizar hacia la izquierda</string>
   <string name="pref_names_image_transition_slideright">Deslizar hacia la derecha</string>
   <string name="pref_names_jpeg_quality_80">80 [Predeterminado]</string>
+  <string name="toast_error">Error</string>
+  <string name="toast_error_discovery_service">No se puede inicializar el servicio de detección.</string>
+  <string name="toast_error_file_type">Tipo de archivo desconocido</string>
+  <string name="toast_error_image">Error al enviar la imagen</string>
+  <string name="toast_error_local_address">No se puede obtener local IP dirección</string>
+  <string name="toast_error_video">Error al enviar el enlace del video</string>
+  <string name="toast_error_video_stopped">Error al enviar la solicitud para detener el video</string>
+  <string name="toast_image">Imagen enviada</string>
+  <string name="toast_local_address">Uso de la dirección local</string>
+  <string name="toast_service_connected">Uso AirPlay servicio</string>
+  <string name="toast_service_found">Encontrado AirPlay servicio</string>
+  <string name="toast_service_removed">Eliminado AirPlay servicio</string>
+  <string name="toast_service_resolved">Resuelto AirPlay servicio</string>
+  <string name="toast_video">Envié enlace del video</string>
+  <string name="toast_video_stopped">Se ha enviado una solicitud para detener el video.</string>
 </resources>

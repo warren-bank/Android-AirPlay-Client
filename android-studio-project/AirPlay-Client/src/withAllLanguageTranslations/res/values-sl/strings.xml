@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Nastavite vedenje za prehod</string>
   <string name="pref_summary_resize_factor">Pred pošiljanjem stranki spremenite velikost slike</string>
   <string name="pref_summary_jpeg_quality">Nastavite JPEG kakovost</string>
+  <string name="main_activity_subtitle_not_connected">Ni povezan</string>
   <string name="main_activity_drawer_item_connect">Poveži se z AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Zrcalni zaslon</string>
   <string name="main_activity_drawer_item_pictures">Slike</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Pomakni v levo</string>
   <string name="pref_names_image_transition_slideright">Pomakni v desno</string>
   <string name="pref_names_jpeg_quality_80">80 [Privzeto]</string>
+  <string name="toast_error">Napaka</string>
+  <string name="toast_error_discovery_service">Ne morem inicializirati storitve za odkrivanje</string>
+  <string name="toast_error_file_type">Neznana vrsta datoteke</string>
+  <string name="toast_error_image">Napaka pri pošiljanju slike</string>
+  <string name="toast_error_local_address">Ne morem pridobiti lokalnih podatkov IP naslov</string>
+  <string name="toast_error_video">Napaka pri pošiljanju povezave do videa</string>
+  <string name="toast_error_video_stopped">Napaka pri pošiljanju zahtevka za ustavitev videa</string>
+  <string name="toast_image">Poslana slika</string>
+  <string name="toast_local_address">Uporaba lokalnega naslova</string>
+  <string name="toast_service_connected">Uporaba AirPlay storitev</string>
+  <string name="toast_service_found">Najdeno AirPlay storitev</string>
+  <string name="toast_service_removed">Odstranjeno AirPlay storitev</string>
+  <string name="toast_service_resolved">Rešeno AirPlay storitev</string>
+  <string name="toast_video">Poslano povezavo do videa</string>
+  <string name="toast_video_stopped">Poslano zahtevo za ustavitev videa</string>
 </resources>

@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Встановити поведінку для переходу</string>
   <string name="pref_summary_resize_factor">Змінити розмір зображення перед відправкою клієнту</string>
   <string name="pref_summary_jpeg_quality">Набір JPEG якість</string>
+  <string name="main_activity_subtitle_not_connected">Не підключено</string>
   <string name="main_activity_drawer_item_connect">Підключитися до AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Дзеркальний екран</string>
   <string name="main_activity_drawer_item_pictures">Фотографії</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Слайд вліво</string>
   <string name="pref_names_image_transition_slideright">Слайд праворуч</string>
   <string name="pref_names_jpeg_quality_80">80 [За замовчуванням]</string>
+  <string name="toast_error">Помилка</string>
+  <string name="toast_error_discovery_service">Неможливо ініціалізувати службу виявлення</string>
+  <string name="toast_error_file_type">Невідомий тип файлу</string>
+  <string name="toast_error_image">Помилка під час надсилання зображення</string>
+  <string name="toast_error_local_address">Неможливо отримати локальний IP адреса</string>
+  <string name="toast_error_video">Помилка під час надсилання посилання на відео</string>
+  <string name="toast_error_video_stopped">Помилка під час надсилання запиту на зупинку відео</string>
+  <string name="toast_image">Надіслане зображення</string>
+  <string name="toast_local_address">Використання локальної адреси</string>
+  <string name="toast_service_connected">Використання AirPlay послуга</string>
+  <string name="toast_service_found">Знайдено AirPlay послуга</string>
+  <string name="toast_service_removed">Видалено AirPlay послуга</string>
+  <string name="toast_service_resolved">Вирішено AirPlay послуга</string>
+  <string name="toast_video">Надіслано посилання на відео</string>
+  <string name="toast_video_stopped">Надіслано запит на зупинку відео</string>
 </resources>

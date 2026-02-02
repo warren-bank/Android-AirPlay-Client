@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">遷移の動作を設定する</string>
   <string name="pref_summary_resize_factor">クライアントに送信する前に画像のサイズを変更する</string>
   <string name="pref_summary_jpeg_quality">セット JPEG 品質</string>
+  <string name="main_activity_subtitle_not_connected">接続されていません</string>
   <string name="main_activity_drawer_item_connect">接続する AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">ミラースクリーン</string>
   <string name="main_activity_drawer_item_pictures">写真</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">左にスライド</string>
   <string name="pref_names_image_transition_slideright">右にスライド</string>
   <string name="pref_names_jpeg_quality_80">80 [デフォルト]</string>
+  <string name="toast_error">エラー</string>
+  <string name="toast_error_discovery_service">検出サービスの初期化に失敗しました</string>
+  <string name="toast_error_file_type">不明なファイル形式</string>
+  <string name="toast_error_image">画像送信エラー</string>
+  <string name="toast_error_local_address">ローカルを取得できません IP 住所</string>
+  <string name="toast_error_video">動画リンクの送信に失敗しました</string>
+  <string name="toast_error_video_stopped">動画停止のリクエスト送信中にエラーが発生しました</string>
+  <string name="toast_image">送信された画像</string>
+  <string name="toast_local_address">ローカルアドレスを使用する</string>
+  <string name="toast_service_connected">使用 AirPlay サービス</string>
+  <string name="toast_service_found">発見された AirPlay サービス</string>
+  <string name="toast_service_removed">削除済み AirPlay サービス</string>
+  <string name="toast_service_resolved">解決済み AirPlay サービス</string>
+  <string name="toast_video">動画リンクを送信しました</string>
+  <string name="toast_video_stopped">動画停止のリクエストを送信しました</string>
 </resources>

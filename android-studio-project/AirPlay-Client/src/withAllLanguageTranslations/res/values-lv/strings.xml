@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Pārejas darbības iestatīšana</string>
   <string name="pref_summary_resize_factor">Mainiet attēla izmēru pirms nosūtīšanas klientam</string>
   <string name="pref_summary_jpeg_quality">Iestatīt JPEG kvalitāte</string>
+  <string name="main_activity_subtitle_not_connected">Nav savienots</string>
   <string name="main_activity_drawer_item_connect">Savienot ar AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Spoguļekrāns</string>
   <string name="main_activity_drawer_item_pictures">Attēli</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Slīdēt pa kreisi</string>
   <string name="pref_names_image_transition_slideright">Slīdiet pa labi</string>
   <string name="pref_names_jpeg_quality_80">80 [Noklusējums]</string>
+  <string name="toast_error">Kļūda</string>
+  <string name="toast_error_discovery_service">Neizdevās inicializēt atklāšanas pakalpojumu</string>
+  <string name="toast_error_file_type">Nezināms faila tips</string>
+  <string name="toast_error_image">Kļūda, nosūtot attēlu</string>
+  <string name="toast_error_local_address">Nevar iegūt vietējo IP adrese</string>
+  <string name="toast_error_video">Kļūda, nosūtot video saiti</string>
+  <string name="toast_error_video_stopped">Kļūda, nosūtot pieprasījumu apturēt video</string>
+  <string name="toast_image">Nosūtīts attēls</string>
+  <string name="toast_local_address">Izmantojot vietējo adresi</string>
+  <string name="toast_service_connected">Izmantojot AirPlay pakalpojums</string>
+  <string name="toast_service_found">Atrasts AirPlay pakalpojums</string>
+  <string name="toast_service_removed">Noņemts AirPlay pakalpojums</string>
+  <string name="toast_service_resolved">Atrisināts AirPlay pakalpojums</string>
+  <string name="toast_video">Nosūtīta video saite</string>
+  <string name="toast_video_stopped">Nosūtīts pieprasījums apturēt video</string>
 </resources>

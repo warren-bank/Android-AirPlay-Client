@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Ορισμός συμπεριφοράς για μετάβαση</string>
   <string name="pref_summary_resize_factor">Αλλαγή μεγέθους εικόνας πριν από την αποστολή στον πελάτη</string>
   <string name="pref_summary_jpeg_quality">Ρύθμιση JPEG ποιότητα</string>
+  <string name="main_activity_subtitle_not_connected">Δεν είναι συνδεδεμένο</string>
   <string name="main_activity_drawer_item_connect">Σύνδεση με AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Οθόνη καθρέφτη</string>
   <string name="main_activity_drawer_item_pictures">Εικόνες</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Σύρετε προς τα αριστερά</string>
   <string name="pref_names_image_transition_slideright">Σύρετε προς τα δεξιά</string>
   <string name="pref_names_jpeg_quality_80">80 [Προεπιλογή]</string>
+  <string name="toast_error">Σφάλμα</string>
+  <string name="toast_error_discovery_service">Δεν είναι δυνατή η αρχικοποίηση της υπηρεσίας ανακάλυψης</string>
+  <string name="toast_error_file_type">Άγνωστος τύπος αρχείου</string>
+  <string name="toast_error_image">Σφάλμα κατά την αποστολή εικόνας</string>
+  <string name="toast_error_local_address">Δεν είναι δυνατή η λήψη τοπικών δεδομένων IP διεύθυνση</string>
+  <string name="toast_error_video">Σφάλμα κατά την αποστολή του συνδέσμου βίντεο</string>
+  <string name="toast_error_video_stopped">Σφάλμα κατά την αποστολή αιτήματος για διακοπή βίντεο</string>
+  <string name="toast_image">Αποστολή εικόνας</string>
+  <string name="toast_local_address">Χρήση τοπικής διεύθυνσης</string>
+  <string name="toast_service_connected">Χρήση AirPlay υπηρεσία</string>
+  <string name="toast_service_found">Βρέθηκε AirPlay υπηρεσία</string>
+  <string name="toast_service_removed">Αφαιρέθηκε AirPlay υπηρεσία</string>
+  <string name="toast_service_resolved">Επιλύθηκε AirPlay υπηρεσία</string>
+  <string name="toast_video">Αποστολή συνδέσμου βίντεο</string>
+  <string name="toast_video_stopped">Αποστολή αιτήματος για διακοπή βίντεο</string>
 </resources>

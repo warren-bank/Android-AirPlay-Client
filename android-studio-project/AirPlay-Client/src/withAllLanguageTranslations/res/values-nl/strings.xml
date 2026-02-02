@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Gedrag voor overgang instellen</string>
   <string name="pref_summary_resize_factor">Wijzig het formaat van de afbeelding voordat u deze naar de klant verzendt.</string>
   <string name="pref_summary_jpeg_quality">Set JPEG kwaliteit</string>
+  <string name="main_activity_subtitle_not_connected">Niet verbonden</string>
   <string name="main_activity_drawer_item_connect">Verbinden met AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Spiegelscherm</string>
   <string name="main_activity_drawer_item_pictures">Foto\'s</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Naar links schuiven</string>
   <string name="pref_names_image_transition_slideright">Schuif naar rechts</string>
   <string name="pref_names_jpeg_quality_80">80 [Standaard]</string>
+  <string name="toast_error">Fout</string>
+  <string name="toast_error_discovery_service">Kan de detectieservice niet initialiseren</string>
+  <string name="toast_error_file_type">Onbekend bestandstype</string>
+  <string name="toast_error_image">Fout bij het verzenden van afbeelding</string>
+  <string name="toast_error_local_address">Kan geen lokale gegevens ophalen IP adres</string>
+  <string name="toast_error_video">Fout bij het verzenden van videolink</string>
+  <string name="toast_error_video_stopped">Fout bij het verzenden van het verzoek om de video te stoppen</string>
+  <string name="toast_image">Verzonden afbeelding</string>
+  <string name="toast_local_address">Lokaal adres gebruiken</string>
+  <string name="toast_service_connected">Gebruik AirPlay dienst</string>
+  <string name="toast_service_found">Gevonden AirPlay dienst</string>
+  <string name="toast_service_removed">Verwijderd AirPlay dienst</string>
+  <string name="toast_service_resolved">Opgelost AirPlay dienst</string>
+  <string name="toast_video">Video-link verzonden</string>
+  <string name="toast_video_stopped">Verzoek verzonden om video te stoppen</string>
 </resources>

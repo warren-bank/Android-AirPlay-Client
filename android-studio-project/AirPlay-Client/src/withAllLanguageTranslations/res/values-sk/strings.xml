@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Nastavte správanie pre prechod</string>
   <string name="pref_summary_resize_factor">Zmeňte veľkosť obrázku pred odoslaním klientovi</string>
   <string name="pref_summary_jpeg_quality">Nastaviť JPEG kvalita</string>
+  <string name="main_activity_subtitle_not_connected">Nie je pripojené</string>
   <string name="main_activity_drawer_item_connect">Pripojiť sa k AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Zrkadlová obrazovka</string>
   <string name="main_activity_drawer_item_pictures">Obrázky</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Posuňte doľava</string>
   <string name="pref_names_image_transition_slideright">Posuňte doprava</string>
   <string name="pref_names_jpeg_quality_80">80 [Predvolené nastavenie]</string>
+  <string name="toast_error">Chyba</string>
+  <string name="toast_error_discovery_service">Nie je možné inicializovať službu vyhľadávania</string>
+  <string name="toast_error_file_type">Neznámy typ súboru</string>
+  <string name="toast_error_image">Chyba pri odosielaní obrázku</string>
+  <string name="toast_error_local_address">Nemožno získať lokálne IP adresa</string>
+  <string name="toast_error_video">Chyba pri odosielaní odkazu na video</string>
+  <string name="toast_error_video_stopped">Chyba pri odosielaní požiadavky na zastavenie videa</string>
+  <string name="toast_image">Odoslaný obrázok</string>
+  <string name="toast_local_address">Použitie lokálnej adresy</string>
+  <string name="toast_service_connected">Použitie AirPlay služba</string>
+  <string name="toast_service_found">Nájdené AirPlay služba</string>
+  <string name="toast_service_removed">Odstránené AirPlay služba</string>
+  <string name="toast_service_resolved">Vyriešené AirPlay služba</string>
+  <string name="toast_video">Odoslaný odkaz na video</string>
+  <string name="toast_video_stopped">Odoslaná žiadosť o zastavenie videa</string>
 </resources>

@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Tentukan perilaku untuk transisi</string>
   <string name="pref_summary_resize_factor">Ubah ukuran gambar sebelum dikirim ke klien</string>
   <string name="pref_summary_jpeg_quality">Set JPEG kualitas</string>
+  <string name="main_activity_subtitle_not_connected">Tidak terhubung</string>
   <string name="main_activity_drawer_item_connect">Hubungkan ke AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Layar Cermin</string>
   <string name="main_activity_drawer_item_pictures">Gambar</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Geser ke kiri</string>
   <string name="pref_names_image_transition_slideright">Geser ke kanan</string>
   <string name="pref_names_jpeg_quality_80">80 [Default]</string>
+  <string name="toast_error">Kesalahan</string>
+  <string name="toast_error_discovery_service">Tidak dapat menginisialisasi layanan penemuan.</string>
+  <string name="toast_error_file_type">Jenis file yang tidak dikenal</string>
+  <string name="toast_error_image">Kesalahan saat mengirim gambar</string>
+  <string name="toast_error_local_address">Tidak dapat mengakses lokal IP alamat</string>
+  <string name="toast_error_video">Kesalahan saat mengirim tautan video</string>
+  <string name="toast_error_video_stopped">Kesalahan saat mengirim permintaan untuk menghentikan video</string>
+  <string name="toast_image">Gambar yang dikirim</string>
+  <string name="toast_local_address">Menggunakan alamat lokal</string>
+  <string name="toast_service_connected">Menggunakan AirPlay layanan</string>
+  <string name="toast_service_found">Ditemukan AirPlay layanan</string>
+  <string name="toast_service_removed">Dihapus AirPlay layanan</string>
+  <string name="toast_service_resolved">Telah diselesaikan AirPlay layanan</string>
+  <string name="toast_video">Kirim tautan video</string>
+  <string name="toast_video_stopped">Telah mengirim permintaan untuk menghentikan video.</string>
 </resources>

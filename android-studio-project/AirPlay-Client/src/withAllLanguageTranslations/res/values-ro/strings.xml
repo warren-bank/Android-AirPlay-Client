@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Setați comportamentul pentru tranziție</string>
   <string name="pref_summary_resize_factor">Redimensionați imaginea înainte de a o trimite clientului</string>
   <string name="pref_summary_jpeg_quality">Set JPEG calitate</string>
+  <string name="main_activity_subtitle_not_connected">Nu este conectat</string>
   <string name="main_activity_drawer_item_connect">Conectați-vă la AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Ecran oglindă</string>
   <string name="main_activity_drawer_item_pictures">Imagini</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Glisați spre stânga</string>
   <string name="pref_names_image_transition_slideright">Glisează spre dreapta</string>
   <string name="pref_names_jpeg_quality_80">80 [Implicit]</string>
+  <string name="toast_error">Eroare</string>
+  <string name="toast_error_discovery_service">Imposibil de inițializat serviciul de descoperire</string>
+  <string name="toast_error_file_type">Tip de fișier necunoscut</string>
+  <string name="toast_error_image">Eroare la trimiterea imaginii</string>
+  <string name="toast_error_local_address">Imposibil de obținut local IP adresă</string>
+  <string name="toast_error_video">Eroare la trimiterea linkului video</string>
+  <string name="toast_error_video_stopped">Eroare la trimiterea cererii de oprire a videoclipului</string>
+  <string name="toast_image">Imagine trimisă</string>
+  <string name="toast_local_address">Utilizarea adresei locale</string>
+  <string name="toast_service_connected">Utilizarea AirPlay serviciu</string>
+  <string name="toast_service_found">Găsit AirPlay serviciu</string>
+  <string name="toast_service_removed">Eliminat AirPlay serviciu</string>
+  <string name="toast_service_resolved">Rezolvat AirPlay serviciu</string>
+  <string name="toast_video">Link video trimis</string>
+  <string name="toast_video_stopped">Solicitare trimisă pentru oprirea videoclipului</string>
 </resources>

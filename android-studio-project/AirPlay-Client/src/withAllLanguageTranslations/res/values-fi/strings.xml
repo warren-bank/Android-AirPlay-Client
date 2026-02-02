@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Aseta siirtymän käyttäytyminen</string>
   <string name="pref_summary_resize_factor">Muuta kuvan kokoa ennen lähettämistä asiakkaalle</string>
   <string name="pref_summary_jpeg_quality">Aseta JPEG laatu</string>
+  <string name="main_activity_subtitle_not_connected">Ei yhteydessä</string>
   <string name="main_activity_drawer_item_connect">Yhdistä AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Peilinäyttö</string>
   <string name="main_activity_drawer_item_pictures">Kuvat</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Liu\'uta vasemmalle</string>
   <string name="pref_names_image_transition_slideright">Liu\'uta oikealle</string>
   <string name="pref_names_jpeg_quality_80">80 [Oletus]</string>
+  <string name="toast_error">Virhe</string>
+  <string name="toast_error_discovery_service">Etsintäpalvelua ei voi alustaa</string>
+  <string name="toast_error_file_type">Tuntematon tiedostotyyppi</string>
+  <string name="toast_error_image">Virhe kuvan lähettämisessä</string>
+  <string name="toast_error_local_address">Paikallista yhteyttä ei saada IP osoite</string>
+  <string name="toast_error_video">Virhe videolinkin lähettämisessä</string>
+  <string name="toast_error_video_stopped">Virhe videon pysäyttämispyynnön lähettämisessä</string>
+  <string name="toast_image">Lähetetty kuva</string>
+  <string name="toast_local_address">Paikallisen osoitteen käyttö</string>
+  <string name="toast_service_connected">Käyttö AirPlay palvelu</string>
+  <string name="toast_service_found">Löydetty AirPlay palvelu</string>
+  <string name="toast_service_removed">Poistettu AirPlay palvelu</string>
+  <string name="toast_service_resolved">Ratkaistu AirPlay palvelu</string>
+  <string name="toast_video">Lähetetty videolinkki</string>
+  <string name="toast_video_stopped">Lähetetty pyyntö videon pysäyttämiseksi</string>
 </resources>

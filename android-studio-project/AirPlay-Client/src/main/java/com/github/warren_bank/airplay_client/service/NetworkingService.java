@@ -110,17 +110,30 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
           // local ip address
           localAddress = NetworkUtils.getLocalIpAddress();
           if (localAddress == null) {
-            toast("Error: Unable to get local IP address");
+            toast(
+                getString(R.string.toast_error)
+              + ": "
+              + getString(R.string.toast_error_local_address)
+            );
             return;
           }
 
           // init jmdns
           jmdns = JmDNS.create(localAddress);
           jmdns.addServiceListener(SERVICE_TYPE, NetworkingService.this);
-          toast("Using local address " + localAddress.getHostAddress());
+          toast(
+              getString(R.string.toast_local_address)
+            + ": "
+            + localAddress.getHostAddress()
+          );
         }
         catch (Exception e) {
-          toast("Error: " + e.getMessage() == null ? "Unable to initialize discovery service" : e.getMessage());
+          toast(
+              getString(R.string.toast_error)
+            + ": "
+            + getString(R.string.toast_error_discovery_service)
+            + ((e.getMessage() == null) ? "" : ("\n" + e.getMessage()))
+          );
         }
       }
     };
@@ -197,7 +210,11 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
         jmdns.close();
       }
       catch (Exception e) {
-        toast("Error: " + e.getMessage());
+        toast(
+            getString(R.string.toast_error)
+          + ": "
+          + e.getMessage()
+        );
       }
     }
 
@@ -270,7 +287,11 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
 
   @Override
   public void serviceAdded(final ServiceEvent event) {
-    toast("Found AirPlay service: " + event.getName());
+    toast(
+        getString(R.string.toast_service_found)
+      + ": "
+      + event.getName()
+    );
     services.put(event.getInfo().getKey(), event.getInfo());
     handler.post(new Runnable() {
       @Override
@@ -282,7 +303,11 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
 
   @Override
   public void serviceRemoved(ServiceEvent event) {
-    toast("Removed AirPlay service: " + event.getName());
+    toast(
+        getString(R.string.toast_service_removed)
+      + ": "
+      + event.getName()
+    );
     services.remove(event.getInfo().getKey());
     if (selectedService != null && selectedService.equals(event.getName())) {
       selectedService = null;
@@ -295,7 +320,13 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
 
   @Override
   public void serviceResolved(ServiceEvent event) {
-    toast("Resolved AirPlay service: " + event.getName() + " @ " + event.getInfo().getURL());
+    toast(
+        getString(R.string.toast_service_resolved)
+      + ": "
+      + event.getName()
+      + " @ "
+      + event.getInfo().getURL()
+    );
     services.put(event.getInfo().getKey(), event.getInfo());
     if (selectedService == null) {
       // try to see if the resolved one is the one that we last connected to -> autoconnect
@@ -316,32 +347,55 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
 
   @Override
   public void onPutImageSuccess(File file) {
-    toast("Sent image " + file.getName());
+    toast(
+        getString(R.string.toast_image)
+      + ": "
+      + file.getName()
+    );
   }
 
   @Override
   public void onPutImageError(File file, String message) {
-    toast("Error sending image " + file.getName() + (message == null ? "" : " :" + message));
+    toast(
+        getString(R.string.toast_error_image)
+      + ": "
+      + file.getName()
+      + ((message == null) ? "" : ("\n" + message))
+    );
   }
 
   @Override
   public void onPlayVideoSuccess(URL location) {
-    toast("Sent video link " + location);
+    toast(
+        getString(R.string.toast_video)
+      + ": "
+      + location
+    );
   }
 
   @Override
   public void onPlayVideoError(URL location, String message) {
-    toast("Error sending video link " + location + (message == null ? "" : " :" + message));
+    toast(
+        getString(R.string.toast_error_video)
+      + ": "
+      + location
+      + ((message == null) ? "" : ("\n" + message))
+    );
   }
 
   @Override
   public void onStopVideoSuccess() {
-    toast("Sent request to stop video");
+    toast(
+      getString(R.string.toast_video_stopped)
+    );
   }
 
   @Override
   public void onStopVideoError(String message) {
-    toast("Error sending request to stop video" + (message == null ? "" : " :" + message));
+    toast(
+        getString(R.string.toast_error_video_stopped)
+      + ((message == null) ? "" : ("\n" + message))
+    );
   }
 
   // ---------------------------------------------------------------------------

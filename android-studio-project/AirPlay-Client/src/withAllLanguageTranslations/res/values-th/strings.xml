@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">ตั้งค่าพฤติกรรมสำหรับการเปลี่ยนผ่าน</string>
   <string name="pref_summary_resize_factor">ปรับขนาดรูปภาพก่อนส่งให้ลูกค้า</string>
   <string name="pref_summary_jpeg_quality">ตั้งค่า JPEG คุณภาพ</string>
+  <string name="main_activity_subtitle_not_connected">ไม่เชื่อมต่อ</string>
   <string name="main_activity_drawer_item_connect">เชื่อมต่อกับ AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">หน้าจอสะท้อน</string>
   <string name="main_activity_drawer_item_pictures">รูปภาพ</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">เลื่อนไปทางซ้าย</string>
   <string name="pref_names_image_transition_slideright">เลื่อนไปทางขวา</string>
   <string name="pref_names_jpeg_quality_80">80 [ค่าเริ่มต้น]</string>
+  <string name="toast_error">ข้อผิดพลาด</string>
+  <string name="toast_error_discovery_service">ไม่สามารถเริ่มต้นบริการค้นหาได้</string>
+  <string name="toast_error_file_type">ประเภทไฟล์ไม่ทราบชื่อ</string>
+  <string name="toast_error_image">เกิดข้อผิดพลาดในการส่งรูปภาพ</string>
+  <string name="toast_error_local_address">ไม่สามารถเข้าถึงข้อมูลในท้องถิ่น IP ที่อยู่</string>
+  <string name="toast_error_video">เกิดข้อผิดพลาดในการส่งลิงก์วิดีโอ</string>
+  <string name="toast_error_video_stopped">เกิดข้อผิดพลาดในการส่งคำขอหยุดวิดีโอ</string>
+  <string name="toast_image">ส่งรูปภาพ</string>
+  <string name="toast_local_address">ใช้ที่อยู่ท้องถิ่น</string>
+  <string name="toast_service_connected">การใช้ AirPlay บริการ</string>
+  <string name="toast_service_found">พบ AirPlay บริการ</string>
+  <string name="toast_service_removed">ลบแล้ว AirPlay บริการ</string>
+  <string name="toast_service_resolved">แก้ไขแล้ว AirPlay บริการ</string>
+  <string name="toast_video">ส่งลิงก์วิดีโอแล้ว</string>
+  <string name="toast_video_stopped">ส่งคำขอหยุดวิดีโอ</string>
 </resources>

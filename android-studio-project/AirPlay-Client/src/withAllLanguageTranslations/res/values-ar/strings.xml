@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">تعيين سلوك الانتقال</string>
   <string name="pref_summary_resize_factor">تغيير حجم الصورة قبل إرسالها إلى العميل</string>
   <string name="pref_summary_jpeg_quality">مجموعة JPEG الجودة</string>
+  <string name="main_activity_subtitle_not_connected">غير متصل</string>
   <string name="main_activity_drawer_item_connect">اتصل بـ AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">شاشة مرآة</string>
   <string name="main_activity_drawer_item_pictures">صور</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">انزلاق إلى اليسار</string>
   <string name="pref_names_image_transition_slideright">انزلق إلى اليمين</string>
   <string name="pref_names_jpeg_quality_80">80 [الافتراضي]</string>
+  <string name="toast_error">خطأ</string>
+  <string name="toast_error_discovery_service">تعذر تهيئة خدمة الاكتشاف</string>
+  <string name="toast_error_file_type">نوع ملف غير معروف</string>
+  <string name="toast_error_image">خطأ في إرسال الصورة</string>
+  <string name="toast_error_local_address">تعذر الحصول على محلي IP العنوان</string>
+  <string name="toast_error_video">خطأ في إرسال رابط الفيديو</string>
+  <string name="toast_error_video_stopped">خطأ في إرسال طلب إيقاف الفيديو</string>
+  <string name="toast_image">صورة مرسلة</string>
+  <string name="toast_local_address">استخدام العنوان المحلي</string>
+  <string name="toast_service_connected">استخدام AirPlay خدمة</string>
+  <string name="toast_service_found">وجدت AirPlay خدمة</string>
+  <string name="toast_service_removed">تمت إزالته AirPlay خدمة</string>
+  <string name="toast_service_resolved">تم حلها AirPlay خدمة</string>
+  <string name="toast_video">إرسال رابط الفيديو</string>
+  <string name="toast_video_stopped">إرسال طلب لإيقاف الفيديو</string>
 </resources>

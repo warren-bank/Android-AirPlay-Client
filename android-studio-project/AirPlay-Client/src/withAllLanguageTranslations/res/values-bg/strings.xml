@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Задаване на поведение за преход</string>
   <string name="pref_summary_resize_factor">Промяна на размера на изображението преди изпращане на клиента</string>
   <string name="pref_summary_jpeg_quality">Набор JPEG качество</string>
+  <string name="main_activity_subtitle_not_connected">Не е свързан</string>
   <string name="main_activity_drawer_item_connect">Свържете се с AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Огледален екран</string>
   <string name="main_activity_drawer_item_pictures">Снимки</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Плъзнете наляво</string>
   <string name="pref_names_image_transition_slideright">Плъзнете надясно</string>
   <string name="pref_names_jpeg_quality_80">80 [По подразбиране]</string>
+  <string name="toast_error">Грешка</string>
+  <string name="toast_error_discovery_service">Не е възможно да се инициализира услугата за откриване</string>
+  <string name="toast_error_file_type">Неизвестен тип файл</string>
+  <string name="toast_error_image">Грешка при изпращане на изображение</string>
+  <string name="toast_error_local_address">Не е възможно да се получи локално IP адрес</string>
+  <string name="toast_error_video">Грешка при изпращане на видео линк</string>
+  <string name="toast_error_video_stopped">Грешка при изпращане на заявка за спиране на видеото</string>
+  <string name="toast_image">Изпратено изображение</string>
+  <string name="toast_local_address">Използване на локален адрес</string>
+  <string name="toast_service_connected">Използване AirPlay услуга</string>
+  <string name="toast_service_found">Намерено AirPlay услуга</string>
+  <string name="toast_service_removed">Премахнато AirPlay услуга</string>
+  <string name="toast_service_resolved">Решено AirPlay услуга</string>
+  <string name="toast_video">Изпратен видео линк</string>
+  <string name="toast_video_stopped">Изпратена заявка за спиране на видеото</string>
 </resources>

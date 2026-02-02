@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">设置过渡行为</string>
   <string name="pref_summary_resize_factor">在发送给客户前调整图片尺寸</string>
   <string name="pref_summary_jpeg_quality">设置 JPEG 质量</string>
+  <string name="main_activity_subtitle_not_connected">未连接</string>
   <string name="main_activity_drawer_item_connect">连接到 AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">镜面屏幕</string>
   <string name="main_activity_drawer_item_pictures">图片</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">向左滑动</string>
   <string name="pref_names_image_transition_slideright">向右滑动</string>
   <string name="pref_names_jpeg_quality_80">80 [默认]</string>
+  <string name="toast_error">错误</string>
+  <string name="toast_error_discovery_service">无法初始化发现服务</string>
+  <string name="toast_error_file_type">未知文件类型</string>
+  <string name="toast_error_image">发送图片失败</string>
+  <string name="toast_error_local_address">无法获取本地 IP 地址</string>
+  <string name="toast_error_video">发送视频链接失败</string>
+  <string name="toast_error_video_stopped">发送停止视频请求时出错</string>
+  <string name="toast_image">发送图片</string>
+  <string name="toast_local_address">使用本地地址</string>
+  <string name="toast_service_connected">使用 AirPlay 服务</string>
+  <string name="toast_service_found">发现 AirPlay 服务</string>
+  <string name="toast_service_removed">已删除 AirPlay 服务</string>
+  <string name="toast_service_resolved">已解决 AirPlay 服务</string>
+  <string name="toast_video">发送视频链接</string>
+  <string name="toast_video_stopped">已发送停止视频请求</string>
 </resources>

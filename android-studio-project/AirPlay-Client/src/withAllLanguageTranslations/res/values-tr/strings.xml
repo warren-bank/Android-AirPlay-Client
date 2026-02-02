@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Geçiş için davranış ayarla</string>
   <string name="pref_summary_resize_factor">Müşteriye göndermeden önce görüntünün boyutunu değiştirin</string>
   <string name="pref_summary_jpeg_quality">Ayar JPEG kalite</string>
+  <string name="main_activity_subtitle_not_connected">Bağlı değil</string>
   <string name="main_activity_drawer_item_connect">Bağlan AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Ayna Ekran</string>
   <string name="main_activity_drawer_item_pictures">Resimler</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Sola kaydır</string>
   <string name="pref_names_image_transition_slideright">Sağa kaydır</string>
   <string name="pref_names_jpeg_quality_80">80 [Varsayılan]</string>
+  <string name="toast_error">Hata</string>
+  <string name="toast_error_discovery_service">Keşif hizmetini başlatılamıyor</string>
+  <string name="toast_error_file_type">Bilinmeyen dosya türü</string>
+  <string name="toast_error_image">Görüntü gönderilirken hata oluştu</string>
+  <string name="toast_error_local_address">Yerel olarak alınamıyor IP adres</string>
+  <string name="toast_error_video">Video bağlantısı gönderilemedi</string>
+  <string name="toast_error_video_stopped">Videoyu durdurma isteği gönderilirken hata oluştu</string>
+  <string name="toast_image">Gönderilen resim</string>
+  <string name="toast_local_address">Yerel adres kullanma</string>
+  <string name="toast_service_connected">Kullanarak AirPlay hizmet</string>
+  <string name="toast_service_found">Bulundu AirPlay hizmet</string>
+  <string name="toast_service_removed">Kaldırıldı AirPlay hizmet</string>
+  <string name="toast_service_resolved">Çözüldü AirPlay hizmet</string>
+  <string name="toast_video">Video bağlantısı gönderildi</string>
+  <string name="toast_video_stopped">Videoyu durdurma isteği gönderildi</string>
 </resources>

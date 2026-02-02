@@ -21,6 +21,7 @@
   <string name="pref_summary_image_transition">Definir comportamento para transição</string>
   <string name="pref_summary_resize_factor">Redimensionar imagem antes de enviar ao cliente</string>
   <string name="pref_summary_jpeg_quality">Definir JPEG qualidade</string>
+  <string name="main_activity_subtitle_not_connected">Não conectado</string>
   <string name="main_activity_drawer_item_connect">Conecte-se a AirPlay...</string>
   <string name="main_activity_drawer_item_mirror">Tela espelhada</string>
   <string name="main_activity_drawer_item_pictures">Fotos</string>
@@ -49,4 +50,19 @@
   <string name="pref_names_image_transition_slideleft">Deslize para a esquerda</string>
   <string name="pref_names_image_transition_slideright">Deslize para a direita</string>
   <string name="pref_names_jpeg_quality_80">80 [Padrão]</string>
+  <string name="toast_error">Erro</string>
+  <string name="toast_error_discovery_service">Não foi possível inicializar o serviço de descoberta</string>
+  <string name="toast_error_file_type">Tipo de arquivo desconhecido</string>
+  <string name="toast_error_image">Erro ao enviar imagem</string>
+  <string name="toast_error_local_address">Não é possível obter local IP endereço</string>
+  <string name="toast_error_video">Erro ao enviar o link do vídeo</string>
+  <string name="toast_error_video_stopped">Erro ao enviar solicitação para parar o vídeo</string>
+  <string name="toast_image">Imagem enviada</string>
+  <string name="toast_local_address">Usando endereço local</string>
+  <string name="toast_service_connected">Utilizando AirPlay serviço</string>
+  <string name="toast_service_found">Encontrado AirPlay serviço</string>
+  <string name="toast_service_removed">Removido AirPlay serviço</string>
+  <string name="toast_service_resolved">Resolvido AirPlay serviço</string>
+  <string name="toast_video">Enviou link do vídeo</string>
+  <string name="toast_video_stopped">Enviou solicitação para parar o vídeo</string>
 </resources>
