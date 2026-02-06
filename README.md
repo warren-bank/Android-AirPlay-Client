@@ -30,7 +30,7 @@ _DroidPlay_ running on Asus Nexus 7 with Android 5.1
 Instructions
 ------------
 
-1. Download the latest APK file from [releases](https://github.com/warren-bank/Android-AirPlay-Client/releases) and install on your device
+1. Download the latest APK file from [releases](https://github.com/warren-bank/Android-AirPlay-Client/releases) and install on your device, or [get it from IzzyOnDroid](https://apt.izzysoft.de/packages/com.github.warren_bank.airplay_client)
 2. Start the app and wait for services to be discovered
 3. Swipe from left to right, and select _Connect to AirPlay..._ from the menu
    * icon will be green for resolved services
