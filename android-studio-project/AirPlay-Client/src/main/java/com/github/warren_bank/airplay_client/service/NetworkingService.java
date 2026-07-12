@@ -25,6 +25,8 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.media.projection.MediaProjection;
+import android.media.projection.MediaProjectionManager;
 import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
@@ -173,6 +175,25 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
     Log.d(tag, "onDestroy");
 
     shutdown();
+  }
+
+  public void enableMediaProjection(int resultCode, Intent data) {
+    if (mirror == null) return;
+
+    int foregroundServiceType = getForegroundServiceType(true);
+    startForeground(foregroundServiceType);
+
+    final MediaProjectionManager projectionManager = ScreenMirrorMgr.getProjectionManager();
+    if (projectionManager == null) return;
+
+    final MediaProjection mediaProjection = projectionManager.getMediaProjection(resultCode, data);
+    if (mediaProjection == null) return;
+
+    ScreenMirrorMgr.setMediaProjection(mediaProjection);
+
+    Message msg = Message.obtain();
+    msg.what = Constant.Msg.Msg_ScreenMirror_Stream_Start;
+    MainApp.broadcastMessage(msg);
   }
 
   // ---------------------------------------------------------------------------
@@ -440,11 +461,10 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
       return;
     }
 
-    int NOTIFICATION_ID = getNotificationId();
-    Notification notification = getNotification();
-
     createNotificationChannel();
-    startForeground(NOTIFICATION_ID, notification);
+
+    int foregroundServiceType = getForegroundServiceType(false);
+    startForeground(foregroundServiceType);
   }
 
   private void updateNotification() {
@@ -453,6 +473,27 @@ public class NetworkingService extends Service implements ServiceListener, AirPl
 
     NotificationManager NM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
     NM.notify(NOTIFICATION_ID, notification);
+  }
+
+  private int getForegroundServiceType(boolean enableMediaProjection) {
+    if (Build.VERSION.SDK_INT < 29) return -1;
+
+    int foregroundServiceType = android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE;
+
+    if (enableMediaProjection)
+      foregroundServiceType |= android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION;
+
+    return foregroundServiceType;
+  }
+
+  private void startForeground(int foregroundServiceType) {
+    int NOTIFICATION_ID = getNotificationId();
+    Notification notification = getNotification();
+
+    if (Build.VERSION.SDK_INT >= 29)
+      startForeground(NOTIFICATION_ID, notification, foregroundServiceType);
+    else
+      startForeground(NOTIFICATION_ID, notification);
   }
 
   private void hideNotification() {

@@ -1,8 +1,5 @@
 package com.github.warren_bank.airplay_client.ui;
 
-import static com.github.warren_bank.airplay_client.mirror.ScreenMirrorMgr.getProjectionManager;
-import static com.github.warren_bank.airplay_client.mirror.ScreenMirrorMgr.setMediaProjection;
-
 import com.github.warren_bank.airplay_client.MainApp;
 import com.github.warren_bank.airplay_client.R;
 import com.github.warren_bank.airplay_client.constant.Constant;
@@ -52,7 +49,6 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
 
   // screen mirroring
   private boolean canMirror;
-  private ScreenMirrorMgr mirror;
 
   // holder for the navigation "drawer" layout
   private DrawerLayout navigationLayout;
@@ -88,7 +84,6 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
     updateSubtitle();
 
     canMirror = (Build.VERSION.SDK_INT >= 21);
-    mirror    = null;
 
     // navigation drawer
     navigationLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -194,9 +189,7 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
         break;
       }
       case "mirror": {
-        mirror = ScreenMirrorMgr.getInstance(getApplicationContext());
-
-        final MediaProjectionManager projectionManager = getProjectionManager();
+        final MediaProjectionManager projectionManager = ScreenMirrorMgr.getProjectionManager();
 
         if (projectionManager != null)
           startActivityForResult(projectionManager.createScreenCaptureIntent(), Constant.PermissionRequestCode.SCREEN_CAPTURE);
@@ -300,17 +293,12 @@ public class DroidPlayActivity extends Activity implements AdapterView.OnItemCli
   }
 
   private void onScreenCapturePermission(int resultCode, Intent data) {
-    final MediaProjectionManager projectionManager = getProjectionManager();
-    if (projectionManager == null) return;
+    if (resultCode == Activity.RESULT_CANCELED) return;
 
-    final MediaProjection mediaProjection = projectionManager.getMediaProjection(resultCode, data);
-    if (mediaProjection == null) return;
+    NetworkingService service = MainApp.getNetworkingService();
+    if (service == null) return;
 
-    setMediaProjection(mediaProjection);
-
-    Message msg = Message.obtain();
-    msg.what = Constant.Msg.Msg_ScreenMirror_Stream_Start;
-    MainApp.broadcastMessage(msg);
+    service.enableMediaProjection(resultCode, data);
   }
 
   private void onNotificationPermission(boolean granted) {
